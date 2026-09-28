@@ -31,7 +31,6 @@
             panel1 = new Panel();
             btnSair = new Button();
             btnCreditos = new Button();
-            btnExercicios = new Button();
             btnAprender = new Button();
             lblTitulo = new Label();
             panel1.SuspendLayout();
@@ -41,7 +40,6 @@
             // 
             panel1.Controls.Add(btnSair);
             panel1.Controls.Add(btnCreditos);
-            panel1.Controls.Add(btnExercicios);
             panel1.Controls.Add(btnAprender);
             panel1.Controls.Add(lblTitulo);
             panel1.Location = new Point(-1, -1);
@@ -52,7 +50,7 @@
             // btnSair
             // 
             btnSair.Font = new Font("Segoe UI", 48F);
-            btnSair.Location = new Point(1006, 703);
+            btnSair.Location = new Point(543, 709);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(500, 98);
             btnSair.TabIndex = 4;
@@ -62,25 +60,14 @@
             // 
             // btnCreditos
             // 
-            btnCreditos.Font = new Font("Segoe UI", 48F);
-            btnCreditos.Location = new Point(72, 703);
+            btnCreditos.Font = new Font("Segoe UI", 72F);
+            btnCreditos.Location = new Point(543, 444);
             btnCreditos.Name = "btnCreditos";
-            btnCreditos.Size = new Size(500, 98);
+            btnCreditos.Size = new Size(500, 177);
             btnCreditos.TabIndex = 3;
             btnCreditos.Text = "Créditos";
             btnCreditos.UseVisualStyleBackColor = true;
             btnCreditos.Click += btnCreditos_Click;
-            // 
-            // btnExercicios
-            // 
-            btnExercicios.Font = new Font("Segoe UI", 72F);
-            btnExercicios.Location = new Point(543, 436);
-            btnExercicios.Name = "btnExercicios";
-            btnExercicios.Size = new Size(500, 177);
-            btnExercicios.TabIndex = 2;
-            btnExercicios.Text = "Exercícios";
-            btnExercicios.UseVisualStyleBackColor = true;
-            btnExercicios.Click += btnExercicios_Click;
             // 
             // btnAprender
             // 
@@ -97,21 +84,22 @@
             // 
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 72F);
-            lblTitulo.Location = new Point(474, 10);
+            lblTitulo.Font = new Font("Segoe UI", 96F);
+            lblTitulo.Location = new Point(361, 10);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(638, 128);
+            lblTitulo.Size = new Size(848, 170);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "ConectaIdade";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1584, 861);
             Controls.Add(panel1);
-            Name = "Form1";
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -121,7 +109,6 @@
         #endregion
 
         private Panel panel1;
-        private Button btnExercicios;
         private Button btnAprender;
         private Label lblTitulo;
         private Button btnSair;

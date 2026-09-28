@@ -1,4 +1,4 @@
-using System.Reflection.Metadata.Ecma335;
+﻿using System.Reflection.Metadata.Ecma335;
 using System.Text.RegularExpressions;
 using System.Threading;
 
@@ -6,7 +6,7 @@ namespace DigitalInclusionApp
 {
     public partial class MainForm : Form
     {
-        Thread? t1;
+        Thread t1;
         public MainForm()
         {
             InitializeComponent();
@@ -16,6 +16,14 @@ namespace DigitalInclusionApp
         {
             Close();
             t1 = new Thread(openLearning);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void btnExercicios_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(openExercises);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
@@ -31,6 +39,7 @@ namespace DigitalInclusionApp
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         public void openLearning()
@@ -38,10 +47,16 @@ namespace DigitalInclusionApp
             Application.Run(new Learning());
             return;
         }
+        public void openExercises()
+        {
+            Application.Run(new Exercises());
+            return;
+        }
         public void openCredits()
         {
             Application.Run(new Credits());
             return;
         }
+
     }
 }

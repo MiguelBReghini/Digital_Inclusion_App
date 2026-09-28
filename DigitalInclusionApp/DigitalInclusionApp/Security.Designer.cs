@@ -1,6 +1,6 @@
 ﻿namespace DigitalInclusionApp
 {
-    partial class Credits
+    partial class Security
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             panel1 = new Panel();
             btnBack = new Button();
+            btnScam = new Button();
             lblTitulo = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(btnBack);
+            panel1.Controls.Add(btnScam);
             panel1.Controls.Add(lblTitulo);
             panel1.Location = new Point(-1, -2);
             panel1.Name = "panel1";
@@ -51,7 +48,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 48F);
-            btnBack.Location = new Point(539, 710);
+            btnBack.Location = new Point(543, 709);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 98);
             btnBack.TabIndex = 4;
@@ -59,53 +56,39 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // btnScam
+            // 
+            btnScam.Font = new Font("Segoe UI", 56F);
+            btnScam.Location = new Point(588, 228);
+            btnScam.Name = "btnScam";
+            btnScam.Size = new Size(410, 408);
+            btnScam.TabIndex = 1;
+            btnScam.Text = "Golpes";
+            btnScam.TextAlign = ContentAlignment.BottomCenter;
+            btnScam.UseVisualStyleBackColor = true;
+            btnScam.Click += btnScam_Click;
+            // 
             // lblTitulo
             // 
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 96F);
-            lblTitulo.Location = new Point(523, 11);
+            lblTitulo.Location = new Point(461, 11);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(541, 170);
+            lblTitulo.Size = new Size(660, 170);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Créditos";
+            lblTitulo.Text = "Segurança";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
-            // 
-            textBox1.AllowDrop = true;
-            textBox1.Font = new Font("Arial", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(166, 206);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.ShortcutsEnabled = false;
-            textBox1.Size = new Size(1270, 156);
-            textBox1.TabIndex = 5;
-            textBox1.Text = resources.GetString("textBox1.Text");
-            // 
-            // textBox2
-            // 
-            textBox2.AllowDrop = true;
-            textBox2.Font = new Font("Arial", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(166, 452);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.ShortcutsEnabled = false;
-            textBox2.Size = new Size(1270, 156);
-            textBox2.TabIndex = 6;
-            textBox2.Text = "Desenvolvimento: Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
-            // 
-            // Credits
+            // Security
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1584, 861);
             Controls.Add(panel1);
-            Name = "Credits";
+            Name = "Security";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Credits";
+            Text = "Security";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -115,8 +98,7 @@
 
         private Panel panel1;
         private Button btnBack;
+        private Button btnScam;
         private Label lblTitulo;
-        private TextBox textBox1;
-        private TextBox textBox2;
     }
 }

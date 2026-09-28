@@ -3,7 +3,6 @@ C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\Digita
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\bin\Debug\net10.0-windows\DigitalInclusionApp.runtimeconfig.json
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\bin\Debug\net10.0-windows\DigitalInclusionApp.dll
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\bin\Debug\net10.0-windows\DigitalInclusionApp.pdb
-C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.Form1.resources
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.csproj.GenerateResource.cache
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.AssemblyInfoInputs.cache
@@ -16,3 +15,8 @@ C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\Digita
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.genruntimeconfig.cache
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\ref\DigitalInclusionApp.dll
 C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalI.DD88EDD4.Up2Date
+C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.Informatics.resources
+C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.Learning.resources
+C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.MainForm.resources
+C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.Security.resources
+C:\Users\Bruno\Documents\GitHub\Digital_Inclusion_App\DigitalInclusionApp\DigitalInclusionApp\obj\Debug\net10.0-windows\DigitalInclusionApp.Credits.resources

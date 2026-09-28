@@ -1,6 +1,6 @@
 ﻿namespace DigitalInclusionApp
 {
-    partial class Credits
+    partial class Informatics
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             panel1 = new Panel();
             btnBack = new Button();
+            btnMouse = new Button();
+            btnKeyboard = new Button();
             lblTitulo = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(btnBack);
+            panel1.Controls.Add(btnMouse);
+            panel1.Controls.Add(btnKeyboard);
             panel1.Controls.Add(lblTitulo);
             panel1.Location = new Point(-1, -2);
             panel1.Name = "panel1";
             panel1.Size = new Size(1586, 864);
-            panel1.TabIndex = 3;
+            panel1.TabIndex = 2;
             // 
             // btnBack
             // 
@@ -59,53 +58,51 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // btnMouse
+            // 
+            btnMouse.Font = new Font("Segoe UI", 56F);
+            btnMouse.Location = new Point(903, 197);
+            btnMouse.Name = "btnMouse";
+            btnMouse.Size = new Size(410, 408);
+            btnMouse.TabIndex = 3;
+            btnMouse.Text = "Mouse";
+            btnMouse.TextAlign = ContentAlignment.BottomCenter;
+            btnMouse.UseVisualStyleBackColor = true;
+            btnMouse.Click += btnMouse_Click;
+            // 
+            // btnKeyboard
+            // 
+            btnKeyboard.Font = new Font("Segoe UI", 54F);
+            btnKeyboard.Location = new Point(270, 197);
+            btnKeyboard.Name = "btnKeyboard";
+            btnKeyboard.Size = new Size(410, 408);
+            btnKeyboard.TabIndex = 1;
+            btnKeyboard.Text = "Teclado";
+            btnKeyboard.TextAlign = ContentAlignment.BottomCenter;
+            btnKeyboard.UseVisualStyleBackColor = true;
+            btnKeyboard.Click += btnKeyboard_Click;
+            // 
             // lblTitulo
             // 
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 96F);
-            lblTitulo.Location = new Point(523, 11);
+            lblTitulo.Location = new Point(439, 11);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(541, 170);
+            lblTitulo.Size = new Size(711, 170);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Créditos";
+            lblTitulo.Text = "Informática";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
-            // 
-            textBox1.AllowDrop = true;
-            textBox1.Font = new Font("Arial", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(166, 206);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.ShortcutsEnabled = false;
-            textBox1.Size = new Size(1270, 156);
-            textBox1.TabIndex = 5;
-            textBox1.Text = resources.GetString("textBox1.Text");
-            // 
-            // textBox2
-            // 
-            textBox2.AllowDrop = true;
-            textBox2.Font = new Font("Arial", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(166, 452);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.ShortcutsEnabled = false;
-            textBox2.Size = new Size(1270, 156);
-            textBox2.TabIndex = 6;
-            textBox2.Text = "Desenvolvimento: Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
-            // 
-            // Credits
+            // Informatics
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1584, 861);
             Controls.Add(panel1);
-            Name = "Credits";
+            Name = "Informatics";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Credits";
+            Text = "Creditos";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -115,8 +112,8 @@
 
         private Panel panel1;
         private Button btnBack;
+        private Button btnMouse;
+        private Button btnKeyboard;
         private Label lblTitulo;
-        private TextBox textBox1;
-        private TextBox textBox2;
     }
 }
