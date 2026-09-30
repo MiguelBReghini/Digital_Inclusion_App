@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalInclusionApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a73145d96eb96e8bba116bc159b57072abddf751")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a44aadeb9262188b1d6724f7d154cfa0aa62a59a")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalInclusionApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalInclusionApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
