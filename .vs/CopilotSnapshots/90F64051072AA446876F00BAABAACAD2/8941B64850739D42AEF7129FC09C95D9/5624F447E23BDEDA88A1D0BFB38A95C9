@@ -1,0 +1,87 @@
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Text.RegularExpressions;
+using System.Threading;
+
+namespace DigitalInclusionApp
+{
+    public partial class MainForm : Form
+    {
+        Thread? t1;
+        public MainForm()
+        {
+            InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // MainForm.cs
+
+                base.OnLoad(e);
+
+                Rectangle area = Screen.FromControl(this).WorkingArea;
+                if (area.Width == 0 || area.Height == 0)
+                    return; // proteção para evitar dividir por zero ou posicionamento inválido
+
+                // Se o form é maior que a tela, escala proporcionalmente
+                if (this.Width > area.Width || this.Height > area.Height)
+                {
+                    float scaleX = (float)area.Width / this.Width;
+                    float scaleY = (float)area.Height / this.Height;
+                    float scale = Math.Min(scaleX, scaleY);
+                    this.Scale(new SizeF(scale, scale));
+                }
+
+                // Centraliza na tela
+                this.Location = new Point(
+                    area.Left + (area.Width - this.Width) / 2,
+                    area.Top + (area.Height - this.Height) / 2
+                );
+
+        }
+
+        private void btnAprender_Click(object sender, EventArgs e)
+        {
+            Close();
+            t1 = new Thread(openLearning);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void btnCreditos_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(openCredits);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void openLearning()
+        {
+            Application.Run(new Learning());
+            return;
+        }
+        public void openCredits()
+        {
+            Application.Run(new Credits());
+            return;
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+    }
+}

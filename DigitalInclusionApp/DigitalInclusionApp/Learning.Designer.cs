@@ -1,4 +1,4 @@
-﻿namespace DigitalInclusionApp
+namespace DigitalInclusionApp
 {
     partial class Learning
     {
@@ -38,21 +38,25 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(3, 11, 174);
+            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnSecurity);
             panel1.Controls.Add(btnInformatics);
             panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(-1, -2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1586, 864);
+            panel1.Size = new Size(924, 700);
             panel1.TabIndex = 1;
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 48F);
-            btnBack.Location = new Point(543, 709);
+            btnBack.Font = new Font("Segoe UI", 32F);
+            btnBack.Location = new Point(212, 569);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(500, 98);
+            btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
             btnBack.Text = "Voltar";
             btnBack.UseVisualStyleBackColor = true;
@@ -60,10 +64,10 @@
             // 
             // btnSecurity
             // 
-            btnSecurity.Font = new Font("Segoe UI", 56F);
-            btnSecurity.Location = new Point(903, 197);
+            btnSecurity.Font = new Font("Segoe UI", 28F);
+            btnSecurity.Location = new Point(520, 300);
             btnSecurity.Name = "btnSecurity";
-            btnSecurity.Size = new Size(410, 408);
+            btnSecurity.Size = new Size(300, 200);
             btnSecurity.TabIndex = 3;
             btnSecurity.Text = "Segurança";
             btnSecurity.TextAlign = ContentAlignment.BottomCenter;
@@ -72,10 +76,10 @@
             // 
             // btnInformatics
             // 
-            btnInformatics.Font = new Font("Segoe UI", 54F);
-            btnInformatics.Location = new Point(270, 197);
+            btnInformatics.Font = new Font("Segoe UI", 28F);
+            btnInformatics.Location = new Point(104, 300);
             btnInformatics.Name = "btnInformatics";
-            btnInformatics.Size = new Size(410, 408);
+            btnInformatics.Size = new Size(300, 200);
             btnInformatics.TabIndex = 1;
             btnInformatics.Text = "Informática";
             btnInformatics.TextAlign = ContentAlignment.BottomRight;
@@ -84,22 +88,25 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 96F);
-            lblTitulo.Location = new Point(493, 11);
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Segoe UI", 60F, FontStyle.Bold);
+            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.Location = new Point(250, 20);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(590, 170);
+            lblTitulo.Size = new Size(424, 106);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprenda!";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Learning
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1584, 861);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(924, 700);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Learning";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aprender";

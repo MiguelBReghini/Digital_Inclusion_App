@@ -1,4 +1,4 @@
-﻿namespace DigitalInclusionApp
+namespace DigitalInclusionApp
 {
     partial class Credits
     {
@@ -39,21 +39,25 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(3, 11, 174);
+            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(-1, -2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1586, 864);
+            panel1.Size = new Size(924, 700);
             panel1.TabIndex = 3;
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 48F);
-            btnBack.Location = new Point(539, 710);
+            btnBack.Font = new Font("Segoe UI", 32F);
+            btnBack.Location = new Point(212, 569);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(500, 98);
+            btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
             btnBack.Text = "Voltar";
             btnBack.UseVisualStyleBackColor = true;
@@ -61,12 +65,14 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 96F);
-            lblTitulo.Location = new Point(523, 11);
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Segoe UI", 48F, FontStyle.Bold);
+            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.Location = new Point(300, 20);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(541, 170);
+            lblTitulo.Size = new Size(324, 80);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Créditos";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
@@ -74,35 +80,40 @@
             // textBox1
             // 
             textBox1.AllowDrop = true;
-            textBox1.Font = new Font("Arial", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(166, 206);
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.BackColor = Color.FromArgb(240, 240, 240);
+            textBox1.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(50, 130);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.ShortcutsEnabled = false;
-            textBox1.Size = new Size(1270, 156);
+            textBox1.Size = new Size(824, 80);
             textBox1.TabIndex = 5;
             textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // textBox2
             // 
             textBox2.AllowDrop = true;
-            textBox2.Font = new Font("Arial", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(166, 452);
+            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox2.BackColor = Color.FromArgb(240, 240, 240);
+            textBox2.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(50, 230);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.ShortcutsEnabled = false;
-            textBox2.Size = new Size(1270, 156);
+            textBox2.Size = new Size(824, 80);
             textBox2.TabIndex = 6;
             textBox2.Text = "Desenvolvimento: Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
             // 
             // Credits
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1584, 861);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(924, 700);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Credits";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Credits";
