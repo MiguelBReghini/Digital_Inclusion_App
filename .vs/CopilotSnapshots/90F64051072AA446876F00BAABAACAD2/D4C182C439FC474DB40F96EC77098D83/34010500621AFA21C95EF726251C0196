@@ -1,0 +1,127 @@
+﻿namespace DigitalInclusionApp
+{
+    partial class Learning
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            panel1 = new Panel();
+            btnBack = new Button();
+            btnSecurity = new Button();
+            btnInformatics = new Button();
+            lblTitulo = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.AutoSize = true;
+            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(btnBack);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Controls.Add(btnSecurity);
+            panel1.Controls.Add(btnInformatics);
+            panel1.Controls.Add(lblTitulo);
+            panel1.Location = new Point(-1, -2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(924, 700);
+            panel1.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("Segoe UI", 48F);
+            btnBack.Location = new Point(543, 709);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(500, 98);
+            btnBack.TabIndex = 4;
+            btnBack.Text = "Voltar";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
+            // btnSecurity
+            // 
+            btnSecurity.Font = new Font("Segoe UI", 56F);
+            btnSecurity.Location = new Point(903, 197);
+            btnSecurity.Name = "btnSecurity";
+            btnSecurity.Size = new Size(410, 408);
+            btnSecurity.TabIndex = 3;
+            btnSecurity.Text = "Segurança";
+            btnSecurity.TextAlign = ContentAlignment.BottomCenter;
+            btnSecurity.UseVisualStyleBackColor = true;
+            btnSecurity.Click += btnSecurity_Click;
+            // 
+            // btnInformatics
+            // 
+            btnInformatics.Font = new Font("Segoe UI", 54F);
+            btnInformatics.Location = new Point(270, 197);
+            btnInformatics.Name = "btnInformatics";
+            btnInformatics.Size = new Size(410, 408);
+            btnInformatics.TabIndex = 1;
+            btnInformatics.Text = "Informática";
+            btnInformatics.TextAlign = ContentAlignment.BottomRight;
+            btnInformatics.UseVisualStyleBackColor = true;
+            btnInformatics.Click += btnInformatics_Click;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 96F);
+            lblTitulo.Location = new Point(493, 11);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(590, 170);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Aprenda!";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Learning
+            // 
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(1584, 861);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "Learning";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Aprender";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Panel panel1;
+        private Button btnBack;
+        private Button btnSecurity;
+        private Button btnInformatics;
+        private Label lblTitulo;
+    }
+}

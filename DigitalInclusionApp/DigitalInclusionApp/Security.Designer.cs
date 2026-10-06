@@ -1,4 +1,4 @@
-﻿namespace DigitalInclusionApp
+namespace DigitalInclusionApp
 {
     partial class Security
     {
@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false;</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -37,20 +37,24 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(3, 11, 174);
+            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnScam);
             panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(-1, -2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1586, 864);
+            panel1.Size = new Size(924, 700);
             panel1.TabIndex = 3;
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 48F);
-            btnBack.Location = new Point(543, 709);
+            btnBack.Font = new Font("Segoe UI", 32F);
+            btnBack.Location = new Point(212, 569);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(500, 98);
+            btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
             btnBack.Text = "Voltar";
             btnBack.UseVisualStyleBackColor = true;
@@ -58,10 +62,10 @@
             // 
             // btnScam
             // 
-            btnScam.Font = new Font("Segoe UI", 56F);
-            btnScam.Location = new Point(588, 228);
+            btnScam.Font = new Font("Segoe UI", 28F);
+            btnScam.Location = new Point(312, 300);
             btnScam.Name = "btnScam";
-            btnScam.Size = new Size(410, 408);
+            btnScam.Size = new Size(300, 200);
             btnScam.TabIndex = 1;
             btnScam.Text = "Golpes";
             btnScam.TextAlign = ContentAlignment.BottomCenter;
@@ -70,25 +74,28 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 96F);
-            lblTitulo.Location = new Point(461, 11);
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Segoe UI", 60F, FontStyle.Bold);
+            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.Location = new Point(200, 20);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(660, 170);
+            lblTitulo.Size = new Size(524, 106);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Segurança";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Security
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1584, 861);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(924, 700);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Security";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Security";
+            Text = "Segurança";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

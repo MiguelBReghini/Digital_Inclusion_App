@@ -8,8 +8,9 @@ namespace DigitalInclusionApp
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            // Ativa Per-Monitor V2 antes de criar forms
+            Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
+
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
         }
