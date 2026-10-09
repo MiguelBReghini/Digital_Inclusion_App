@@ -10,6 +10,31 @@ namespace DigitalInclusionApp
         public MainForm()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            Rectangle area = Screen.FromControl(this).WorkingArea;
+            if (area.Width == 0 || area.Height == 0)
+                return; // proteção para evitar dividir por zero ou posicionamento inválido
+
+            // Se o form é maior que a tela, escala proporcionalmente
+            if (this.Width > area.Width || this.Height > area.Height)
+            {
+                float scaleX = (float)area.Width / this.Width;
+                float scaleY = (float)area.Height / this.Height;
+                float scale = Math.Min(scaleX, scaleY);
+                this.Scale(new SizeF(scale, scale));
+            }
+
+            // Centraliza na tela
+            this.Location = new Point(
+                area.Left + (area.Width - this.Width) / 2,
+                area.Top + (area.Height - this.Height) / 2
+            );
         }
 
         private void btnAprender_Click(object sender, EventArgs e)
@@ -43,5 +68,17 @@ namespace DigitalInclusionApp
             Application.Run(new Credits());
             return;
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }

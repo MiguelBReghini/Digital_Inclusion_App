@@ -38,21 +38,28 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(3, 11, 174);
+            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnSair);
             panel1.Controls.Add(btnCreditos);
             panel1.Controls.Add(btnAprender);
             panel1.Controls.Add(lblTitulo);
-            panel1.Location = new Point(-1, -1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1586, 864);
+            panel1.Size = new Size(924, 700);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // btnSair
             // 
+            btnSair.AutoSize = true;
+            btnSair.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnSair.Font = new Font("Segoe UI", 48F);
-            btnSair.Location = new Point(543, 709);
+            btnSair.Location = new Point(376, 569);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(500, 98);
+            btnSair.Size = new Size(152, 96);
             btnSair.TabIndex = 4;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = true;
@@ -60,10 +67,12 @@
             // 
             // btnCreditos
             // 
-            btnCreditos.Font = new Font("Segoe UI", 72F);
-            btnCreditos.Location = new Point(543, 444);
+            btnCreditos.AutoSize = true;
+            btnCreditos.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnCreditos.Font = new Font("Segoe UI", 60F);
+            btnCreditos.Location = new Point(289, 387);
             btnCreditos.Name = "btnCreditos";
-            btnCreditos.Size = new Size(500, 177);
+            btnCreditos.Size = new Size(349, 116);
             btnCreditos.TabIndex = 3;
             btnCreditos.Text = "Créditos";
             btnCreditos.UseVisualStyleBackColor = true;
@@ -71,38 +80,44 @@
             // 
             // btnAprender
             // 
-            btnAprender.Font = new Font("Segoe UI", 72F);
-            btnAprender.Location = new Point(543, 207);
+            btnAprender.AutoSize = true;
+            btnAprender.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnAprender.BackColor = SystemColors.ActiveCaption;
+            btnAprender.Font = new Font("Segoe UI", 60F);
+            btnAprender.Location = new Point(269, 205);
             btnAprender.Name = "btnAprender";
-            btnAprender.Size = new Size(500, 177);
+            btnAprender.Size = new Size(386, 116);
             btnAprender.TabIndex = 1;
             btnAprender.Text = "Aprender";
-            btnAprender.UseVisualStyleBackColor = true;
+            btnAprender.UseVisualStyleBackColor = false;
             btnAprender.Click += btnAprender_Click;
             // 
             // lblTitulo
             // 
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 96F);
-            lblTitulo.Location = new Point(361, 10);
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Segoe UI", 90F, FontStyle.Bold);
+            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.Location = new Point(63, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(848, 170);
+            lblTitulo.Size = new Size(839, 159);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "ConectaIdade";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            lblTitulo.Click += lblTitulo_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1584, 861);
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            ClientSize = new Size(924, 700);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
         }
 

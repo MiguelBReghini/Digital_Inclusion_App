@@ -63,59 +63,60 @@ namespace DigitalInclusionApp.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap d609243a20117cb8132988815ded3c8b {
+        internal static System.Drawing.Bitmap _1280 {
             get {
-                object obj = ResourceManager.GetObject("d609243a20117cb8132988815ded3c8b", resourceCulture);
+                object obj = ResourceManager.GetObject("1280", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a {
-        ///  &quot;name&quot;: &quot;portuguese&quot;,
-        ///  &quot;_comment&quot;: &quot;Sourced from: https://www.wordandphrase.info/port&quot;,
-        ///
-        ///  &quot;bcp47&quot;: &quot;pt-PT&quot;,
-        ///  &quot;words&quot;: [
-        ///    &quot;o&quot;,
-        ///    &quot;de&quot;,
-        ///    &quot;e&quot;,
-        ///    &quot;em&quot;,
-        ///    &quot;um&quot;,
-        ///    &quot;que&quot;,
-        ///    &quot;a&quot;,
-        ///    &quot;ser&quot;,
-        ///    &quot;para&quot;,
-        ///    &quot;não&quot;,
-        ///    &quot;com&quot;,
-        ///    &quot;por&quot;,
-        ///    &quot;ter&quot;,
-        ///    &quot;se&quot;,
-        ///    &quot;seu&quot;,
-        ///    &quot;eu&quot;,
-        ///    &quot;ele&quot;,
-        ///    &quot;fazer&quot;,
-        ///    &quot;mais&quot;,
-        ///    &quot;este&quot;,
-        ///    &quot;ou&quot;,
-        ///    &quot;poder&quot;,
-        ///    &quot;estar&quot;,
-        ///    &quot;esse&quot;,
-        ///    &quot;mas&quot;,
-        ///    &quot;ir&quot;,
-        ///    &quot;todo&quot;,
-        ///    &quot;outro&quot;,
-        ///    &quot;meu&quot;,
-        ///    &quot;muito&quot;,
-        ///    &quot;dizer&quot;,
-        ///    &quot;ano&quot;,
-        ///    &quot;isso&quot;,
-        ///    &quot;ela&quot;,
-        ///    &quot;t [o restante da cadeia de caracteres foi truncado]&quot;;.
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static string portuguese {
+        internal static System.Drawing.Bitmap _1600 {
             get {
-                return ResourceManager.GetString("portuguese", resourceCulture);
+                object obj = ResourceManager.GetObject("1600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _16001 {
+            get {
+                object obj = ResourceManager.GetObject("16001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _16002 {
+            get {
+                object obj = ResourceManager.GetObject("16002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Abstrato_Azul_com_Ondas_Fluídas {
+            get {
+                object obj = ResourceManager.GetObject("Fundo Abstrato Azul com Ondas Fluídas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image {
+            get {
+                object obj = ResourceManager.GetObject("image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
