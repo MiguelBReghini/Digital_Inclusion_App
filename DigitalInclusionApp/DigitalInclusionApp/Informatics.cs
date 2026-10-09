@@ -43,10 +43,10 @@ namespace DigitalInclusionApp
 
         private void btnKeyboard_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //t1 = new Thread(openKeyboard);
-            //t1.SetApartmentState(ApartmentState.STA);
-            //t1.Start();
+            this.Close();
+            t1 = new Thread(openKeyboard);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
             return;
         }
 
@@ -68,7 +68,7 @@ namespace DigitalInclusionApp
         }
         public void openKeyboard()
         {
-            //Application.Run(new Keyboard());
+            Application.Run(new Keyboard());
             return;
         }
 
