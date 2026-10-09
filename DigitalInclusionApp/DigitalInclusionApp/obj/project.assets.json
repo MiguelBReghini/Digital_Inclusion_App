@@ -8,19 +8,19 @@
     "net10.0-windows": []
   },
   "packageFolders": {
-    "C:\\Users\\Bruno\\.nuget\\packages\\": {}
+    "C:\\Users\\PEDRO ZANELLA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruno\\Documents\\GitHub\\Digital_Inclusion_App\\DigitalInclusionApp\\DigitalInclusionApp\\DigitalInclusionApp.csproj",
+      "projectUniqueName": "C:\\Users\\PEDRO ZANELLA\\source\\repos\\Digital_Inclusion_App\\DigitalInclusionApp\\DigitalInclusionApp\\DigitalInclusionApp.csproj",
       "projectName": "DigitalInclusionApp",
-      "projectPath": "C:\\Users\\Bruno\\Documents\\GitHub\\Digital_Inclusion_App\\DigitalInclusionApp\\DigitalInclusionApp\\DigitalInclusionApp.csproj",
-      "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruno\\Documents\\GitHub\\Digital_Inclusion_App\\DigitalInclusionApp\\DigitalInclusionApp\\obj\\",
+      "projectPath": "C:\\Users\\PEDRO ZANELLA\\source\\repos\\Digital_Inclusion_App\\DigitalInclusionApp\\DigitalInclusionApp\\DigitalInclusionApp.csproj",
+      "packagesPath": "C:\\Users\\PEDRO ZANELLA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PEDRO ZANELLA\\source\\repos\\Digital_Inclusion_App\\DigitalInclusionApp\\DigitalInclusionApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PEDRO ZANELLA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
