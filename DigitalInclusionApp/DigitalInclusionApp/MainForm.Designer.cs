@@ -38,7 +38,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(3, 11, 174);
+            panel1.BackColor = Color.White;
             panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnSair);
@@ -118,6 +118,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 

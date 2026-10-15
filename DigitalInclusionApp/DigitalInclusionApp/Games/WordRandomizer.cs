@@ -1,34 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.Json;
 
 namespace DigitalInclusionApp.Games
 {
     internal class WordList
     {
-        public List<string> words { get; set; }
+        public List<string>? words { get; set; }
     }
     internal class WordRandomizer
     {
-        
+
         string currentWord = "";
         int LastIndex;
-        List<string> words;
+        List<string> words = new();
         string wordCapitalized = "";
         Random Randomizer = new Random();
 
         public string RandomWord
         {
             get { return wordCapitalized;}
-            
-              
+
+
         }
-     
+
         public WordRandomizer()
         {
-            string textJson = Properties.Resources.portuguese;
-            WordList dados = JsonSerializer.Deserialize<WordList>(textJson);
-            words = dados.words;
+            var assemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var assemblyDir = Path.GetDirectoryName(assemblyLocation);
+
+            if (assemblyDir != null)
+            {
+                var resourcePath = Path.Combine(assemblyDir, "Resources", "portuguese.json");
+
+                string textJson = File.ReadAllText(resourcePath);
+                WordList? dados = JsonSerializer.Deserialize<WordList>(textJson);
+                if (dados?.words != null)
+                {
+                    words = dados.words;
+                }
+            }
         }
 
         public void RandomizeIndex()

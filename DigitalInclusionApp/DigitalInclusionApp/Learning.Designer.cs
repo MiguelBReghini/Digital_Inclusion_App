@@ -38,7 +38,7 @@ namespace DigitalInclusionApp
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(3, 11, 174);
+            panel1.BackColor = Color.Navy;
             panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
@@ -82,7 +82,7 @@ namespace DigitalInclusionApp
             btnInformatics.Size = new Size(300, 200);
             btnInformatics.TabIndex = 1;
             btnInformatics.Text = "Informática";
-            btnInformatics.TextAlign = ContentAlignment.BottomRight;
+            btnInformatics.TextAlign = ContentAlignment.BottomCenter;
             btnInformatics.UseVisualStyleBackColor = true;
             btnInformatics.Click += btnInformatics_Click;
             // 
@@ -95,7 +95,7 @@ namespace DigitalInclusionApp
             lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
             lblTitulo.Location = new Point(250, 20);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(424, 106);
+            lblTitulo.Size = new Size(393, 106);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprenda!";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
