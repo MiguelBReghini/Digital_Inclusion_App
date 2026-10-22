@@ -30,20 +30,20 @@ namespace DigitalInclusionApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             panel1 = new Panel();
+            textBox1 = new TextBox();
+            socialProjectTxt = new TextBox();
             btnBack = new Button();
             lblTitulo = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImage = Properties.Resources._1280;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(socialProjectTxt);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(lblTitulo);
             panel1.Dock = DockStyle.Fill;
@@ -52,12 +52,43 @@ namespace DigitalInclusionApp
             panel1.Size = new Size(924, 700);
             panel1.TabIndex = 3;
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(2, 36, 64);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = SystemColors.ActiveCaption;
+            textBox1.Location = new Point(38, 385);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(848, 88);
+            textBox1.TabIndex = 6;
+            textBox1.Text = "Desenvolvimento: Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // socialProjectTxt
+            // 
+            socialProjectTxt.BackColor = Color.FromArgb(2, 36, 64);
+            socialProjectTxt.BorderStyle = BorderStyle.None;
+            socialProjectTxt.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            socialProjectTxt.ForeColor = SystemColors.ActiveCaption;
+            socialProjectTxt.Location = new Point(38, 188);
+            socialProjectTxt.Multiline = true;
+            socialProjectTxt.Name = "socialProjectTxt";
+            socialProjectTxt.ReadOnly = true;
+            socialProjectTxt.Size = new Size(848, 167);
+            socialProjectTxt.TabIndex = 5;
+            socialProjectTxt.Text = resources.GetString("socialProjectTxt.Text");
+            socialProjectTxt.TextAlign = HorizontalAlignment.Center;
+            // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 32F);
-            btnBack.Location = new Point(212, 569);
+            btnBack.Font = new Font("Segoe UI", 50.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ImageAlign = ContentAlignment.TopCenter;
+            btnBack.Location = new Point(214, 564);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(500, 80);
+            btnBack.Size = new Size(500, 97);
             btnBack.TabIndex = 4;
             btnBack.Text = "Voltar";
             btnBack.UseVisualStyleBackColor = true;
@@ -68,44 +99,14 @@ namespace DigitalInclusionApp
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 48F, FontStyle.Bold);
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
             lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
-            lblTitulo.Location = new Point(300, 20);
+            lblTitulo.Location = new Point(227, 43);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(324, 80);
+            lblTitulo.Size = new Size(478, 142);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Créditos";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            textBox1.AllowDrop = true;
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = Color.FromArgb(240, 240, 240);
-            textBox1.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(50, 130);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.ShortcutsEnabled = false;
-            textBox1.Size = new Size(824, 80);
-            textBox1.TabIndex = 5;
-            textBox1.Text = resources.GetString("textBox1.Text");
-            // 
-            // textBox2
-            // 
-            textBox2.AllowDrop = true;
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.BackColor = Color.FromArgb(240, 240, 240);
-            textBox2.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(50, 230);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.ShortcutsEnabled = false;
-            textBox2.Size = new Size(824, 80);
-            textBox2.TabIndex = 6;
-            textBox2.Text = "Desenvolvimento: Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
             // 
             // Credits
             // 
@@ -127,7 +128,7 @@ namespace DigitalInclusionApp
         private Panel panel1;
         private Button btnBack;
         private Label lblTitulo;
+        private TextBox socialProjectTxt;
         private TextBox textBox1;
-        private TextBox textBox2;
     }
 }
