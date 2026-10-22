@@ -56,6 +56,7 @@
             keyboardProgressBar.Name = "keyboardProgressBar";
             keyboardProgressBar.Size = new Size(330, 23);
             keyboardProgressBar.TabIndex = 1;
+            keyboardProgressBar.Click += keyboardProgressBar_Click;
             // 
             // backBtnKeyboardPractice
             // 
@@ -65,6 +66,7 @@
             backBtnKeyboardPractice.Name = "backBtnKeyboardPractice";
             backBtnKeyboardPractice.Size = new Size(125, 49);
             backBtnKeyboardPractice.TabIndex = 0;
+            backBtnKeyboardPractice.TabStop = false;
             backBtnKeyboardPractice.Text = "Voltar";
             backBtnKeyboardPractice.UseVisualStyleBackColor = true;
             backBtnKeyboardPractice.Click += backBtnKeyboardPractice_Click;
@@ -122,8 +124,10 @@
             inputWord.ScrollBars = RichTextBoxScrollBars.None;
             inputWord.Size = new Size(330, 48);
             inputWord.TabIndex = 6;
+            inputWord.TabStop = false;
             inputWord.Text = "Aperte qualquer tecla";
             inputWord.WordWrap = false;
+            inputWord.TextChanged += inputWord_TextChanged;
             // 
             // KeyboardPractice
             // 
@@ -140,6 +144,7 @@
             Name = "KeyboardPractice";
             Text = "Praticar o Teclado";
             Load += Form1_Load;
+            KeyPress += KeyboardPractice_KeyPress;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

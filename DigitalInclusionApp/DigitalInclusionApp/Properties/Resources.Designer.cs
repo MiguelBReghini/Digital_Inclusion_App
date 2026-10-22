@@ -119,5 +119,61 @@ namespace DigitalInclusionApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KeyboardImage {
+            get {
+                object obj = ResourceManager.GetObject("KeyboardImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {
+        ///  &quot;name&quot;: &quot;portuguese&quot;,
+        ///  &quot;_comment&quot;: &quot;Sourced from: https://www.wordandphrase.info/port&quot;,
+        ///
+        ///  &quot;bcp47&quot;: &quot;pt-PT&quot;,
+        ///  &quot;words&quot;: [
+        ///    &quot;o&quot;,
+        ///    &quot;de&quot;,
+        ///    &quot;e&quot;,
+        ///    &quot;em&quot;,
+        ///    &quot;um&quot;,
+        ///    &quot;que&quot;,
+        ///    &quot;a&quot;,
+        ///    &quot;ser&quot;,
+        ///    &quot;para&quot;,
+        ///    &quot;não&quot;,
+        ///    &quot;com&quot;,
+        ///    &quot;por&quot;,
+        ///    &quot;ter&quot;,
+        ///    &quot;se&quot;,
+        ///    &quot;seu&quot;,
+        ///    &quot;eu&quot;,
+        ///    &quot;ele&quot;,
+        ///    &quot;fazer&quot;,
+        ///    &quot;mais&quot;,
+        ///    &quot;este&quot;,
+        ///    &quot;ou&quot;,
+        ///    &quot;poder&quot;,
+        ///    &quot;estar&quot;,
+        ///    &quot;esse&quot;,
+        ///    &quot;mas&quot;,
+        ///    &quot;ir&quot;,
+        ///    &quot;todo&quot;,
+        ///    &quot;outro&quot;,
+        ///    &quot;meu&quot;,
+        ///    &quot;muito&quot;,
+        ///    &quot;dizer&quot;,
+        ///    [o restante da cadeia de caracteres foi truncado]&quot;;.
+        /// </summary>
+        internal static string portuguese {
+            get {
+                return ResourceManager.GetString("portuguese", resourceCulture);
+            }
+        }
     }
 }

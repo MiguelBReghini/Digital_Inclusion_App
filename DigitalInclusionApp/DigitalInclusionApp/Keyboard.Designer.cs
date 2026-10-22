@@ -30,12 +30,12 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            voltarBtn = new Button();
             btnPraticaKeyboard = new Button();
             keyboardContent = new Label();
             panel2 = new Panel();
             imgKeyboard = new PictureBox();
             process1 = new System.Diagnostics.Process();
-            voltarBtn = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgKeyboard).BeginInit();
@@ -66,6 +66,19 @@
             panel1.Size = new Size(1158, 532);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // voltarBtn
+            // 
+            voltarBtn.Anchor = AnchorStyles.Bottom;
+            voltarBtn.AutoSize = true;
+            voltarBtn.Font = new Font("Segoe UI", 20F);
+            voltarBtn.Location = new Point(1029, 439);
+            voltarBtn.Name = "voltarBtn";
+            voltarBtn.Size = new Size(97, 52);
+            voltarBtn.TabIndex = 5;
+            voltarBtn.Text = "Voltar";
+            voltarBtn.UseVisualStyleBackColor = true;
+            voltarBtn.Click += voltarBtn_Click;
             // 
             // btnPraticaKeyboard
             // 
@@ -108,7 +121,11 @@
             // 
             imgKeyboard.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             imgKeyboard.BackgroundImageLayout = ImageLayout.None;
+<<<<<<< HEAD
             imgKeyboard.Image = Properties.Resources.d609243a20117cb8132988815ded3c8b;
+=======
+            imgKeyboard.Image = Properties.Resources.KeyboardImage;
+>>>>>>> 0208a9a (conclui o jogo do teclado)
             imgKeyboard.Location = new Point(3, 70);
             imgKeyboard.Margin = new Padding(20);
             imgKeyboard.Name = "imgKeyboard";
@@ -129,19 +146,6 @@
             process1.StartInfo.UseCredentialsForNetworkingOnly = false;
             process1.StartInfo.UserName = "";
             process1.SynchronizingObject = this;
-            // 
-            // voltarBtn
-            // 
-            voltarBtn.Anchor = AnchorStyles.Bottom;
-            voltarBtn.AutoSize = true;
-            voltarBtn.Font = new Font("Segoe UI", 20F);
-            voltarBtn.Location = new Point(1029, 439);
-            voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(97, 52);
-            voltarBtn.TabIndex = 5;
-            voltarBtn.Text = "Voltar";
-            voltarBtn.UseVisualStyleBackColor = true;
-            voltarBtn.Click += voltarBtn_Click;
             // 
             // Keyboard
             // 
