@@ -32,17 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keyboard));
             label1 = new Label();
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
             voltarBtn = new Button();
             btnPraticaKeyboard = new Button();
             panel2 = new Panel();
+            pictureBox1 = new PictureBox();     
+            textBox1 = new TextBox();
             process1 = new System.Diagnostics.Process();
-            imageList1 = new ImageList(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
+            pictureBox1 = new PictureBox();
+            textBox1 = new TextBox();
             // 
             // label1
             // 
@@ -110,6 +111,19 @@
             voltarBtn.UseVisualStyleBackColor = true;
             voltarBtn.Click += voltarBtn_Click;
             // 
+            // voltarBtn
+            // 
+            voltarBtn.Anchor = AnchorStyles.Bottom;
+            voltarBtn.AutoSize = true;
+            voltarBtn.Font = new Font("Segoe UI", 20F);
+            voltarBtn.Location = new Point(1029, 439);
+            voltarBtn.Name = "voltarBtn";
+            voltarBtn.Size = new Size(97, 52);
+            voltarBtn.TabIndex = 5;
+            voltarBtn.Text = "Voltar";
+            voltarBtn.UseVisualStyleBackColor = true;
+            voltarBtn.Click += voltarBtn_Click;
+            // 
             // btnPraticaKeyboard
             // 
             btnPraticaKeyboard.Anchor = AnchorStyles.Bottom;
@@ -146,12 +160,6 @@
             process1.StartInfo.UseCredentialsForNetworkingOnly = false;
             process1.StartInfo.UserName = "";
             process1.SynchronizingObject = this;
-            // 
-            // imageList1
-            // 
-            imageList1.ColorDepth = ColorDepth.Depth32Bit;
-            imageList1.ImageSize = new Size(16, 16);
-            imageList1.TransparentColor = Color.Transparent;
             // 
             // Keyboard
             // 

@@ -46,6 +46,7 @@
             keyboardProgressBar.Name = "keyboardProgressBar";
             keyboardProgressBar.Size = new Size(330, 23);
             keyboardProgressBar.TabIndex = 1;
+            keyboardProgressBar.Click += keyboardProgressBar_Click;
             // 
             // backBtnKeyboardPractice
             // 
@@ -55,6 +56,7 @@
             backBtnKeyboardPractice.Name = "backBtnKeyboardPractice";
             backBtnKeyboardPractice.Size = new Size(320, 93);
             backBtnKeyboardPractice.TabIndex = 0;
+            backBtnKeyboardPractice.TabStop = false;
             backBtnKeyboardPractice.Text = "Voltar";
             backBtnKeyboardPractice.UseVisualStyleBackColor = true;
             backBtnKeyboardPractice.Click += backBtnKeyboardPractice_Click;
@@ -124,24 +126,10 @@
             inputWord.ScrollBars = RichTextBoxScrollBars.None;
             inputWord.Size = new Size(513, 77);
             inputWord.TabIndex = 6;
+            inputWord.TabStop = false;
             inputWord.Text = "Aperte qualquer tecla";
             inputWord.WordWrap = false;
             inputWord.TextChanged += inputWord_TextChanged;
-            // 
-            // panel2
-            // 
-            panel2.BackgroundImage = Properties.Resources._1280;
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Controls.Add(backBtnKeyboardPractice);
-            panel2.Controls.Add(keyboardProgressBar);
-            panel2.Controls.Add(instructionsKeyboardPractice);
-            panel2.Controls.Add(disclaimerKeyboardPractice);
-            panel2.Controls.Add(diclaimerKeyboardPractice2);
-            panel2.Controls.Add(inputWord);
-            panel2.Location = new Point(0, -2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(924, 702);
-            panel2.TabIndex = 7;
             // 
             // KeyboardPractice
             // 
@@ -154,8 +142,8 @@
             Name = "KeyboardPractice";
             Text = "Praticar o Teclado";
             Load += Form1_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            KeyPress += KeyboardPractice_KeyPress;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
