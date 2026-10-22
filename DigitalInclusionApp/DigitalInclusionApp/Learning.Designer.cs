@@ -39,7 +39,7 @@ namespace DigitalInclusionApp
             // panel1
             // 
             panel1.BackColor = Color.Navy;
-            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImage = Properties.Resources._1280;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnSecurity);
@@ -53,8 +53,8 @@ namespace DigitalInclusionApp
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 32F);
-            btnBack.Location = new Point(212, 569);
+            btnBack.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
+            btnBack.Location = new Point(215, 569);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
@@ -64,10 +64,10 @@ namespace DigitalInclusionApp
             // 
             // btnSecurity
             // 
-            btnSecurity.Font = new Font("Segoe UI", 28F);
-            btnSecurity.Location = new Point(520, 300);
+            btnSecurity.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
+            btnSecurity.Location = new Point(520, 246);
             btnSecurity.Name = "btnSecurity";
-            btnSecurity.Size = new Size(300, 200);
+            btnSecurity.Size = new Size(300, 254);
             btnSecurity.TabIndex = 3;
             btnSecurity.Text = "Segurança";
             btnSecurity.TextAlign = ContentAlignment.BottomCenter;
@@ -76,10 +76,10 @@ namespace DigitalInclusionApp
             // 
             // btnInformatics
             // 
-            btnInformatics.Font = new Font("Segoe UI", 28F);
-            btnInformatics.Location = new Point(104, 300);
+            btnInformatics.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
+            btnInformatics.Location = new Point(104, 246);
             btnInformatics.Name = "btnInformatics";
-            btnInformatics.Size = new Size(300, 200);
+            btnInformatics.Size = new Size(300, 254);
             btnInformatics.TabIndex = 1;
             btnInformatics.Text = "Informática";
             btnInformatics.TextAlign = ContentAlignment.BottomCenter;
@@ -91,11 +91,11 @@ namespace DigitalInclusionApp
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 60F, FontStyle.Bold);
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
             lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
-            lblTitulo.Location = new Point(250, 20);
+            lblTitulo.Location = new Point(199, 46);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(393, 106);
+            lblTitulo.Size = new Size(526, 142);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprenda!";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;

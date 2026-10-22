@@ -32,12 +32,27 @@ namespace DigitalInclusionApp
             t1 = new Thread(openKeyboard);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
-            
+
         }
         private void openKeyboard()
         {
             Application.Run(new Keyboard());
             return;
+        }
+
+        private void inputWord_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void disclaimerKeyboardPractice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void instructionsKeyboardPractice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
