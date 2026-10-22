@@ -39,7 +39,7 @@ namespace DigitalInclusionApp
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImage = Properties.Resources._1280;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnMouse);
@@ -53,8 +53,8 @@ namespace DigitalInclusionApp
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 32F);
-            btnBack.Location = new Point(212, 569);
+            btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBack.Location = new Point(207, 569);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
@@ -64,10 +64,10 @@ namespace DigitalInclusionApp
             // 
             // btnMouse
             // 
-            btnMouse.Font = new Font("Segoe UI", 28F);
-            btnMouse.Location = new Point(520, 300);
+            btnMouse.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnMouse.Location = new Point(520, 246);
             btnMouse.Name = "btnMouse";
-            btnMouse.Size = new Size(300, 200);
+            btnMouse.Size = new Size(300, 254);
             btnMouse.TabIndex = 3;
             btnMouse.Text = "Mouse";
             btnMouse.TextAlign = ContentAlignment.BottomCenter;
@@ -76,10 +76,10 @@ namespace DigitalInclusionApp
             // 
             // btnKeyboard
             // 
-            btnKeyboard.Font = new Font("Segoe UI", 28F);
-            btnKeyboard.Location = new Point(104, 300);
+            btnKeyboard.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnKeyboard.Location = new Point(104, 246);
             btnKeyboard.Name = "btnKeyboard";
-            btnKeyboard.Size = new Size(300, 200);
+            btnKeyboard.Size = new Size(300, 254);
             btnKeyboard.TabIndex = 1;
             btnKeyboard.Text = "Teclado";
             btnKeyboard.TextAlign = ContentAlignment.BottomCenter;
@@ -91,11 +91,11 @@ namespace DigitalInclusionApp
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 60F, FontStyle.Bold);
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
             lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
-            lblTitulo.Location = new Point(200, 20);
+            lblTitulo.Location = new Point(140, 35);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(524, 106);
+            lblTitulo.Size = new Size(645, 142);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Informática";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;

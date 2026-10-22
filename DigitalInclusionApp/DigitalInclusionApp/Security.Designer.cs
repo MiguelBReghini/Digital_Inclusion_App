@@ -38,7 +38,7 @@ namespace DigitalInclusionApp
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackgroundImage = Properties.Resources._1280;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnScam);
@@ -51,8 +51,8 @@ namespace DigitalInclusionApp
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 32F);
-            btnBack.Location = new Point(212, 569);
+            btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBack.Location = new Point(212, 571);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
@@ -62,10 +62,10 @@ namespace DigitalInclusionApp
             // 
             // btnScam
             // 
-            btnScam.Font = new Font("Segoe UI", 28F);
-            btnScam.Location = new Point(312, 300);
+            btnScam.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnScam.Location = new Point(312, 248);
             btnScam.Name = "btnScam";
-            btnScam.Size = new Size(300, 200);
+            btnScam.Size = new Size(300, 254);
             btnScam.TabIndex = 1;
             btnScam.Text = "Golpes";
             btnScam.TextAlign = ContentAlignment.BottomCenter;
@@ -77,11 +77,11 @@ namespace DigitalInclusionApp
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 60F, FontStyle.Bold);
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
             lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
-            lblTitulo.Location = new Point(200, 20);
+            lblTitulo.Location = new Point(170, 20);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(524, 106);
+            lblTitulo.Size = new Size(584, 142);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Segurança";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;

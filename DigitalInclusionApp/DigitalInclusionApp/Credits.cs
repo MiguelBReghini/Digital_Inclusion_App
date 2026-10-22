@@ -52,5 +52,10 @@ namespace DigitalInclusionApp
             Application.Run(new MainForm());
             return;
         }
+
+        private void SocialProjectlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
