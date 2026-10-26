@@ -148,6 +148,20 @@
             panel2.Size = new Size(924, 127);
             panel2.TabIndex = 2;
             // 
+<<<<<<< HEAD
+            // imgKeyboard
+            // 
+            imgKeyboard.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            imgKeyboard.Location = new Point(3, 70);
+            imgKeyboard.Margin = new Padding(20);
+            imgKeyboard.Name = "imgKeyboard";
+            imgKeyboard.Size = new Size(502, 450);
+            imgKeyboard.TabIndex = 1;
+            imgKeyboard.TabStop = false;
+            imgKeyboard.Click += pictureBox1_Click;
+            // 
+=======
+>>>>>>> 6370a5b9459892136e6365c2b52ceaaa1e3880a5
             // process1
             // 
             process1.StartInfo.CreateNewProcessGroup = false;

@@ -4,6 +4,9 @@
     <Compile Update="Credits.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Mouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="KeyboardPractice.cs">
       <SubType>Form</SubType>
     </Compile>

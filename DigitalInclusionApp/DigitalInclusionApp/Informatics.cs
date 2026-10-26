@@ -52,10 +52,10 @@ namespace DigitalInclusionApp
 
         private void btnMouse_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //t1 = new Thread(openMouse);
-            //t1.SetApartmentState(ApartmentState.STA);
-            //t1.Start();
+            this.Close();
+            t1 = new Thread(openMouse);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
             return;
         }
 
@@ -74,7 +74,7 @@ namespace DigitalInclusionApp
 
         public void openMouse()
         {
-            //Application.Run(new Mouse());
+            Application.Run(new Mouse());
             return;
         }
 
