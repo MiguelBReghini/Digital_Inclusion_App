@@ -120,12 +120,6 @@
             // imgKeyboard
             // 
             imgKeyboard.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            imgKeyboard.BackgroundImageLayout = ImageLayout.None;
-<<<<<<< HEAD
-            imgKeyboard.Image = Properties.Resources.d609243a20117cb8132988815ded3c8b;
-=======
-            imgKeyboard.Image = Properties.Resources.KeyboardImage;
->>>>>>> 0208a9a (conclui o jogo do teclado)
             imgKeyboard.Location = new Point(3, 70);
             imgKeyboard.Margin = new Padding(20);
             imgKeyboard.Name = "imgKeyboard";
