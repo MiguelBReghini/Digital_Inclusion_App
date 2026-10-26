@@ -28,44 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keyboard));
             label1 = new Label();
             panel1 = new Panel();
             voltarBtn = new Button();
             btnPraticaKeyboard = new Button();
-            keyboardContent = new Label();
             panel2 = new Panel();
-            imgKeyboard = new PictureBox();
+            pictureBox1 = new PictureBox();     
+            textBox1 = new TextBox();
             process1 = new System.Diagnostics.Process();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)imgKeyboard).BeginInit();
             SuspendLayout();
+            pictureBox1 = new PictureBox();
+            textBox1 = new TextBox();
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 40F);
-            label1.Location = new Point(474, 4);
+            label1.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.GradientActiveCaption;
+            label1.Location = new Point(268, 6);
             label1.Margin = new Padding(20);
             label1.Name = "label1";
-            label1.Size = new Size(210, 72);
+            label1.Size = new Size(389, 125);
             label1.TabIndex = 0;
             label1.Text = "Teclado";
             // 
             // panel1
             // 
+            panel1.AutoSize = true;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(voltarBtn);
             panel1.Controls.Add(btnPraticaKeyboard);
-            panel1.Controls.Add(keyboardContent);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(imgKeyboard);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1158, 532);
+            panel1.Size = new Size(924, 700);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 133);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(499, 430);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(2, 36, 64);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = SystemColors.ActiveCaption;
+            textBox1.Location = new Point(505, 154);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(416, 321);
+            textBox1.TabIndex = 7;
+            textBox1.Text = "A imagem mostra um guia visual da posição ideal dos dedos em um teclado de computador, com cada cor correspondendo a um dedo e às teclas que ele deve acionar. Note que há um padrão para facilitar.";
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // voltarBtn
+            // 
+            voltarBtn.Anchor = AnchorStyles.Bottom;
+            voltarBtn.AutoSize = true;
+            voltarBtn.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            voltarBtn.Location = new Point(99, 577);
+            voltarBtn.Name = "voltarBtn";
+            voltarBtn.Size = new Size(320, 93);
+            voltarBtn.TabIndex = 5;
+            voltarBtn.Text = "Voltar";
+            voltarBtn.UseVisualStyleBackColor = true;
+            voltarBtn.Click += voltarBtn_Click;
             // 
             // voltarBtn
             // 
@@ -84,39 +128,27 @@
             // 
             btnPraticaKeyboard.Anchor = AnchorStyles.Bottom;
             btnPraticaKeyboard.AutoSize = true;
-            btnPraticaKeyboard.Font = new Font("Segoe UI", 40F);
-            btnPraticaKeyboard.Location = new Point(718, 409);
+            btnPraticaKeyboard.Font = new Font("Segoe UI", 45F, FontStyle.Bold);
+            btnPraticaKeyboard.Location = new Point(505, 577);
             btnPraticaKeyboard.Name = "btnPraticaKeyboard";
-            btnPraticaKeyboard.Size = new Size(219, 93);
+            btnPraticaKeyboard.Size = new Size(320, 93);
             btnPraticaKeyboard.TabIndex = 4;
             btnPraticaKeyboard.Text = "Praticar";
             btnPraticaKeyboard.UseVisualStyleBackColor = true;
             btnPraticaKeyboard.Click += btnPraticaKeyboard_Click;
             // 
-            // keyboardContent
-            // 
-            keyboardContent.AllowDrop = true;
-            keyboardContent.Anchor = AnchorStyles.Right;
-            keyboardContent.AutoEllipsis = true;
-            keyboardContent.AutoSize = true;
-            keyboardContent.Font = new Font("Segoe UI", 25F);
-            keyboardContent.Location = new Point(512, 85);
-            keyboardContent.MaximumSize = new Size(600, 0);
-            keyboardContent.Name = "keyboardContent";
-            keyboardContent.Size = new Size(599, 276);
-            keyboardContent.TabIndex = 3;
-            keyboardContent.Text = "A imagem mostra um guia visual da posição correta dos dedos em um teclado de computador, com cada cor correspondendo a um dedo e às teclas que ele deve acionar. Note que há um padrão para facilitar.";
-            keyboardContent.TextAlign = ContentAlignment.TopCenter;
-            // 
             // panel2
             // 
+            panel2.BackColor = Color.Transparent;
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1158, 84);
+            panel2.Size = new Size(924, 127);
             panel2.TabIndex = 2;
             // 
+<<<<<<< HEAD
             // imgKeyboard
             // 
             imgKeyboard.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -128,6 +160,8 @@
             imgKeyboard.TabStop = false;
             imgKeyboard.Click += pictureBox1_Click;
             // 
+=======
+>>>>>>> 6370a5b9459892136e6365c2b52ceaaa1e3880a5
             // process1
             // 
             process1.StartInfo.CreateNewProcessGroup = false;
@@ -146,28 +180,29 @@
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoScroll = true;
-            ClientSize = new Size(1158, 532);
+            ClientSize = new Size(924, 700);
             Controls.Add(panel1);
             Name = "Keyboard";
             Text = "Teclado";
-            Load += Keyboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)imgKeyboard).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
         private Panel panel1;
-        private PictureBox imgKeyboard;
         private Panel panel2;
-        private Label keyboardContent;
         private Button btnPraticaKeyboard;
         private Button voltarBtn;
         private System.Diagnostics.Process process1;
+        private TextBox textBox1;
+        private PictureBox pictureBox1;
+        private ImageList imageList1;
     }
 }

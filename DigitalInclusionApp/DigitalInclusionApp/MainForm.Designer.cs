@@ -38,8 +38,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources.Fundo_Abstrato_Azul_com_Ondas_Fluídas;
+            panel1.BackColor = Color.White;
+            panel1.BackgroundImage = Properties.Resources._1280;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnSair);
             panel1.Controls.Add(btnCreditos);
@@ -56,10 +56,10 @@
             // 
             btnSair.AutoSize = true;
             btnSair.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnSair.Font = new Font("Segoe UI", 48F);
+            btnSair.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.Location = new Point(376, 569);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(152, 96);
+            btnSair.Size = new Size(160, 96);
             btnSair.TabIndex = 4;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // 
             btnCreditos.AutoSize = true;
             btnCreditos.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnCreditos.Font = new Font("Segoe UI", 60F);
+            btnCreditos.Font = new Font("Segoe UI", 60F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreditos.Location = new Point(289, 387);
             btnCreditos.Name = "btnCreditos";
-            btnCreditos.Size = new Size(349, 116);
+            btnCreditos.Size = new Size(368, 116);
             btnCreditos.TabIndex = 3;
             btnCreditos.Text = "Créditos";
             btnCreditos.UseVisualStyleBackColor = true;
@@ -82,11 +82,11 @@
             // 
             btnAprender.AutoSize = true;
             btnAprender.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAprender.BackColor = SystemColors.ActiveCaption;
-            btnAprender.Font = new Font("Segoe UI", 60F);
+            btnAprender.BackColor = Color.White;
+            btnAprender.Font = new Font("Segoe UI", 60F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAprender.Location = new Point(269, 205);
             btnAprender.Name = "btnAprender";
-            btnAprender.Size = new Size(386, 116);
+            btnAprender.Size = new Size(409, 116);
             btnAprender.TabIndex = 1;
             btnAprender.Text = "Aprender";
             btnAprender.UseVisualStyleBackColor = false;
@@ -118,6 +118,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
