@@ -33,6 +33,7 @@
             voltarBtn = new Button();
             btnTarget = new Button();
             btnTargetDir = new Button();
+            progressMouse = new ProgressBar();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(810, 100);
+            panel1.Size = new Size(1326, 100);
             panel1.TabIndex = 0;
             // 
             // mouseLabel
@@ -51,7 +52,7 @@
             mouseLabel.AutoSize = true;
             mouseLabel.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
             mouseLabel.ForeColor = SystemColors.GradientActiveCaption;
-            mouseLabel.Location = new Point(240, -10);
+            mouseLabel.Location = new Point(498, -10);
             mouseLabel.Name = "mouseLabel";
             mouseLabel.Size = new Size(349, 125);
             mouseLabel.TabIndex = 0;
@@ -67,7 +68,7 @@
             voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
-            voltarBtn.Location = new Point(155, 352);
+            voltarBtn.Location = new Point(413, 726);
             voltarBtn.Name = "voltarBtn";
             voltarBtn.Size = new Size(500, 80);
             voltarBtn.TabIndex = 1;
@@ -114,12 +115,21 @@
             btnTargetDir.Click += btnTargetDir_Click;
             btnTargetDir.MouseDown += btnTargetDir_Click_MouseDown;
             // 
+            // progressMouse
+            // 
+            progressMouse.ForeColor = Color.Lime;
+            progressMouse.Location = new Point(348, 648);
+            progressMouse.Name = "progressMouse";
+            progressMouse.Size = new Size(675, 48);
+            progressMouse.TabIndex = 4;
+            // 
             // Mouse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(1, 34, 62);
-            ClientSize = new Size(810, 459);
+            ClientSize = new Size(1326, 833);
+            Controls.Add(progressMouse);
             Controls.Add(btnTargetDir);
             Controls.Add(btnTarget);
             Controls.Add(voltarBtn);
@@ -139,5 +149,6 @@
         private Button voltarBtn;
         private Button btnTarget;
         private Button btnTargetDir;
+        private ProgressBar progressMouse;
     }
 }

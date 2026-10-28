@@ -144,14 +144,29 @@ namespace DigitalInclusionApp
             if (palavrasCompletadas >= quotaPalavras)
             {
                 inputWord.Refresh();
-                MessageBox.Show("Você concluiu 10 palavras.");
+                MessageBox.Show("Você concluiu 10 palavras!");
+                ResetGame();
                 return;
             }
 
+            NextWord();
+        }
+
+        private void ResetGame()
+        {
+            palavrasCompletadas = 0;
+            keyboardProgressBar.Value = 0;
+            NextWord();
+        }
+        private void NextWord()
+        {
             randomizer.RandomizeIndex();
             Palavra.Text = randomizer.RandomWord;
             validator.StartWord(randomizer.RandomWord);
             inputWord.Clear();
+            erroAtivo = false;
         }
+
+       
     }
 }
