@@ -1,4 +1,4 @@
-﻿namespace DigitalInclusionApp
+namespace DigitalInclusionApp
 {
     partial class Keyboard
     {
@@ -28,22 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keyboard));
             label1 = new Label();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            textBox1 = new TextBox();
             voltarBtn = new Button();
             btnPraticaKeyboard = new Button();
             panel2 = new Panel();
-            pictureBox1 = new PictureBox();     
-            textBox1 = new TextBox();
             process1 = new System.Diagnostics.Process();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
             // 
             // label1
             // 
@@ -61,7 +57,7 @@
             // panel1
             // 
             panel1.AutoSize = true;
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(textBox1);
@@ -76,16 +72,17 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.KeyboardImage;
             pictureBox1.Location = new Point(0, 133);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(499, 430);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(2, 36, 64);
+            textBox1.BackColor = Color.FromArgb(1, 34, 62);
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
@@ -102,26 +99,14 @@
             // 
             voltarBtn.Anchor = AnchorStyles.Bottom;
             voltarBtn.AutoSize = true;
+            voltarBtn.BackColor = Color.White;
             voltarBtn.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            voltarBtn.Location = new Point(99, 577);
+            voltarBtn.Location = new Point(106, 577);
             voltarBtn.Name = "voltarBtn";
             voltarBtn.Size = new Size(320, 93);
             voltarBtn.TabIndex = 5;
             voltarBtn.Text = "Voltar";
-            voltarBtn.UseVisualStyleBackColor = true;
-            voltarBtn.Click += voltarBtn_Click;
-            // 
-            // voltarBtn
-            // 
-            voltarBtn.Anchor = AnchorStyles.Bottom;
-            voltarBtn.AutoSize = true;
-            voltarBtn.Font = new Font("Segoe UI", 20F);
-            voltarBtn.Location = new Point(1029, 439);
-            voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(97, 52);
-            voltarBtn.TabIndex = 5;
-            voltarBtn.Text = "Voltar";
-            voltarBtn.UseVisualStyleBackColor = true;
+            voltarBtn.UseVisualStyleBackColor = false;
             voltarBtn.Click += voltarBtn_Click;
             // 
             // btnPraticaKeyboard
@@ -148,20 +133,6 @@
             panel2.Size = new Size(924, 127);
             panel2.TabIndex = 2;
             // 
-<<<<<<< HEAD
-            // imgKeyboard
-            // 
-            imgKeyboard.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            imgKeyboard.Location = new Point(3, 70);
-            imgKeyboard.Margin = new Padding(20);
-            imgKeyboard.Name = "imgKeyboard";
-            imgKeyboard.Size = new Size(502, 450);
-            imgKeyboard.TabIndex = 1;
-            imgKeyboard.TabStop = false;
-            imgKeyboard.Click += pictureBox1_Click;
-            // 
-=======
->>>>>>> 6370a5b9459892136e6365c2b52ceaaa1e3880a5
             // process1
             // 
             process1.StartInfo.CreateNewProcessGroup = false;

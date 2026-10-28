@@ -15,27 +15,52 @@ namespace DigitalInclusionApp
         public Keyboard()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+            ApplyFullscreen();
+            CenterControls();
+        }
 
-            Rectangle area = Screen.FromControl(this).WorkingArea;
-            if (area.Width == 0 || area.Height == 0)
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            if (IsHandleCreated)
+            {
+                CenterControls();
+            }
+        }
+
+        private void ApplyFullscreen()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void CenterControls()
+        {
+            if (panel1 == null)
                 return;
 
-            if (this.Width > area.Width || this.Height > area.Height)
-            {
-                float scaleX = (float)area.Width / this.Width;
-                float scaleY = (float)area.Height / this.Height;
-                float scale = Math.Min(scaleX, scaleY);
-                this.Scale(new SizeF(scale, scale));
-            }
+            var centerX = panel1.ClientSize.Width / 2;
+            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 2 - 80);
+            pictureBox1.Width = imageWidth;
+            pictureBox1.Height = (int)(imageWidth * 0.86);
+            pictureBox1.Left = centerX - (pictureBox1.Width / 2) - 170;
 
-            this.Location = new Point(
-                area.Left + (area.Width - this.Width) / 2,
-                area.Top + (area.Height - this.Height) / 2
-            );
+            var textWidth = Math.Min(420, panel1.ClientSize.Width / 3);
+            textBox1.Width = textWidth;
+            textBox1.Left = centerX + 20;
+
+            voltarBtn.Left = centerX - 340;
+            btnPraticaKeyboard.Left = centerX + 20;
+            label1.Left = centerX - (label1.Width / 2);
         }
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)

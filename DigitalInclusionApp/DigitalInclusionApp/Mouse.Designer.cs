@@ -49,52 +49,76 @@
             // 
             mouseLabel.Anchor = AnchorStyles.Top;
             mouseLabel.AutoSize = true;
-            mouseLabel.Font = new Font("Segoe UI", 34F);
-            mouseLabel.Location = new Point(334, 9);
+            mouseLabel.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
+            mouseLabel.ForeColor = SystemColors.GradientActiveCaption;
+            mouseLabel.Location = new Point(240, -10);
             mouseLabel.Name = "mouseLabel";
-            mouseLabel.Size = new Size(165, 62);
+            mouseLabel.Size = new Size(349, 125);
             mouseLabel.TabIndex = 0;
             mouseLabel.Text = "Mouse";
+            mouseLabel.Click += mouseLabel_Click;
             // 
             // voltarBtn
             // 
-            voltarBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            voltarBtn.Font = new Font("Segoe UI", 22F);
-            voltarBtn.Location = new Point(685, 401);
+            voltarBtn.Anchor = AnchorStyles.Bottom;
+            voltarBtn.BackColor = Color.FromArgb(231, 237, 58);
+            voltarBtn.FlatAppearance.BorderColor = Color.FromArgb(1, 34, 62);
+            voltarBtn.FlatAppearance.BorderSize = 2;
+            voltarBtn.FlatStyle = FlatStyle.Flat;
+            voltarBtn.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
+            voltarBtn.Location = new Point(155, 352);
             voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(113, 46);
+            voltarBtn.Size = new Size(500, 80);
             voltarBtn.TabIndex = 1;
-            voltarBtn.Text = "Voltar";
-            voltarBtn.UseVisualStyleBackColor = true;
+            voltarBtn.Text = "⬅       Voltar";
+            voltarBtn.TextAlign = ContentAlignment.MiddleLeft;
+            voltarBtn.UseVisualStyleBackColor = false;
             voltarBtn.Click += voltarBtn_Click;
             // 
             // btnTarget
             // 
-            btnTarget.Font = new Font("Segoe UI", 14F);
-            btnTarget.Location = new Point(314, 230);
+            btnTarget.BackColor = SystemColors.ActiveCaption;
+            btnTarget.BackgroundImageLayout = ImageLayout.None;
+            btnTarget.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            btnTarget.FlatAppearance.MouseDownBackColor = Color.Green;
+            btnTarget.FlatAppearance.MouseOverBackColor = Color.Green;
+            btnTarget.FlatStyle = FlatStyle.Flat;
+            btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTarget.ForeColor = SystemColors.ActiveCaptionText;
+            btnTarget.Location = new Point(308, 197);
             btnTarget.Name = "btnTarget";
-            btnTarget.Size = new Size(203, 70);
+            btnTarget.Size = new Size(212, 84);
             btnTarget.TabIndex = 2;
-            btnTarget.Text = "Clique Aqui para começar";
-            btnTarget.UseVisualStyleBackColor = true;
+            btnTarget.Text = "Clique Aqui para começar!";
+            btnTarget.UseVisualStyleBackColor = false;
             btnTarget.Click += btnTarget_Click;
             // 
             // btnTargetDir
             // 
-            btnTargetDir.Font = new Font("Segoe UI", 14F);
-            btnTargetDir.Location = new Point(35, 138);
+            btnTargetDir.BackColor = SystemColors.ActiveCaption;
+            btnTargetDir.BackgroundImageLayout = ImageLayout.None;
+            btnTargetDir.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            btnTargetDir.FlatAppearance.MouseDownBackColor = Color.Green;
+            btnTargetDir.FlatAppearance.MouseOverBackColor = Color.Green;
+            btnTargetDir.FlatStyle = FlatStyle.Flat;
+            btnTargetDir.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold);
+            btnTargetDir.ForeColor = Color.Black;
+            btnTargetDir.Location = new Point(59, 118);
             btnTargetDir.Name = "btnTargetDir";
-            btnTargetDir.Size = new Size(203, 70);
+            btnTargetDir.Size = new Size(212, 84);
             btnTargetDir.TabIndex = 3;
-            btnTargetDir.Text = "Clique Aqui com o Botão Direito";
-            btnTargetDir.UseVisualStyleBackColor = true;
+            btnTargetDir.Text = "Botão Direito";
+            btnTargetDir.UseVisualStyleBackColor = false;
             btnTargetDir.Visible = false;
+            btnTargetDir.Click += btnTargetDir_Click;
             btnTargetDir.MouseDown += btnTargetDir_Click_MouseDown;
             // 
             // Mouse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(1, 34, 62);
             ClientSize = new Size(810, 459);
             Controls.Add(btnTargetDir);
             Controls.Add(btnTarget);
@@ -102,6 +126,7 @@
             Controls.Add(panel1);
             Name = "Mouse";
             Text = "Form1";
+            Load += Mouse_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

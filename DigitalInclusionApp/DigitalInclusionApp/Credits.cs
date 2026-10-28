@@ -16,28 +16,53 @@ namespace DigitalInclusionApp
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+            ApplyFullscreen();
+            CenterControls();
+        }
 
-            Rectangle area = Screen.FromControl(this).WorkingArea;
-            if (area.Width == 0 || area.Height == 0)
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            if (IsHandleCreated)
+            {
+                CenterControls();
+            }
+        }
+
+        private void ApplyFullscreen()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void CenterControls()
+        {
+            if (panel1 == null)
                 return;
 
-            if (this.Width > area.Width || this.Height > area.Height)
-            {
-                float scaleX = (float)area.Width / this.Width;
-                float scaleY = (float)area.Height / this.Height;
-                float scale = Math.Min(scaleX, scaleY);
-                this.Scale(new SizeF(scale, scale));
-            }
+            var centerX = panel1.ClientSize.Width / 2;
 
-            this.Location = new Point(
-                area.Left + (area.Width - this.Width) / 2,
-                area.Top + (area.Height - this.Height) / 2
-            );
+            lblTitulo.Left = centerX - (lblTitulo.Width / 2);
+            socialProjectTxt.Left = centerX - (socialProjectTxt.Width / 2);
+            textBox1.Left = centerX - (textBox1.Width / 2);
+            btnBack.Left = centerX - (btnBack.Width / 2);
+
+            socialProjectTxt.Location = new Point(centerX - Convert.ToInt32(Width / 4.8), Height / 5);
+            textBox1.Location = new Point(centerX - Convert.ToInt32(Width / 4.8), Convert.ToInt32(Height / 1.6));
+
+            socialProjectTxt.Font = new Font("Segoe UI", 30, FontStyle.Bold);
+            socialProjectTxt.CharacterCasing = CharacterCasing.Upper;
+
+            textBox1.Font = new Font("Segoe UI", 30, FontStyle.Bold);
+            textBox1.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -54,6 +79,11 @@ namespace DigitalInclusionApp
         }
 
         private void SocialProjectlbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void socialProjectTxt_TextChanged(object sender, EventArgs e)
         {
 
         }

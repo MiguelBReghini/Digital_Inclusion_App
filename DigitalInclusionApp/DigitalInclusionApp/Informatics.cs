@@ -17,28 +17,56 @@ namespace DigitalInclusionApp
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+            ApplyFullscreen();
+            CenterControls();
+        }
 
-            Rectangle area = Screen.FromControl(this).WorkingArea;
-            if (area.Width == 0 || area.Height == 0)
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            if (IsHandleCreated)
+            {
+                CenterControls();
+            }
+        }
+
+        private void ApplyFullscreen()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void CenterControls()
+        {
+            if (panel1 == null)
                 return;
 
-            if (this.Width > area.Width || this.Height > area.Height)
-            {
-                float scaleX = (float)area.Width / this.Width;
-                float scaleY = (float)area.Height / this.Height;
-                float scale = Math.Min(scaleX, scaleY);
-                this.Scale(new SizeF(scale, scale));
-            }
+            var centerX = panel1.ClientSize.Width / 2;
 
-            this.Location = new Point(
-                area.Left + (area.Width - this.Width) / 2,
-                area.Top + (area.Height - this.Height) / 2
-            );
+            lblTitulo.Left = centerX - (lblTitulo.Width / 2);
+            btnKeyboard.Left = centerX - Convert.ToInt32(Width / 2.3);
+            btnMouse.Left = centerX + Convert.ToInt32(Width / 20);
+            btnBack.Left = centerX - (btnBack.Width / 2);
+
+            double divTop = 3;
+            double divSize = 2.6;
+
+            btnKeyboard.Top = Convert.ToInt32(Height / divTop);
+            btnMouse.Top = Convert.ToInt32(Height / divTop);
+
+            btnKeyboard.Width = Convert.ToInt32(Width / divSize);
+            btnMouse.Width = Convert.ToInt32(Width / divSize);
+
+            btnKeyboard.Height = Convert.ToInt32(Height / divSize);
+            btnMouse.Height = Convert.ToInt32(Height / divSize);
         }
 
         private void btnKeyboard_Click(object sender, EventArgs e)

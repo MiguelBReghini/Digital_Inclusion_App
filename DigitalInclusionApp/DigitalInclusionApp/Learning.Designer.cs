@@ -38,8 +38,7 @@ namespace DigitalInclusionApp
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Navy;
-            panel1.BackgroundImage = Properties.Resources._1280;
+            panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnSecurity);
@@ -53,17 +52,23 @@ namespace DigitalInclusionApp
             // 
             // btnBack
             // 
+            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnBack.BackColor = Color.FromArgb(231, 237, 58);
+            btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
+            btnBack.ForeColor = Color.FromArgb(1, 34, 62);
             btnBack.Location = new Point(215, 569);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
-            btnBack.Text = "Voltar";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "⬅       Voltar";
+            btnBack.TextAlign = ContentAlignment.MiddleLeft;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // btnSecurity
             // 
+            btnSecurity.Anchor = AnchorStyles.Left;
             btnSecurity.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
             btnSecurity.Location = new Point(520, 246);
             btnSecurity.Name = "btnSecurity";
@@ -76,6 +81,8 @@ namespace DigitalInclusionApp
             // 
             // btnInformatics
             // 
+            btnInformatics.Anchor = AnchorStyles.Left;
+            btnInformatics.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnInformatics.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
             btnInformatics.Location = new Point(104, 246);
             btnInformatics.Name = "btnInformatics";
@@ -88,17 +95,17 @@ namespace DigitalInclusionApp
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
             lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
-            lblTitulo.Location = new Point(199, 46);
+            lblTitulo.Location = new Point(199, 19);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(526, 142);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Aprenda!";
-            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            lblTitulo.TextAlign = ContentAlignment.TopCenter;
             // 
             // Learning
             // 
@@ -106,10 +113,11 @@ namespace DigitalInclusionApp
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Learning";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aprender";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

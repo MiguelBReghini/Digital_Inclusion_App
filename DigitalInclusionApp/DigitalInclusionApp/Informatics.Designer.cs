@@ -38,8 +38,7 @@ namespace DigitalInclusionApp
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources._1280;
+            panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnMouse);
@@ -53,13 +52,18 @@ namespace DigitalInclusionApp
             // 
             // btnBack
             // 
+            btnBack.Anchor = AnchorStyles.Bottom;
+            btnBack.BackColor = Color.FromArgb(231, 237, 58);
+            btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBack.ForeColor = Color.FromArgb(1, 34, 62);
             btnBack.Location = new Point(207, 569);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
-            btnBack.Text = "Voltar";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "⬅       Voltar";
+            btnBack.TextAlign = ContentAlignment.MiddleLeft;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // btnMouse
@@ -91,8 +95,9 @@ namespace DigitalInclusionApp
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
-            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.FlatStyle = FlatStyle.Flat;
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold | FontStyle.Underline);
+            lblTitulo.ForeColor = Color.FromArgb(128, 255, 255);
             lblTitulo.Location = new Point(140, 35);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(645, 142);
@@ -106,10 +111,11 @@ namespace DigitalInclusionApp
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Informatics";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Informática";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

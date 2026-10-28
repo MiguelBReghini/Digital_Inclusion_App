@@ -37,8 +37,7 @@ namespace DigitalInclusionApp
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources._1280;
+            panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnScam);
@@ -51,13 +50,18 @@ namespace DigitalInclusionApp
             // 
             // btnBack
             // 
+            btnBack.Anchor = AnchorStyles.Bottom;
+            btnBack.BackColor = Color.FromArgb(231, 237, 58);
+            btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBack.ForeColor = Color.FromArgb(1, 34, 62);
             btnBack.Location = new Point(212, 571);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
-            btnBack.Text = "Voltar";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "⬅       Voltar";
+            btnBack.TextAlign = ContentAlignment.MiddleLeft;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // btnScam
@@ -74,7 +78,7 @@ namespace DigitalInclusionApp
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
@@ -92,10 +96,11 @@ namespace DigitalInclusionApp
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Security";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Segurança";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
