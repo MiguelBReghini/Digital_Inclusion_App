@@ -39,8 +39,7 @@ namespace DigitalInclusionApp
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(3, 11, 174);
-            panel1.BackgroundImage = Properties.Resources._1280;
+            panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(socialProjectTxt);
@@ -54,7 +53,8 @@ namespace DigitalInclusionApp
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(2, 36, 64);
+            textBox1.Anchor = AnchorStyles.Top;
+            textBox1.BackColor = Color.FromArgb(1, 34, 62);
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
@@ -62,14 +62,15 @@ namespace DigitalInclusionApp
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(848, 88);
+            textBox1.Size = new Size(848, 173);
             textBox1.TabIndex = 6;
-            textBox1.Text = "Desenvolvimento: Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
+            textBox1.Text = "Desenvolvimento: \r\nFelipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // socialProjectTxt
             // 
-            socialProjectTxt.BackColor = Color.FromArgb(2, 36, 64);
+            socialProjectTxt.Anchor = AnchorStyles.Top;
+            socialProjectTxt.BackColor = Color.FromArgb(1, 34, 62);
             socialProjectTxt.BorderStyle = BorderStyle.None;
             socialProjectTxt.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             socialProjectTxt.ForeColor = SystemColors.ActiveCaption;
@@ -77,21 +78,27 @@ namespace DigitalInclusionApp
             socialProjectTxt.Multiline = true;
             socialProjectTxt.Name = "socialProjectTxt";
             socialProjectTxt.ReadOnly = true;
-            socialProjectTxt.Size = new Size(848, 167);
+            socialProjectTxt.Size = new Size(848, 370);
             socialProjectTxt.TabIndex = 5;
             socialProjectTxt.Text = resources.GetString("socialProjectTxt.Text");
             socialProjectTxt.TextAlign = HorizontalAlignment.Center;
+            socialProjectTxt.TextChanged += socialProjectTxt_TextChanged;
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 50.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Anchor = AnchorStyles.Bottom;
+            btnBack.BackColor = Color.FromArgb(231, 237, 58);
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBack.ForeColor = Color.FromArgb(1, 34, 62);
             btnBack.ImageAlign = ContentAlignment.TopCenter;
             btnBack.Location = new Point(214, 564);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(500, 97);
+            btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
-            btnBack.Text = "Voltar";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "⬅       Voltar";
+            btnBack.TextAlign = ContentAlignment.MiddleLeft;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // lblTitulo
@@ -99,8 +106,8 @@ namespace DigitalInclusionApp
             lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
-            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold | FontStyle.Underline);
+            lblTitulo.ForeColor = Color.FromArgb(128, 255, 255);
             lblTitulo.Location = new Point(227, 43);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(478, 142);
@@ -114,10 +121,11 @@ namespace DigitalInclusionApp
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Credits";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Credits";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

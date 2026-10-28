@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
-using System.Text;
-using System.Text.Json;
+using System.Threading;
 using System.Windows.Forms;
 using DigitalInclusionApp.Games;
+
 namespace DigitalInclusionApp
 {
     public partial class KeyboardPractice : Form
@@ -17,13 +12,54 @@ namespace DigitalInclusionApp
         private bool erroAtivo = false;
         private int palavrasCompletadas = 0;
         private const int quotaPalavras = 10;
-        Thread? t1;
-        private WordRandomizer randomizer = new WordRandomizer();
-        private TypingValidator validator = new TypingValidator();
+        private Thread? t1;
+        private readonly WordRandomizer randomizer = new();
+        private readonly TypingValidator validator = new();
 
         public KeyboardPractice()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            ApplyFullscreen();
+            CenterControls();
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            if (IsHandleCreated)
+            {
+                CenterControls();
+            }
+        }
+
+        private void ApplyFullscreen()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void CenterControls()
+        {
+            if (panel2 == null)
+                return;
+
+            var centerX = panel2.ClientSize.Width / 2;
+            keyboardProgressBar.Left = centerX - (keyboardProgressBar.Width / 2);
+            backBtnKeyboardPractice.Left = centerX - (backBtnKeyboardPractice.Width / 2);
+            Palavra.Left = centerX - (Palavra.Width / 2);
+            instructionsKeyboardPractice.Left = centerX - (instructionsKeyboardPractice.Width / 2);
+            inputWord.Left = centerX - (inputWord.Width / 2);
+            disclaimerKeyboardPractice.Left = centerX - (disclaimerKeyboardPractice.Width / 2);
+            diclaimerKeyboardPractice2.Left = centerX - (diclaimerKeyboardPractice2.Width / 2);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,25 +69,24 @@ namespace DigitalInclusionApp
             validator.StartWord(randomizer.RandomWord);
             keyboardProgressBar.Maximum = quotaPalavras;
             keyboardProgressBar.Value = 0;
+            CenterControls();
         }
 
         private void backBtnKeyboardPractice_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             t1 = new Thread(openKeyboard);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
-
         }
+
         private void openKeyboard()
         {
             Application.Run(new Keyboard());
-            return;
         }
 
         private void inputWord_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void KeyboardPractice_KeyPress(object sender, KeyPressEventArgs e)
@@ -68,6 +103,7 @@ namespace DigitalInclusionApp
                 inputWord.Clear();
                 placeholderAtivo = false;
             }
+
             bool acertou = validator.ValidateChar(e.KeyChar);
             if (acertou)
             {
@@ -89,11 +125,8 @@ namespace DigitalInclusionApp
                 AppendColored(e.KeyChar.ToString(), Color.Red);
                 erroAtivo = true;
             }
-
-
-
-            e.Handled = true;
         }
+
         private void AppendColored(string text, Color color)
         {
             inputWord.SelectionStart = inputWord.TextLength;
@@ -108,7 +141,7 @@ namespace DigitalInclusionApp
             palavrasCompletadas++;
             keyboardProgressBar.Value = palavrasCompletadas;
 
-            if(palavrasCompletadas >= quotaPalavras)
+            if (palavrasCompletadas >= quotaPalavras)
             {
                 inputWord.Refresh();
                 MessageBox.Show("Você concluiu 10 palavras.");
@@ -119,11 +152,6 @@ namespace DigitalInclusionApp
             Palavra.Text = randomizer.RandomWord;
             validator.StartWord(randomizer.RandomWord);
             inputWord.Clear();
-        }
-
-        private void keyboardProgressBar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

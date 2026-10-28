@@ -17,28 +17,59 @@ namespace DigitalInclusionApp
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+            ApplyFullscreen();
+            CenterControls();
 
-            Rectangle area = Screen.FromControl(this).WorkingArea;
-            if (area.Width == 0 || area.Height == 0)
+            double Width = Bounds.Width;
+            double Height = Bounds.Height;
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            if (IsHandleCreated)
+            {
+                CenterControls();
+            }
+        }
+
+        private void ApplyFullscreen()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void CenterControls()
+        {
+            if (panel1 == null)
                 return;
 
-            if (this.Width > area.Width || this.Height > area.Height)
-            {
-                float scaleX = (float)area.Width / this.Width;
-                float scaleY = (float)area.Height / this.Height;
-                float scale = Math.Min(scaleX, scaleY);
-                this.Scale(new SizeF(scale, scale));
-            }
+            var centerX = panel1.ClientSize.Width / 2;
 
-            this.Location = new Point(
-                area.Left + (area.Width - this.Width) / 2,
-                area.Top + (area.Height - this.Height) / 2
-            );
+            lblTitulo.Left = centerX - (lblTitulo.Width / 2);
+            btnInformatics.Left = centerX - Convert.ToInt32(Width/ 2.3);
+            btnSecurity.Left = centerX + Convert.ToInt32(Width/ 20);
+            btnBack.Left = centerX - (btnBack.Width / 2);
+
+            double divTop = 3;
+            double divSize = 2.6;
+
+            btnInformatics.Top = Convert.ToInt32(Height / divTop);
+            btnSecurity.Top = Convert.ToInt32(Height / divTop);
+
+            btnInformatics.Width = Convert.ToInt32(Width/ divSize);
+            btnSecurity.Width = Convert.ToInt32(Width / divSize);
+
+            btnInformatics.Height = Convert.ToInt32(Height / divSize);
+            btnSecurity.Height = Convert.ToInt32(Height / divSize);
         }
 
         private void btnBack_Click(object sender, EventArgs e)

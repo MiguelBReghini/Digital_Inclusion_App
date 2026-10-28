@@ -1,4 +1,4 @@
-﻿namespace DigitalInclusionApp
+namespace DigitalInclusionApp
 {
     partial class KeyboardPractice
     {
@@ -46,7 +46,6 @@
             keyboardProgressBar.Name = "keyboardProgressBar";
             keyboardProgressBar.Size = new Size(330, 23);
             keyboardProgressBar.TabIndex = 1;
-            keyboardProgressBar.Click += keyboardProgressBar_Click;
             // 
             // backBtnKeyboardPractice
             // 
@@ -66,6 +65,7 @@
             Palavra.Anchor = AnchorStyles.Top;
             Palavra.AutoSize = true;
             Palavra.Font = new Font("Segoe UI", 40F);
+            Palavra.ForeColor = SystemColors.ButtonHighlight;
             Palavra.ImageAlign = ContentAlignment.TopCenter;
             Palavra.Location = new Point(401, 37);
             Palavra.Name = "Palavra";
@@ -85,7 +85,6 @@
             disclaimerKeyboardPractice.Size = new Size(765, 30);
             disclaimerKeyboardPractice.TabIndex = 3;
             disclaimerKeyboardPractice.Text = "Dica: Segure shift e a tecla desejada para deixar a letra dela em maiscúlo";
-            disclaimerKeyboardPractice.Click += disclaimerKeyboardPractice_Click;
             // 
             // diclaimerKeyboardPractice2
             // 
@@ -99,18 +98,17 @@
             diclaimerKeyboardPractice2.Size = new Size(902, 30);
             diclaimerKeyboardPractice2.TabIndex = 4;
             diclaimerKeyboardPractice2.Text = "Dica: Aperte a tecla do acento desejado e então na tecla que você deseja por o acento";
-            diclaimerKeyboardPractice2.Click += this.diclaimerKeyboardPractice2_Click;
             // 
             // instructionsKeyboardPractice
             // 
             instructionsKeyboardPractice.AutoSize = true;
             instructionsKeyboardPractice.Font = new Font("Segoe UI", 20F);
+            instructionsKeyboardPractice.ForeColor = SystemColors.ButtonHighlight;
             instructionsKeyboardPractice.Location = new Point(184, 218);
             instructionsKeyboardPractice.Name = "instructionsKeyboardPractice";
             instructionsKeyboardPractice.Size = new Size(556, 37);
             instructionsKeyboardPractice.TabIndex = 5;
             instructionsKeyboardPractice.Text = "Digite a palavra acima dentro da caixa abaixo";
-            instructionsKeyboardPractice.Click += instructionsKeyboardPractice_Click;
             // 
             // inputWord
             // 
@@ -118,7 +116,7 @@
             inputWord.BackColor = Color.FromArgb(2, 36, 64);
             inputWord.BorderStyle = BorderStyle.FixedSingle;
             inputWord.Font = new Font("Segoe UI", 40F);
-            inputWord.ForeColor = SystemColors.ActiveCaption;
+            inputWord.ForeColor = SystemColors.InactiveCaption;
             inputWord.Location = new Point(206, 309);
             inputWord.Multiline = false;
             inputWord.Name = "inputWord";
@@ -131,24 +129,43 @@
             inputWord.WordWrap = false;
             inputWord.TextChanged += inputWord_TextChanged;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(2, 36, 64);
+            panel2.Controls.Add(keyboardProgressBar);
+            panel2.Controls.Add(backBtnKeyboardPractice);
+            panel2.Controls.Add(Palavra);
+            panel2.Controls.Add(disclaimerKeyboardPractice);
+            panel2.Controls.Add(diclaimerKeyboardPractice2);
+            panel2.Controls.Add(instructionsKeyboardPractice);
+            panel2.Controls.Add(inputWord);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(924, 700);
+            panel2.TabIndex = 0;
+            // 
             // KeyboardPractice
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel2);
-            Controls.Add(Palavra);
+            FormBorderStyle = FormBorderStyle.None;
             KeyPreview = true;
             Name = "KeyboardPractice";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Praticar o Teclado";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             KeyPress += KeyboardPractice_KeyPress;
-            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
+
         private Button backBtnKeyboardPractice;
         private ProgressBar keyboardProgressBar;
         private Label Palavra;
