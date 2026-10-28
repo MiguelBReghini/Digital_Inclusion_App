@@ -7,22 +7,22 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Mouse.cs">
+    <Compile Update="Learning\Informatics\Mouse\Mouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="KeyboardPractice.cs">
+    <Compile Update="Learning\Informatics\Keyboard\KeyboardPractice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Keyboard.cs">
+    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning.cs">
+    <Compile Update="Learning\Learning.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Informatics.cs">
+    <Compile Update="Learning\Informatics\Informatics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Security.cs">
+    <Compile Update="Learning\Security\Security.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

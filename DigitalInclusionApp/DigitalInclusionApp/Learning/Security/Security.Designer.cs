@@ -82,7 +82,7 @@ namespace DigitalInclusionApp
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
-            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.ForeColor = Color.FromArgb(128, 255, 255);
             lblTitulo.Location = new Point(170, 20);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(584, 142);

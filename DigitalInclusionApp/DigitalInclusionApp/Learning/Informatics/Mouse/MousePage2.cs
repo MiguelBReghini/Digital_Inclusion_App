@@ -9,10 +9,10 @@ using System.Windows.Forms;
 namespace DigitalInclusionApp
 {
 
-    public partial class Keyboard : Form
+    public partial class MousePage2 : Form
     {
         Thread? t1;
-        public Keyboard()
+        public MousePage2()
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
@@ -66,12 +66,12 @@ namespace DigitalInclusionApp
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openKeyboardPractice);
+            t1 = new Thread(openKeyboardPage2);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
             return;
         }
-     
+
 
         private void voltarBtn_Click(object sender, EventArgs e)
         {
@@ -80,9 +80,9 @@ namespace DigitalInclusionApp
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
-        private void openKeyboardPractice()
+        private void openKeyboardPage2()
         {
-            Application.Run(new KeyboardPractice());
+            Application.Run(new KeyboardPage2());
             return;
         }
         public void openInformatics()
@@ -90,6 +90,10 @@ namespace DigitalInclusionApp
             Application.Run(new Informatics());
             return;
         }
-       
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

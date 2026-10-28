@@ -103,11 +103,11 @@ namespace DigitalInclusionApp
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold | FontStyle.Underline);
-            lblTitulo.ForeColor = Color.FromArgb(128, 255, 255);
+            lblTitulo.ForeColor = Color.FromArgb(171, 237, 58);
             lblTitulo.Location = new Point(227, 43);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(478, 142);

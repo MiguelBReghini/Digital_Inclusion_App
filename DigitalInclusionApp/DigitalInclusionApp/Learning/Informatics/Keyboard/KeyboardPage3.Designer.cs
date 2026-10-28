@@ -1,6 +1,6 @@
 namespace DigitalInclusionApp
 {
-    partial class Keyboard
+    partial class KeyboardPage3
     {
         /// <summary>
         /// Required designer variable.
@@ -73,9 +73,9 @@ namespace DigitalInclusionApp
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.KeyboardImage;
-            pictureBox1.Location = new Point(0, 133);
+            pictureBox1.Location = new Point(28, 133);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(499, 430);
+            pictureBox1.Size = new Size(419, 430);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;

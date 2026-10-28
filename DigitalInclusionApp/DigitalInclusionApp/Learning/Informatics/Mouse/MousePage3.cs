@@ -1,19 +1,18 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace DigitalInclusionApp
 {
-    public partial class Informatics : Form
+
+    public partial class MousePage3 : Form
     {
         Thread? t1;
-        public Informatics()
+        public MousePage3()
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
@@ -50,66 +49,51 @@ namespace DigitalInclusionApp
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
+            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 2 - 80);
+            pictureBox1.Width = imageWidth;
+            pictureBox1.Height = (int)(imageWidth * 0.86);
+            pictureBox1.Left = centerX - (pictureBox1.Width / 2) - 170;
 
-            lblTitulo.Left = centerX - (lblTitulo.Width / 2);
-            btnKeyboard.Left = centerX - Convert.ToInt32(Width / 2.3);
-            btnMouse.Left = centerX + Convert.ToInt32(Width / 20);
-            btnBack.Left = centerX - (btnBack.Width / 2);
+            var textWidth = Math.Min(420, panel1.ClientSize.Width / 3);
+            textBox1.Width = textWidth;
+            textBox1.Left = centerX + 20;
 
-            double divTop = 3;
-            double divSize = 2.6;
-
-            btnKeyboard.Top = Convert.ToInt32(Height / divTop);
-            btnMouse.Top = Convert.ToInt32(Height / divTop);
-
-            btnKeyboard.Width = Convert.ToInt32(Width / divSize);
-            btnMouse.Width = Convert.ToInt32(Width / divSize);
-
-            btnKeyboard.Height = Convert.ToInt32(Height / divSize);
-            btnMouse.Height = Convert.ToInt32(Height / divSize);
+            voltarBtn.Left = centerX - 340;
+            btnPraticaKeyboard.Left = centerX + 20;
+            label1.Left = centerX - (label1.Width / 2);
         }
 
-        private void btnKeyboard_Click(object sender, EventArgs e)
+        private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openKeyboard);
+            t1 = new Thread(openKeyboardPage2);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
             return;
         }
 
-        private void btnMouse_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            t1 = new Thread(openMouse);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
-        }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void voltarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openLearning);
+            t1 = new Thread(openInformatics);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
-        public void openKeyboard()
+        private void openKeyboardPage2()
         {
-            Application.Run(new Keyboard());
+            Application.Run(new KeyboardPage2());
+            return;
+        }
+        public void openInformatics()
+        {
+            Application.Run(new Informatics());
             return;
         }
 
-        public void openMouse()
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Application.Run(new Mouse());
-            return;
-        }
 
-        public void openLearning()
-        {
-            Application.Run(new Learning());
-            return;
         }
     }
 }
