@@ -1,6 +1,6 @@
 namespace DigitalInclusionApp
 {
-    partial class KeyboardPage1
+    partial class MousePage2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,18 @@ namespace DigitalInclusionApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MousePage2));
             label1 = new Label();
             panel1 = new Panel();
-            textBox3 = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            vScrollBar1 = new VScrollBar();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            hScrollBar1 = new HScrollBar();
+            trackBar1 = new TrackBar();
             textBox2 = new TextBox();
-            pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
@@ -41,7 +48,7 @@ namespace DigitalInclusionApp
             panel2 = new Panel();
             process1 = new System.Diagnostics.Process();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -53,21 +60,27 @@ namespace DigitalInclusionApp
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(128, 255, 255);
-            label1.Location = new Point(438, 6);
+            label1.Location = new Point(458, 6);
             label1.Margin = new Padding(20);
             label1.Name = "label1";
-            label1.Size = new Size(389, 125);
+            label1.Size = new Size(349, 125);
             label1.TabIndex = 0;
-            label1.Text = "Teclado";
+            label1.Text = "Mouse";
             // 
             // panel1
             // 
             panel1.AutoSize = true;
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(vScrollBar1);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(hScrollBar1);
+            panel1.Controls.Add(trackBar1);
             panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(textBox1);
@@ -80,20 +93,93 @@ namespace DigitalInclusionApp
             panel1.Size = new Size(1264, 767);
             panel1.TabIndex = 1;
             // 
-            // textBox3
+            // label6
             // 
-            textBox3.BackColor = Color.FromArgb(1, 34, 62);
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.ForeColor = SystemColors.ActiveCaption;
-            textBox3.Location = new Point(848, 454);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(416, 121);
-            textBox3.TabIndex = 12;
-            textBox3.Text = "Este quadro terá informações sobre Quebra de Linha";
-            textBox3.TextAlign = HorizontalAlignment.Center;
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(1, 34, 62);
+            label6.Enabled = false;
+            label6.Font = new Font("Segoe UI", 50.25F, FontStyle.Bold);
+            label6.ForeColor = Color.Green;
+            label6.Location = new Point(1099, 130);
+            label6.Name = "label6";
+            label6.Size = new Size(130, 89);
+            label6.TabIndex = 19;
+            label6.Text = "✔";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(1, 34, 62);
+            label5.Enabled = false;
+            label5.Font = new Font("Segoe UI", 50.25F, FontStyle.Bold);
+            label5.ForeColor = Color.Green;
+            label5.Location = new Point(1099, 329);
+            label5.Name = "label5";
+            label5.Size = new Size(130, 89);
+            label5.TabIndex = 18;
+            label5.Text = "✔";
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(985, 130);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(111, 384);
+            vScrollBar1.SmallChange = 5;
+            vScrollBar1.TabIndex = 17;
+            vScrollBar1.Scroll += vScrollBar1_Scroll;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label4.ForeColor = SystemColors.GradientActiveCaption;
+            label4.Location = new Point(529, 120);
+            label4.Name = "label4";
+            label4.Size = new Size(117, 21);
+            label4.TabIndex = 16;
+            label4.Text = "Solte no final!";
+            label4.Visible = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Enabled = false;
+            label3.Font = new Font("Segoe UI", 50.25F, FontStyle.Bold);
+            label3.ForeColor = Color.Green;
+            label3.Location = new Point(489, 225);
+            label3.Name = "label3";
+            label3.Size = new Size(130, 89);
+            label3.TabIndex = 15;
+            label3.Text = "✔";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Enabled = false;
+            label2.Font = new Font("Segoe UI", 50.25F, FontStyle.Bold);
+            label2.ForeColor = Color.Green;
+            label2.Location = new Point(359, 225);
+            label2.Name = "label2";
+            label2.Size = new Size(130, 89);
+            label2.TabIndex = 14;
+            label2.Text = "✔";
+            // 
+            // hScrollBar1
+            // 
+            hScrollBar1.Location = new Point(359, 141);
+            hScrollBar1.Name = "hScrollBar1";
+            hScrollBar1.Size = new Size(260, 84);
+            hScrollBar1.TabIndex = 13;
+            hScrollBar1.Scroll += hScrollBar1_Scroll;
+            // 
+            // trackBar1
+            // 
+            trackBar1.Location = new Point(359, 348);
+            trackBar1.Name = "trackBar1";
+            trackBar1.Size = new Size(260, 45);
+            trackBar1.TabIndex = 12;
+            trackBar1.TickStyle = TickStyle.Both;
+            trackBar1.Scroll += trackBar1_Scroll;
             // 
             // textBox2
             // 
@@ -101,29 +187,19 @@ namespace DigitalInclusionApp
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = SystemColors.ActiveCaption;
-            textBox2.Location = new Point(438, 454);
+            textBox2.Location = new Point(706, 517);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(416, 88);
+            textBox2.Size = new Size(416, 121);
             textBox2.TabIndex = 11;
-            textBox2.Text = "Este quadro terá informações sobre Números";
+            textBox2.Text = "Este quadro terá informações sobre Scroll";
             textBox2.TextAlign = HorizontalAlignment.Center;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.KeyboardImage;
-            pictureBox3.Location = new Point(888, 124);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(293, 298);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.KeyboardImage;
-            pictureBox2.Location = new Point(487, 124);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(652, 120);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(293, 298);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -132,13 +208,14 @@ namespace DigitalInclusionApp
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.KeyboardImage;
-            pictureBox1.Location = new Point(85, 124);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(41, 120);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // textBox1
             // 
@@ -146,13 +223,13 @@ namespace DigitalInclusionApp
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(27, 454);
+            textBox1.Location = new Point(34, 466);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(416, 88);
+            textBox1.Size = new Size(585, 121);
             textBox1.TabIndex = 7;
-            textBox1.Text = "Este quadro terá informações sobre Letras";
+            textBox1.Text = "Ainda com o Botão Esquerdo, podemos arrastar objetos com o ponteiro. \r\nTente arrastar as barras acima até o final!";
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -160,13 +237,16 @@ namespace DigitalInclusionApp
             // 
             voltarBtn.Anchor = AnchorStyles.Bottom;
             voltarBtn.AutoSize = true;
-            voltarBtn.BackColor = Color.White;
+            voltarBtn.BackColor = Color.FromArgb(231, 237, 58);
+            voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            voltarBtn.Location = new Point(276, 644);
+            voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
+            voltarBtn.Location = new Point(102, 644);
             voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(320, 93);
+            voltarBtn.Size = new Size(500, 93);
             voltarBtn.TabIndex = 5;
-            voltarBtn.Text = "Voltar";
+            voltarBtn.Text = "⬅       Voltar";
+            voltarBtn.TextAlign = ContentAlignment.MiddleLeft;
             voltarBtn.UseVisualStyleBackColor = false;
             voltarBtn.Click += voltarBtn_Click;
             // 
@@ -174,13 +254,16 @@ namespace DigitalInclusionApp
             // 
             btnPraticaKeyboard.Anchor = AnchorStyles.Bottom;
             btnPraticaKeyboard.AutoSize = true;
+            btnPraticaKeyboard.BackColor = Color.FromArgb(128, 255, 255);
+            btnPraticaKeyboard.FlatStyle = FlatStyle.Flat;
             btnPraticaKeyboard.Font = new Font("Segoe UI", 45F, FontStyle.Bold);
-            btnPraticaKeyboard.Location = new Point(675, 644);
+            btnPraticaKeyboard.Location = new Point(661, 644);
             btnPraticaKeyboard.Name = "btnPraticaKeyboard";
-            btnPraticaKeyboard.Size = new Size(320, 93);
+            btnPraticaKeyboard.Size = new Size(500, 93);
             btnPraticaKeyboard.TabIndex = 4;
-            btnPraticaKeyboard.Text = "Próximo";
-            btnPraticaKeyboard.UseVisualStyleBackColor = true;
+            btnPraticaKeyboard.Text = "Próximo   ➞";
+            btnPraticaKeyboard.TextAlign = ContentAlignment.MiddleRight;
+            btnPraticaKeyboard.UseVisualStyleBackColor = false;
             btnPraticaKeyboard.Click += btnPraticaKeyboard_Click;
             // 
             // panel2
@@ -207,18 +290,18 @@ namespace DigitalInclusionApp
             process1.StartInfo.UserName = "";
             process1.SynchronizingObject = this;
             // 
-            // KeyboardPage1
+            // MousePage2
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoScroll = true;
             ClientSize = new Size(1264, 767);
             Controls.Add(panel1);
-            Name = "KeyboardPage1";
+            Name = "MousePage2";
             Text = "Teclado";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -238,9 +321,15 @@ namespace DigitalInclusionApp
         private TextBox textBox1;
         private PictureBox pictureBox1;
         private ImageList imageList1;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private TextBox textBox3;
         private TextBox textBox2;
+        private TrackBar trackBar1;
+        private Label label2;
+        private HScrollBar hScrollBar1;
+        private Label label3;
+        private Label label4;
+        private VScrollBar vScrollBar1;
+        private Label label6;
+        private Label label5;
     }
 }

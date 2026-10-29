@@ -36,6 +36,7 @@ namespace DigitalInclusionApp
             {
                 CenterControls();
             }
+            
         }
 
         private void ApplyFullscreen()
@@ -46,22 +47,59 @@ namespace DigitalInclusionApp
 
         private void CenterControls()
         {
+            double Width = Bounds.Width;
+            double Height = Bounds.Height;
             if (panel1 == null)
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
-            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 2 - 80);
+            //Image Sizes
+            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 4 - 80);
             pictureBox1.Width = imageWidth;
-            pictureBox1.Height = (int)(imageWidth * 0.86);
-            pictureBox1.Left = centerX - (pictureBox1.Width / 2) - 170;
+            pictureBox1.Height = imageWidth;
+            pictureBox2.Width = imageWidth;
+            pictureBox2.Height = imageWidth;
+            ////Button Sizes
+            double divSize = 6;
+            //btnTarget.Width = Convert.ToInt32(Width / divSize - 100);
+            //btnTarget.Height = Convert.ToInt32(Height / divSize);
 
-            var textWidth = Math.Min(420, panel1.ClientSize.Width / 3);
-            textBox1.Width = textWidth;
-            textBox1.Left = centerX + 20;
 
-            voltarBtn.Left = centerX - 340;
-            btnPraticaKeyboard.Left = centerX + 20;
-            label1.Left = centerX - (label1.Width / 2);
+            //Images X
+            pictureBox1.Left = centerX + Convert.ToInt32(Width / 30);
+            pictureBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
+            //Button X
+            //btnTarget.Left = centerX - Convert.ToInt32(Width / 7);
+            voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
+            btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
+            hScrollBar1.Left = centerX - Convert.ToInt32(Width / 6);
+            vScrollBar1.Left = centerX + Convert.ToInt32(Width / 3.5);
+            trackBar1.Left = centerX - Convert.ToInt32(Width / 6);
+
+            //Text X
+            textBox2.Left = centerX + Convert.ToInt32(Width / 7);
+            textBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
+            label2.Left = centerX - Convert.ToInt32(Width / 10);
+            label3.Left = centerX - Convert.ToInt32(Width / 6);
+            label5.Left = centerX + Convert.ToInt32(Width / 2.7);
+            label6.Left = centerX + Convert.ToInt32(Width / 2.7);
+
+            //Images Y
+            double divTop = 6;
+            pictureBox1.Top = Convert.ToInt32(Height / divTop);
+            pictureBox2.Top = Convert.ToInt32(Height / divTop);
+            //Button Y
+            hScrollBar1.Top = Convert.ToInt32(Height / 6);
+            vScrollBar1.Top = Convert.ToInt32(Height / 6);
+            trackBar1.Top = Convert.ToInt32(Height / 2);
+            //Text Y
+            double textTop = 1.5;
+            textBox1.Top = Convert.ToInt32(Height / textTop);
+            textBox2.Top = Convert.ToInt32(Height / textTop);
+            label2.Top = centerX - Convert.ToInt32(Height / 1.75);
+            label3.Top = centerX - Convert.ToInt32(Height / 1.75);
+            label5.Top = centerX - Convert.ToInt32(Height / 2);
+            label6.Top = centerX - Convert.ToInt32(Height / 1.4);
         }
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)

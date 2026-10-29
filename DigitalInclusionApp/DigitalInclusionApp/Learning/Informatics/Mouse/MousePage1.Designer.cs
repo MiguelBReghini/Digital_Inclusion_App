@@ -29,6 +29,7 @@ namespace DigitalInclusionApp
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MousePage1));
             label1 = new Label();
             panel1 = new Panel();
             button1 = new Button();
@@ -54,12 +55,12 @@ namespace DigitalInclusionApp
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(128, 255, 255);
-            label1.Location = new Point(438, 6);
+            label1.Location = new Point(458, 6);
             label1.Margin = new Padding(20);
             label1.Name = "label1";
-            label1.Size = new Size(389, 125);
+            label1.Size = new Size(349, 125);
             label1.TabIndex = 0;
-            label1.Text = "Teclado";
+            label1.Text = "Mouse";
             // 
             // panel1
             // 
@@ -135,7 +136,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.KeyboardImage;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(648, 142);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(293, 298);
@@ -146,7 +147,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.KeyboardImage;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(35, 142);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);
@@ -174,13 +175,15 @@ namespace DigitalInclusionApp
             // 
             voltarBtn.Anchor = AnchorStyles.Bottom;
             voltarBtn.AutoSize = true;
-            voltarBtn.BackColor = Color.White;
+            voltarBtn.BackColor = Color.FromArgb(231, 237, 58);
             voltarBtn.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            voltarBtn.Location = new Point(276, 644);
+            voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
+            voltarBtn.Location = new Point(96, 646);
             voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(320, 93);
+            voltarBtn.Size = new Size(500, 91);
             voltarBtn.TabIndex = 5;
-            voltarBtn.Text = "Voltar";
+            voltarBtn.Text = "⬅       Voltar";
+            voltarBtn.TextAlign = ContentAlignment.MiddleLeft;
             voltarBtn.UseVisualStyleBackColor = false;
             voltarBtn.Click += voltarBtn_Click;
             // 
@@ -188,13 +191,17 @@ namespace DigitalInclusionApp
             // 
             btnPraticaKeyboard.Anchor = AnchorStyles.Bottom;
             btnPraticaKeyboard.AutoSize = true;
+            btnPraticaKeyboard.BackColor = Color.FromArgb(128, 255, 255);
+            btnPraticaKeyboard.FlatStyle = FlatStyle.Flat;
             btnPraticaKeyboard.Font = new Font("Segoe UI", 45F, FontStyle.Bold);
-            btnPraticaKeyboard.Location = new Point(675, 644);
+            btnPraticaKeyboard.ForeColor = Color.FromArgb(1, 34, 62);
+            btnPraticaKeyboard.Location = new Point(669, 644);
             btnPraticaKeyboard.Name = "btnPraticaKeyboard";
-            btnPraticaKeyboard.Size = new Size(320, 93);
+            btnPraticaKeyboard.Size = new Size(500, 93);
             btnPraticaKeyboard.TabIndex = 4;
-            btnPraticaKeyboard.Text = "Próximo";
-            btnPraticaKeyboard.UseVisualStyleBackColor = true;
+            btnPraticaKeyboard.Text = "Próximo   ➞";
+            btnPraticaKeyboard.TextAlign = ContentAlignment.MiddleRight;
+            btnPraticaKeyboard.UseVisualStyleBackColor = false;
             btnPraticaKeyboard.Click += btnPraticaKeyboard_Click;
             // 
             // panel2

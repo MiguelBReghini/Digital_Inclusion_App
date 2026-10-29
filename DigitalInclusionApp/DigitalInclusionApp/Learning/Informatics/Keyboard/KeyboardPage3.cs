@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DigitalInclusionApp
 {
@@ -49,18 +50,26 @@ namespace DigitalInclusionApp
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
-            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 2 - 80);
+            //Image Sizes
+            var imageWidth = Convert.ToInt32(Width / 2.5);
             pictureBox1.Width = imageWidth;
-            pictureBox1.Height = (int)(imageWidth * 0.86);
-            pictureBox1.Left = centerX - (pictureBox1.Width / 2) - 170;
+            pictureBox1.Height = imageWidth;
 
-            var textWidth = Math.Min(420, panel1.ClientSize.Width / 3);
-            textBox1.Width = textWidth;
-            textBox1.Left = centerX + 20;
+            //Images X
+            pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
+            //Button X
+            voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
+            btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
+            //Text X
+            textBox1.Left = centerX + Convert.ToInt32(Width / 10);
 
-            voltarBtn.Left = centerX - 340;
-            btnPraticaKeyboard.Left = centerX + 20;
-            label1.Left = centerX - (label1.Width / 2);
+            //Images Y
+            double divTop = 7;
+            pictureBox1.Top = Convert.ToInt32(Height / divTop);
+            //Button Y
+            //Text Y
+            double textTop = 5;
+            textBox1.Top = Convert.ToInt32(Height / textTop);
         }
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)

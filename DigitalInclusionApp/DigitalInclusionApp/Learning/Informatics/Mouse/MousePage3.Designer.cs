@@ -28,8 +28,10 @@ namespace DigitalInclusionApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MousePage3));
             label1 = new Label();
             panel1 = new Panel();
+            btnTarget = new Button();
             textBox1 = new TextBox();
             pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -39,7 +41,6 @@ namespace DigitalInclusionApp
             btnPraticaKeyboard = new Button();
             panel2 = new Panel();
             process1 = new System.Diagnostics.Process();
-            btnTarget = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -53,12 +54,12 @@ namespace DigitalInclusionApp
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(128, 255, 255);
-            label1.Location = new Point(438, 6);
+            label1.Location = new Point(458, 6);
             label1.Margin = new Padding(20);
             label1.Name = "label1";
-            label1.Size = new Size(389, 125);
+            label1.Size = new Size(349, 125);
             label1.TabIndex = 0;
-            label1.Text = "Teclado";
+            label1.Text = "Mouse";
             // 
             // panel1
             // 
@@ -79,6 +80,24 @@ namespace DigitalInclusionApp
             panel1.Name = "panel1";
             panel1.Size = new Size(1264, 767);
             panel1.TabIndex = 1;
+            // 
+            // btnTarget
+            // 
+            btnTarget.BackColor = SystemColors.ActiveCaption;
+            btnTarget.BackgroundImageLayout = ImageLayout.None;
+            btnTarget.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            btnTarget.FlatAppearance.MouseDownBackColor = Color.LightGreen;
+            btnTarget.FlatAppearance.MouseOverBackColor = Color.LightGreen;
+            btnTarget.FlatStyle = FlatStyle.Flat;
+            btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTarget.ForeColor = SystemColors.ActiveCaptionText;
+            btnTarget.Location = new Point(374, 196);
+            btnTarget.Name = "btnTarget";
+            btnTarget.Size = new Size(212, 161);
+            btnTarget.TabIndex = 15;
+            btnTarget.Text = "Clique com o Botão Direito do Mouse aqui!";
+            btnTarget.UseVisualStyleBackColor = false;
+            btnTarget.Click += btnTarget_Click;
             // 
             // textBox1
             // 
@@ -133,7 +152,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.KeyboardImage;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(46, 122);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(293, 298);
@@ -145,13 +164,16 @@ namespace DigitalInclusionApp
             // 
             voltarBtn.Anchor = AnchorStyles.Bottom;
             voltarBtn.AutoSize = true;
-            voltarBtn.BackColor = Color.White;
+            voltarBtn.BackColor = Color.FromArgb(231, 237, 58);
+            voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            voltarBtn.Location = new Point(276, 644);
+            voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
+            voltarBtn.Location = new Point(104, 644);
             voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(320, 93);
+            voltarBtn.Size = new Size(500, 93);
             voltarBtn.TabIndex = 5;
-            voltarBtn.Text = "Voltar";
+            voltarBtn.Text = "⬅      Voltar";
+            voltarBtn.TextAlign = ContentAlignment.MiddleLeft;
             voltarBtn.UseVisualStyleBackColor = false;
             voltarBtn.Click += voltarBtn_Click;
             // 
@@ -159,13 +181,17 @@ namespace DigitalInclusionApp
             // 
             btnPraticaKeyboard.Anchor = AnchorStyles.Bottom;
             btnPraticaKeyboard.AutoSize = true;
+            btnPraticaKeyboard.BackColor = Color.FromArgb(128, 255, 255);
+            btnPraticaKeyboard.FlatStyle = FlatStyle.Flat;
             btnPraticaKeyboard.Font = new Font("Segoe UI", 45F, FontStyle.Bold);
-            btnPraticaKeyboard.Location = new Point(675, 644);
+            btnPraticaKeyboard.ForeColor = Color.FromArgb(1, 34, 62);
+            btnPraticaKeyboard.Location = new Point(670, 644);
             btnPraticaKeyboard.Name = "btnPraticaKeyboard";
-            btnPraticaKeyboard.Size = new Size(320, 93);
+            btnPraticaKeyboard.Size = new Size(500, 93);
             btnPraticaKeyboard.TabIndex = 4;
-            btnPraticaKeyboard.Text = "Próximo";
-            btnPraticaKeyboard.UseVisualStyleBackColor = true;
+            btnPraticaKeyboard.Text = "Próximo   ➞";
+            btnPraticaKeyboard.TextAlign = ContentAlignment.MiddleRight;
+            btnPraticaKeyboard.UseVisualStyleBackColor = false;
             btnPraticaKeyboard.Click += btnPraticaKeyboard_Click;
             // 
             // panel2
@@ -191,24 +217,6 @@ namespace DigitalInclusionApp
             process1.StartInfo.UseCredentialsForNetworkingOnly = false;
             process1.StartInfo.UserName = "";
             process1.SynchronizingObject = this;
-            // 
-            // btnTarget
-            // 
-            btnTarget.BackColor = SystemColors.ActiveCaption;
-            btnTarget.BackgroundImageLayout = ImageLayout.None;
-            btnTarget.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
-            btnTarget.FlatAppearance.MouseDownBackColor = Color.LightGreen;
-            btnTarget.FlatAppearance.MouseOverBackColor = Color.LightGreen;
-            btnTarget.FlatStyle = FlatStyle.Flat;
-            btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTarget.ForeColor = SystemColors.ActiveCaptionText;
-            btnTarget.Location = new Point(374, 196);
-            btnTarget.Name = "btnTarget";
-            btnTarget.Size = new Size(212, 161);
-            btnTarget.TabIndex = 15;
-            btnTarget.Text = "Clique com o Botão Direito do Mouse aqui!";
-            btnTarget.UseVisualStyleBackColor = false;
-            btnTarget.Click += btnTarget_Click;
             // 
             // MousePage3
             // 

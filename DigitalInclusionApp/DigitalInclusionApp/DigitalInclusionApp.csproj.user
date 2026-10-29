@@ -1,28 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning\Informatics\Mouse\MousePage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning\Informatics\Mouse\MousePage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning\Informatics\Mouse\MousePage3.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Main\Credits.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Learning\_Informatics\Mouse\Mouse.cs">
+    <Compile Update="Learning\Informatics\Mouse\Mouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPractice.cs">
+    <Compile Update="Learning\Informatics\Keyboard\KeyboardPractice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPage3.cs">
+    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Learning\Learning.cs">
+    <Compile Update="Learning\Learning.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Learning\_Informatics\Informatics.cs">
+    <Compile Update="Learning\Informatics\Informatics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Learning\Security\Security.cs">
+    <Compile Update="Learning\Security\Security.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

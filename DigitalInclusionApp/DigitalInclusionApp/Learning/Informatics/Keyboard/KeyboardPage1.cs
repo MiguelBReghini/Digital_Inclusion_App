@@ -9,10 +9,10 @@ using System.Windows.Forms;
 namespace DigitalInclusionApp
 {
 
-    public partial class MousePage1 : Form
+    public partial class KeyboardPage1 : Form
     {
         Thread? t1;
-        public MousePage1()
+        public KeyboardPage1()
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
@@ -49,18 +49,38 @@ namespace DigitalInclusionApp
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
-            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 2 - 80);
+            //Image Sizes
+            var imageWidth = Math.Min(520, panel1.ClientSize.Width / 4 - 80);
             pictureBox1.Width = imageWidth;
-            pictureBox1.Height = (int)(imageWidth * 0.86);
-            pictureBox1.Left = centerX - (pictureBox1.Width / 2) - 170;
+            pictureBox1.Height = imageWidth;
+            pictureBox2.Width = imageWidth;
+            pictureBox2.Height = imageWidth;
+            pictureBox3.Width = imageWidth;
+            pictureBox3.Height = imageWidth;
 
-            var textWidth = Math.Min(420, panel1.ClientSize.Width / 3);
-            textBox1.Width = textWidth;
-            textBox1.Left = centerX + 20;
+            //Images X
+            pictureBox1.Left = centerX - Convert.ToInt32(Width / 10);
+            pictureBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
+            pictureBox3.Left = centerX + Convert.ToInt32(Width / 5);
+            //Button X
+            voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
+            btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
+            //Text X
+            textBox1.Left = centerX + Convert.ToInt32(Width / 5);
+            textBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
+            textBox3.Left = centerX - Convert.ToInt32(Width / 10);
 
-            voltarBtn.Left = centerX - 340;
-            btnPraticaKeyboard.Left = centerX + 20;
-            label1.Left = centerX - (label1.Width / 2);
+            //Images Y
+            double divTop = 6;
+            pictureBox1.Top = Convert.ToInt32(Height / divTop);
+            pictureBox2.Top = Convert.ToInt32(Height / divTop);
+            pictureBox3.Top = Convert.ToInt32(Height / divTop);
+            //Button Y
+            //Text Y
+            double textTop = 1.7;
+            textBox1.Top = Convert.ToInt32(Height / textTop);
+            textBox2.Top = Convert.ToInt32(Height / textTop);
+            textBox3.Top = Convert.ToInt32(Height / textTop);
         }
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
@@ -82,7 +102,7 @@ namespace DigitalInclusionApp
         }
         private void openKeyboardPage2()
         {
-            Application.Run(new MousePage2());
+            Application.Run(new KeyboardPage2());
             return;
         }
         public void openInformatics()
@@ -94,43 +114,6 @@ namespace DigitalInclusionApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTarget_Click(object sender, EventArgs e)
-        {
-            btnTarget.Text = "Você clicou!!! ✔✔✔✔";
-            btnTarget.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            btnTarget.ForeColor = Color.Green;
-        }
-
-        private int cliqueCount = 0;
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            cliqueCount++;
-
-            if (cliqueCount == 1)
-            {
-                timer1.Start();
-            }
-            else if (cliqueCount == 2)
-            {
-                timer1.Stop();
-                cliqueCount = 0;
-
-                button1.Text = "Você clicou!!! ✔✔✔✔";
-                button1.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-                button1.ForeColor = Color.Green;
-            }
         }
     }
 }
