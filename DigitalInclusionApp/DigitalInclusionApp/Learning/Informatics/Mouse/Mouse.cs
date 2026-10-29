@@ -77,6 +77,7 @@ namespace DigitalInclusionApp
             {
                 return;
             }
+
             int maxX = this.ClientSize.Width - btnTarget.Width;
             int maxY = this.ClientSize.Height - btnTarget.Height;
 

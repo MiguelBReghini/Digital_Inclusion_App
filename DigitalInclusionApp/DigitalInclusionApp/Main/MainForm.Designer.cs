@@ -83,8 +83,8 @@
             lblTitulo.Anchor = AnchorStyles.Top;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 90F, FontStyle.Bold);
-            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
+            lblTitulo.Font = new Font("Segoe UI", 90F, FontStyle.Bold | FontStyle.Underline);
+            lblTitulo.ForeColor = Color.PaleTurquoise;
             lblTitulo.Location = new Point(173, 0);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(839, 159);

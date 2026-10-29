@@ -1,6 +1,6 @@
 namespace DigitalInclusionApp
 {
-    partial class Informatics
+    partial class Credits
     {
         /// <summary>
         /// Required designer variable.
@@ -10,7 +10,7 @@ namespace DigitalInclusionApp
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false;</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -28,10 +28,11 @@ namespace DigitalInclusionApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             panel1 = new Panel();
+            textBox1 = new TextBox();
+            socialProjectTxt = new TextBox();
             btnBack = new Button();
-            btnMouse = new Button();
-            btnKeyboard = new Button();
             lblTitulo = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -40,15 +41,48 @@ namespace DigitalInclusionApp
             // 
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(socialProjectTxt);
             panel1.Controls.Add(btnBack);
-            panel1.Controls.Add(btnMouse);
-            panel1.Controls.Add(btnKeyboard);
             panel1.Controls.Add(lblTitulo);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(924, 700);
-            panel1.TabIndex = 2;
+            panel1.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top;
+            textBox1.BackColor = Color.FromArgb(1, 34, 62);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = SystemColors.ActiveCaption;
+            textBox1.Location = new Point(38, 385);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(848, 173);
+            textBox1.TabIndex = 6;
+            textBox1.Text = "Desenvolvimento: \r\nFelipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // socialProjectTxt
+            // 
+            socialProjectTxt.Anchor = AnchorStyles.Top;
+            socialProjectTxt.BackColor = Color.FromArgb(1, 34, 62);
+            socialProjectTxt.BorderStyle = BorderStyle.None;
+            socialProjectTxt.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            socialProjectTxt.ForeColor = SystemColors.ActiveCaption;
+            socialProjectTxt.Location = new Point(38, 188);
+            socialProjectTxt.Multiline = true;
+            socialProjectTxt.Name = "socialProjectTxt";
+            socialProjectTxt.ReadOnly = true;
+            socialProjectTxt.Size = new Size(848, 370);
+            socialProjectTxt.TabIndex = 5;
+            socialProjectTxt.Text = resources.GetString("socialProjectTxt.Text");
+            socialProjectTxt.TextAlign = HorizontalAlignment.Center;
+            socialProjectTxt.TextChanged += socialProjectTxt_TextChanged;
             // 
             // btnBack
             // 
@@ -57,7 +91,8 @@ namespace DigitalInclusionApp
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             btnBack.ForeColor = Color.FromArgb(1, 34, 62);
-            btnBack.Location = new Point(207, 569);
+            btnBack.ImageAlign = ContentAlignment.TopCenter;
+            btnBack.Location = new Point(214, 564);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
@@ -66,55 +101,30 @@ namespace DigitalInclusionApp
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
-            // btnMouse
-            // 
-            btnMouse.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
-            btnMouse.Location = new Point(520, 246);
-            btnMouse.Name = "btnMouse";
-            btnMouse.Size = new Size(300, 254);
-            btnMouse.TabIndex = 3;
-            btnMouse.Text = "Mouse";
-            btnMouse.TextAlign = ContentAlignment.BottomCenter;
-            btnMouse.UseVisualStyleBackColor = true;
-            btnMouse.Click += btnMouse_Click;
-            // 
-            // btnKeyboard
-            // 
-            btnKeyboard.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
-            btnKeyboard.Location = new Point(104, 246);
-            btnKeyboard.Name = "btnKeyboard";
-            btnKeyboard.Size = new Size(300, 254);
-            btnKeyboard.TabIndex = 1;
-            btnKeyboard.Text = "Teclado";
-            btnKeyboard.TextAlign = ContentAlignment.BottomCenter;
-            btnKeyboard.UseVisualStyleBackColor = true;
-            btnKeyboard.Click += btnKeyboard_Click;
-            // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.FlatStyle = FlatStyle.Flat;
             lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold | FontStyle.Underline);
-            lblTitulo.ForeColor = Color.FromArgb(128, 255, 255);
-            lblTitulo.Location = new Point(140, 35);
+            lblTitulo.ForeColor = Color.FromArgb(171, 237, 58);
+            lblTitulo.Location = new Point(227, 43);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(645, 142);
+            lblTitulo.Size = new Size(478, 142);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Informática";
+            lblTitulo.Text = "Créditos";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Informatics
+            // Credits
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Informatics";
+            Name = "Credits";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Informática";
+            Text = "Credits";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -125,8 +135,8 @@ namespace DigitalInclusionApp
 
         private Panel panel1;
         private Button btnBack;
-        private Button btnMouse;
-        private Button btnKeyboard;
         private Label lblTitulo;
+        private TextBox socialProjectTxt;
+        private TextBox textBox1;
     }
 }
