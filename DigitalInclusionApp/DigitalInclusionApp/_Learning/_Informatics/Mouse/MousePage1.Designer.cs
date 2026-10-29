@@ -1,6 +1,6 @@
 namespace DigitalInclusionApp
 {
-    partial class MousePage2
+    partial class MousePage1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,22 @@ namespace DigitalInclusionApp
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             panel1 = new Panel();
+            button1 = new Button();
+            btnTarget = new Button();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
             pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             voltarBtn = new Button();
             btnPraticaKeyboard = new Button();
             panel2 = new Panel();
             process1 = new System.Diagnostics.Process();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -65,10 +66,10 @@ namespace DigitalInclusionApp
             panel1.AutoSize = true;
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnTarget);
             panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
             panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(voltarBtn);
@@ -80,13 +81,49 @@ namespace DigitalInclusionApp
             panel1.Size = new Size(1264, 767);
             panel1.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ActiveCaption;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            button1.FlatAppearance.MouseDownBackColor = Color.LightGreen;
+            button1.FlatAppearance.MouseOverBackColor = Color.LightGreen;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(997, 224);
+            button1.Name = "button1";
+            button1.Size = new Size(212, 161);
+            button1.TabIndex = 14;
+            button1.Text = "Clique Duas Vezes com o Botão Esquerdo Aqui!";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
+            // btnTarget
+            // 
+            btnTarget.BackColor = SystemColors.ActiveCaption;
+            btnTarget.BackgroundImageLayout = ImageLayout.None;
+            btnTarget.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            btnTarget.FlatAppearance.MouseDownBackColor = Color.LightGreen;
+            btnTarget.FlatAppearance.MouseOverBackColor = Color.LightGreen;
+            btnTarget.FlatStyle = FlatStyle.Flat;
+            btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTarget.ForeColor = SystemColors.ActiveCaptionText;
+            btnTarget.Location = new Point(384, 223);
+            btnTarget.Name = "btnTarget";
+            btnTarget.Size = new Size(212, 161);
+            btnTarget.TabIndex = 13;
+            btnTarget.Text = "Clique com o Botão Esquerdo do Mouse aqui!";
+            btnTarget.UseVisualStyleBackColor = false;
+            btnTarget.Click += btnTarget_Click;
+            // 
             // textBox3
             // 
             textBox3.BackColor = Color.FromArgb(1, 34, 62);
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = SystemColors.ActiveCaption;
-            textBox3.Location = new Point(848, 454);
+            textBox3.Location = new Point(753, 483);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
@@ -94,46 +131,23 @@ namespace DigitalInclusionApp
             textBox3.TabIndex = 12;
             textBox3.Text = "Este quadro terá informações sobre Duplo Clique";
             textBox3.TextAlign = HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.FromArgb(1, 34, 62);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = SystemColors.ActiveCaption;
-            textBox2.Location = new Point(438, 454);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(416, 121);
-            textBox2.TabIndex = 11;
-            textBox2.Text = "Este quadro terá informações sobre Arrastar";
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.KeyboardImage;
-            pictureBox3.Location = new Point(888, 124);
+            pictureBox3.Location = new Point(648, 142);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(293, 298);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.KeyboardImage;
-            pictureBox2.Location = new Point(487, 124);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(293, 298);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.KeyboardImage;
-            pictureBox1.Location = new Point(85, 124);
+            pictureBox1.Location = new Point(35, 142);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -146,7 +160,7 @@ namespace DigitalInclusionApp
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(27, 454);
+            textBox1.Location = new Point(126, 483);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -207,19 +221,22 @@ namespace DigitalInclusionApp
             process1.StartInfo.UserName = "";
             process1.SynchronizingObject = this;
             // 
-            // MousePage2
+            // timer1
+            // 
+            timer1.Interval = 300;
+            // 
+            // MousePage1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoScroll = true;
             ClientSize = new Size(1264, 767);
             Controls.Add(panel1);
-            Name = "MousePage2";
+            Name = "MousePage1";
             Text = "Teclado";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -239,8 +256,9 @@ namespace DigitalInclusionApp
         private PictureBox pictureBox1;
         private ImageList imageList1;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
         private TextBox textBox3;
-        private TextBox textBox2;
+        private Button btnTarget;
+        private Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

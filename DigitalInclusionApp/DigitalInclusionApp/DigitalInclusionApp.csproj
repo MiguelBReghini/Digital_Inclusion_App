@@ -21,17 +21,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage2.cs">
+    <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPage2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage1.cs">
+    <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Learning\_Informatics\Mouse\MousePage3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Learning\_Informatics\Mouse\MousePage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Learning\_Informatics\Mouse\MousePage1.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Learning\Informatics\Basics\" />
-    <Folder Include="Learning\Security\Scams\" />
+    <Folder Include="_Learning\_Informatics\Basics\" />
+    <Folder Include="_Learning\Security\Scams\" />
   </ItemGroup>
 
 </Project>

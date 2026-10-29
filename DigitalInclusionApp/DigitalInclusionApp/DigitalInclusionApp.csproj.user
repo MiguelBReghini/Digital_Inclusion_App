@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Credits.cs">
+    <Compile Update="Main\Credits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MainForm.cs">
+    <Compile Update="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Informatics\Mouse\Mouse.cs">
+    <Compile Update="_Learning\_Informatics\Mouse\Mouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Informatics\Keyboard\KeyboardPractice.cs">
+    <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPractice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Informatics\Keyboard\KeyboardPage3.cs">
+    <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPage3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Learning.cs">
+    <Compile Update="_Learning\Learning.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Informatics\Informatics.cs">
+    <Compile Update="_Learning\_Informatics\Informatics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning\Security\Security.cs">
+    <Compile Update="_Learning\Security\Security.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

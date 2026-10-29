@@ -9,10 +9,10 @@ using System.Windows.Forms;
 namespace DigitalInclusionApp
 {
 
-    public partial class MousePage3 : Form
+    public partial class MousePage1 : Form
     {
         Thread? t1;
-        public MousePage3()
+        public MousePage1()
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
@@ -82,7 +82,7 @@ namespace DigitalInclusionApp
         }
         private void openKeyboardPage2()
         {
-            Application.Run(new KeyboardPage2());
+            Application.Run(new MousePage2());
             return;
         }
         public void openInformatics()
@@ -94,6 +94,43 @@ namespace DigitalInclusionApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTarget_Click(object sender, EventArgs e)
+        {
+            btnTarget.Text = "Você clicou!!! ✔✔✔✔";
+            btnTarget.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            btnTarget.ForeColor = Color.Green;
+        }
+
+        private int cliqueCount = 0;
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            cliqueCount++;
+
+            if (cliqueCount == 1)
+            {
+                timer1.Start();
+            }
+            else if (cliqueCount == 2)
+            {
+                timer1.Stop();
+                cliqueCount = 0;
+
+                button1.Text = "Você clicou!!! ✔✔✔✔";
+                button1.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+                button1.ForeColor = Color.Green;
+            }
         }
     }
 }
