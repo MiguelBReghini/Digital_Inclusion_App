@@ -51,8 +51,8 @@
             mouseLabel.Anchor = AnchorStyles.Top;
             mouseLabel.AutoSize = true;
             mouseLabel.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
-            mouseLabel.ForeColor = SystemColors.GradientActiveCaption;
-            mouseLabel.Location = new Point(498, -10);
+            mouseLabel.ForeColor = Color.FromArgb(128, 255, 255);
+            mouseLabel.Location = new Point(316, -10);
             mouseLabel.Name = "mouseLabel";
             mouseLabel.Size = new Size(349, 125);
             mouseLabel.TabIndex = 0;
@@ -68,7 +68,7 @@
             voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
-            voltarBtn.Location = new Point(413, 726);
+            voltarBtn.Location = new Point(231, 509);
             voltarBtn.Name = "voltarBtn";
             voltarBtn.Size = new Size(500, 80);
             voltarBtn.TabIndex = 1;
@@ -87,7 +87,7 @@
             btnTarget.FlatStyle = FlatStyle.Flat;
             btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTarget.ForeColor = SystemColors.ActiveCaptionText;
-            btnTarget.Location = new Point(308, 197);
+            btnTarget.Location = new Point(375, 197);
             btnTarget.Name = "btnTarget";
             btnTarget.Size = new Size(212, 84);
             btnTarget.TabIndex = 2;

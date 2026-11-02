@@ -118,6 +118,9 @@ namespace DigitalInclusionApp
                 btnTargetDir.Visible = false;
                 btnTarget.Visible = true;
             }
+
+            int maxX = this.ClientSize.Width - btnTarget.Width;
+            int maxY = this.ClientSize.Height - btnTarget.Height;
         }
 
         private bool RegisterClick()

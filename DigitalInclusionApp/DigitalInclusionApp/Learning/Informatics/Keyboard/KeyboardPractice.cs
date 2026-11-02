@@ -82,7 +82,7 @@ namespace DigitalInclusionApp
 
         private void openKeyboard()
         {
-            Application.Run(new Keyboard());
+            Application.Run(new KeyboardPage3());
         }
 
         private void inputWord_TextChanged(object sender, EventArgs e)

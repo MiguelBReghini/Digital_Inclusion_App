@@ -96,13 +96,13 @@ namespace DigitalInclusionApp
         }
         public void openKeyboard()
         {
-            Application.Run(new Keyboard());
+            Application.Run(new KeyboardPage1());
             return;
         }
 
         public void openMouse()
         {
-            Application.Run(new Mouse());
+            Application.Run(new MousePage1());
             return;
         }
 

@@ -1,6 +1,6 @@
 namespace DigitalInclusionApp
 {
-    partial class Security
+    partial class Learning
     {
         /// <summary>
         /// Required designer variable.
@@ -10,7 +10,7 @@ namespace DigitalInclusionApp
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false;</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -30,7 +30,8 @@ namespace DigitalInclusionApp
         {
             panel1 = new Panel();
             btnBack = new Button();
-            btnScam = new Button();
+            btnSecurity = new Button();
+            btnInformatics = new Button();
             lblTitulo = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -40,22 +41,23 @@ namespace DigitalInclusionApp
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnBack);
-            panel1.Controls.Add(btnScam);
+            panel1.Controls.Add(btnSecurity);
+            panel1.Controls.Add(btnInformatics);
             panel1.Controls.Add(lblTitulo);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(924, 700);
-            panel1.TabIndex = 3;
+            panel1.TabIndex = 1;
             // 
             // btnBack
             // 
-            btnBack.Anchor = AnchorStyles.Bottom;
+            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnBack.BackColor = Color.FromArgb(231, 237, 58);
             btnBack.FlatStyle = FlatStyle.Flat;
-            btnBack.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBack.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
             btnBack.ForeColor = Color.FromArgb(1, 34, 62);
-            btnBack.Location = new Point(212, 571);
+            btnBack.Location = new Point(215, 569);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(500, 80);
             btnBack.TabIndex = 4;
@@ -64,42 +66,57 @@ namespace DigitalInclusionApp
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
-            // btnScam
+            // btnSecurity
             // 
-            btnScam.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
-            btnScam.Location = new Point(312, 248);
-            btnScam.Name = "btnScam";
-            btnScam.Size = new Size(300, 254);
-            btnScam.TabIndex = 1;
-            btnScam.Text = "Golpes";
-            btnScam.TextAlign = ContentAlignment.BottomCenter;
-            btnScam.UseVisualStyleBackColor = true;
-            btnScam.Click += btnScam_Click;
+            btnSecurity.Anchor = AnchorStyles.Left;
+            btnSecurity.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
+            btnSecurity.Location = new Point(520, 246);
+            btnSecurity.Name = "btnSecurity";
+            btnSecurity.Size = new Size(300, 254);
+            btnSecurity.TabIndex = 3;
+            btnSecurity.Text = "Segurança";
+            btnSecurity.TextAlign = ContentAlignment.BottomCenter;
+            btnSecurity.UseVisualStyleBackColor = true;
+            btnSecurity.Click += btnSecurity_Click;
+            // 
+            // btnInformatics
+            // 
+            btnInformatics.Anchor = AnchorStyles.Left;
+            btnInformatics.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnInformatics.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
+            btnInformatics.Location = new Point(104, 246);
+            btnInformatics.Name = "btnInformatics";
+            btnInformatics.Size = new Size(300, 254);
+            btnInformatics.TabIndex = 1;
+            btnInformatics.Text = "Informática";
+            btnInformatics.TextAlign = ContentAlignment.BottomCenter;
+            btnInformatics.UseVisualStyleBackColor = true;
+            btnInformatics.Click += btnInformatics_Click;
             // 
             // lblTitulo
             // 
             lblTitulo.Anchor = AnchorStyles.Top;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold);
-            lblTitulo.ForeColor = SystemColors.GradientActiveCaption;
-            lblTitulo.Location = new Point(170, 20);
+            lblTitulo.Font = new Font("Segoe UI", 80F, FontStyle.Bold | FontStyle.Underline);
+            lblTitulo.ForeColor = Color.FromArgb(58, 237, 213);
+            lblTitulo.Location = new Point(199, 19);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(584, 142);
+            lblTitulo.Size = new Size(526, 142);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Segurança";
-            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            lblTitulo.Text = "Aprenda!";
+            lblTitulo.TextAlign = ContentAlignment.TopCenter;
             // 
-            // Security
+            // Learning
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(924, 700);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Security";
+            Name = "Learning";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Segurança";
+            Text = "Aprender";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -110,7 +127,8 @@ namespace DigitalInclusionApp
 
         private Panel panel1;
         private Button btnBack;
-        private Button btnScam;
+        private Button btnSecurity;
+        private Button btnInformatics;
         private Label lblTitulo;
     }
 }
