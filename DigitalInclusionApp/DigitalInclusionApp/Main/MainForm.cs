@@ -71,9 +71,9 @@ namespace DigitalInclusionApp
             btnCreditos.Height = Convert.ToInt32(Height / lowSize2);
             btnSair.Height = Convert.ToInt32(Height / lowSize2);
 
-            btnAprender.Font = new Font("Segoe UI", Width / 15, FontStyle.Bold);
-            btnCreditos.Font = new Font("Segoe UI", Width / 25, FontStyle.Bold);
-            btnSair.Font = new Font("Segoe UI", Width / 25, FontStyle.Bold);
+            btnAprender.Font = new Font("Segoe UI", Width / 25, FontStyle.Bold);
+            btnCreditos.Font = new Font("Segoe UI", Width / 40, FontStyle.Bold);
+            btnSair.Font = new Font("Segoe UI", Width / 40, FontStyle.Bold);
         }
 
         private void btnAprender_Click(object sender, EventArgs e)
