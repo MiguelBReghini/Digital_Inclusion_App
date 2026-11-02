@@ -121,6 +121,15 @@ namespace DigitalInclusionApp
             return;
         }
 
+        private void btnTarget_Click_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Right)
+                return;
+            btnTarget.Text = "Você clicou!!! ✔✔✔✔";
+            btnTarget.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            btnTarget.ForeColor = Color.Green;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

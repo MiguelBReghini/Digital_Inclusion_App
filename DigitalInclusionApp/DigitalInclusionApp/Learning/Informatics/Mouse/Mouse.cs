@@ -116,6 +116,7 @@ namespace DigitalInclusionApp
             if (TryMoveToValidPosition(btnTarget))
             {
                 btnTargetDir.Visible = false;
+                btnTarget.Text = "Botão Esquerdo";
                 btnTarget.Visible = true;
             }
 

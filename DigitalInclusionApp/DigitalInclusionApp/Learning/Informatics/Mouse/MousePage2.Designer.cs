@@ -38,7 +38,6 @@ namespace DigitalInclusionApp
             label3 = new Label();
             label2 = new Label();
             hScrollBar1 = new HScrollBar();
-            trackBar1 = new TrackBar();
             textBox2 = new TextBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -48,7 +47,6 @@ namespace DigitalInclusionApp
             panel2 = new Panel();
             process1 = new System.Diagnostics.Process();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -79,7 +77,6 @@ namespace DigitalInclusionApp
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(hScrollBar1);
-            panel1.Controls.Add(trackBar1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
@@ -171,15 +168,6 @@ namespace DigitalInclusionApp
             hScrollBar1.Size = new Size(260, 84);
             hScrollBar1.TabIndex = 13;
             hScrollBar1.Scroll += hScrollBar1_Scroll;
-            // 
-            // trackBar1
-            // 
-            trackBar1.Location = new Point(359, 348);
-            trackBar1.Name = "trackBar1";
-            trackBar1.Size = new Size(260, 45);
-            trackBar1.TabIndex = 12;
-            trackBar1.TickStyle = TickStyle.Both;
-            trackBar1.Scroll += trackBar1_Scroll;
             // 
             // textBox2
             // 
@@ -301,7 +289,6 @@ namespace DigitalInclusionApp
             Text = "Teclado";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -323,7 +310,6 @@ namespace DigitalInclusionApp
         private ImageList imageList1;
         private PictureBox pictureBox2;
         private TextBox textBox2;
-        private TrackBar trackBar1;
         private Label label2;
         private HScrollBar hScrollBar1;
         private Label label3;

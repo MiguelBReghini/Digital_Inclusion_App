@@ -91,13 +91,13 @@ namespace DigitalInclusionApp
             btnTarget.FlatStyle = FlatStyle.Flat;
             btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTarget.ForeColor = SystemColors.ActiveCaptionText;
-            btnTarget.Location = new Point(374, 196);
+            btnTarget.Location = new Point(371, 200);
             btnTarget.Name = "btnTarget";
             btnTarget.Size = new Size(212, 161);
             btnTarget.TabIndex = 15;
             btnTarget.Text = "Clique com o Botão Direito do Mouse aqui!";
             btnTarget.UseVisualStyleBackColor = false;
-            btnTarget.Click += btnTarget_Click;
+            btnTarget.MouseDown += btnTarget_Click_MouseDown;
             // 
             // textBox1
             // 

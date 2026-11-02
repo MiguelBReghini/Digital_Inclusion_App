@@ -66,15 +66,14 @@ namespace DigitalInclusionApp
 
 
             //Images X
-            pictureBox1.Left = centerX + Convert.ToInt32(Width / 30);
-            pictureBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
+            pictureBox2.Left = centerX + Convert.ToInt32(Width / 30);
+            pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
             //Button X
             //btnTarget.Left = centerX - Convert.ToInt32(Width / 7);
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
             btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
             hScrollBar1.Left = centerX - Convert.ToInt32(Width / 6);
             vScrollBar1.Left = centerX + Convert.ToInt32(Width / 3.5);
-            trackBar1.Left = centerX - Convert.ToInt32(Width / 6);
 
             //Text X
             textBox2.Left = centerX + Convert.ToInt32(Width / 7);
@@ -91,7 +90,6 @@ namespace DigitalInclusionApp
             //Button Y
             hScrollBar1.Top = Convert.ToInt32(Height / 6);
             vScrollBar1.Top = Convert.ToInt32(Height / 6);
-            trackBar1.Top = Convert.ToInt32(Height / 2);
             //Text Y
             double textTop = 1.5;
             textBox1.Top = Convert.ToInt32(Height / textTop);
@@ -139,20 +137,18 @@ namespace DigitalInclusionApp
         {
 
         }
-
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             if (hScrollBar1.Value >= hScrollBar1.Maximum - hScrollBar1.LargeChange + 1)
             {
                 label2.Enabled = true;
+                done = true;
             }
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            if (trackBar1.Value >= trackBar1.Maximum)
+            else if ((hScrollBar1.Value <= hScrollBar1.Minimum + hScrollBar1.LargeChange + 1) && done)
             {
                 label3.Enabled = true;
+                done = false;
+                return;
             }
         }
 
@@ -167,6 +163,7 @@ namespace DigitalInclusionApp
             else if ((vScrollBar1.Value <= vScrollBar1.Minimum + vScrollBar1.LargeChange + 1) && done)
             {
                 label6.Enabled = true;
+                done = false;
                 return;
             }
         }

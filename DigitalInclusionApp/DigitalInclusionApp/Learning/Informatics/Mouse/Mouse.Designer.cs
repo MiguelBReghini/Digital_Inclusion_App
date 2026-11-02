@@ -52,7 +52,7 @@
             mouseLabel.AutoSize = true;
             mouseLabel.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
             mouseLabel.ForeColor = Color.FromArgb(128, 255, 255);
-            mouseLabel.Location = new Point(316, -10);
+            mouseLabel.Location = new Point(489, -10);
             mouseLabel.Name = "mouseLabel";
             mouseLabel.Size = new Size(349, 125);
             mouseLabel.TabIndex = 0;
@@ -68,7 +68,7 @@
             voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
-            voltarBtn.Location = new Point(231, 509);
+            voltarBtn.Location = new Point(413, 726);
             voltarBtn.Name = "voltarBtn";
             voltarBtn.Size = new Size(500, 80);
             voltarBtn.TabIndex = 1;
@@ -87,7 +87,7 @@
             btnTarget.FlatStyle = FlatStyle.Flat;
             btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTarget.ForeColor = SystemColors.ActiveCaptionText;
-            btnTarget.Location = new Point(375, 197);
+            btnTarget.Location = new Point(557, 374);
             btnTarget.Name = "btnTarget";
             btnTarget.Size = new Size(212, 84);
             btnTarget.TabIndex = 2;
@@ -117,8 +117,10 @@
             // 
             // progressMouse
             // 
+            progressMouse.Anchor = AnchorStyles.Bottom;
             progressMouse.ForeColor = Color.Lime;
-            progressMouse.Location = new Point(348, 648);
+            progressMouse.Location = new Point(326, 648);
+            progressMouse.Margin = new Padding(3, 3, 3, 10);
             progressMouse.Name = "progressMouse";
             progressMouse.Size = new Size(675, 48);
             progressMouse.TabIndex = 4;
