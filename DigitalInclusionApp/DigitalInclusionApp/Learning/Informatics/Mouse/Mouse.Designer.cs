@@ -33,6 +33,7 @@
             voltarBtn = new Button();
             btnTarget = new Button();
             btnTargetDir = new Button();
+            progressMouse = new ProgressBar();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(962, 100);
+            panel1.Size = new Size(1326, 100);
             panel1.TabIndex = 0;
             // 
             // mouseLabel
@@ -114,12 +115,21 @@
             btnTargetDir.Click += btnTargetDir_Click;
             btnTargetDir.MouseDown += btnTargetDir_Click_MouseDown;
             // 
+            // progressMouse
+            // 
+            progressMouse.ForeColor = Color.Lime;
+            progressMouse.Location = new Point(348, 648);
+            progressMouse.Name = "progressMouse";
+            progressMouse.Size = new Size(675, 48);
+            progressMouse.TabIndex = 4;
+            // 
             // Mouse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(1, 34, 62);
-            ClientSize = new Size(962, 616);
+            ClientSize = new Size(1326, 833);
+            Controls.Add(progressMouse);
             Controls.Add(btnTargetDir);
             Controls.Add(btnTarget);
             Controls.Add(voltarBtn);
@@ -139,5 +149,6 @@
         private Button voltarBtn;
         private Button btnTarget;
         private Button btnTargetDir;
+        private ProgressBar progressMouse;
     }
 }

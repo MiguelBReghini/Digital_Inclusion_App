@@ -46,6 +46,7 @@ namespace DigitalInclusionApp
             keyboardProgressBar.Name = "keyboardProgressBar";
             keyboardProgressBar.Size = new Size(330, 23);
             keyboardProgressBar.TabIndex = 1;
+           
             // 
             // backBtnKeyboardPractice
             // 
