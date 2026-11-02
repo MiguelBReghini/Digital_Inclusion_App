@@ -66,8 +66,8 @@ namespace DigitalInclusionApp
 
 
             //Images X
-            pictureBox1.Left = centerX + Convert.ToInt32(Width / 30);
-            pictureBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
+            pictureBox2.Left = centerX + Convert.ToInt32(Width / 30);
+            pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
             //Button X
             //btnTarget.Left = centerX - Convert.ToInt32(Width / 7);
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);

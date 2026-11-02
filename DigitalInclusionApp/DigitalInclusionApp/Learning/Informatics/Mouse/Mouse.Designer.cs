@@ -41,8 +41,9 @@
             panel1.Controls.Add(mouseLabel);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(962, 100);
+            panel1.Size = new Size(1099, 133);
             panel1.TabIndex = 0;
             // 
             // mouseLabel
@@ -51,9 +52,9 @@
             mouseLabel.AutoSize = true;
             mouseLabel.Font = new Font("Segoe UI", 70F, FontStyle.Bold);
             mouseLabel.ForeColor = Color.FromArgb(128, 255, 255);
-            mouseLabel.Location = new Point(316, -10);
+            mouseLabel.Location = new Point(361, -13);
             mouseLabel.Name = "mouseLabel";
-            mouseLabel.Size = new Size(349, 125);
+            mouseLabel.Size = new Size(434, 155);
             mouseLabel.TabIndex = 0;
             mouseLabel.Text = "Mouse";
             mouseLabel.Click += mouseLabel_Click;
@@ -67,9 +68,10 @@
             voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
-            voltarBtn.Location = new Point(231, 509);
+            voltarBtn.Location = new Point(264, 679);
+            voltarBtn.Margin = new Padding(3, 4, 3, 4);
             voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(500, 80);
+            voltarBtn.Size = new Size(571, 107);
             voltarBtn.TabIndex = 1;
             voltarBtn.Text = "⬅       Voltar";
             voltarBtn.TextAlign = ContentAlignment.MiddleLeft;
@@ -84,11 +86,12 @@
             btnTarget.FlatAppearance.MouseDownBackColor = Color.Green;
             btnTarget.FlatAppearance.MouseOverBackColor = Color.Green;
             btnTarget.FlatStyle = FlatStyle.Flat;
-            btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTarget.Font = new Font("Segoe UI", 18.25F, FontStyle.Bold);
             btnTarget.ForeColor = SystemColors.ActiveCaptionText;
-            btnTarget.Location = new Point(375, 197);
+            btnTarget.Location = new Point(429, 263);
+            btnTarget.Margin = new Padding(3, 4, 3, 4);
             btnTarget.Name = "btnTarget";
-            btnTarget.Size = new Size(212, 84);
+            btnTarget.Size = new Size(242, 112);
             btnTarget.TabIndex = 2;
             btnTarget.Text = "Clique Aqui para começar!";
             btnTarget.UseVisualStyleBackColor = false;
@@ -104,9 +107,10 @@
             btnTargetDir.FlatStyle = FlatStyle.Flat;
             btnTargetDir.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold);
             btnTargetDir.ForeColor = Color.Black;
-            btnTargetDir.Location = new Point(59, 118);
+            btnTargetDir.Location = new Point(67, 157);
+            btnTargetDir.Margin = new Padding(3, 4, 3, 4);
             btnTargetDir.Name = "btnTargetDir";
-            btnTargetDir.Size = new Size(212, 84);
+            btnTargetDir.Size = new Size(242, 112);
             btnTargetDir.TabIndex = 3;
             btnTargetDir.Text = "Botão Direito";
             btnTargetDir.UseVisualStyleBackColor = false;
@@ -116,14 +120,15 @@
             // 
             // Mouse
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(1, 34, 62);
-            ClientSize = new Size(962, 616);
+            ClientSize = new Size(1099, 821);
             Controls.Add(btnTargetDir);
             Controls.Add(btnTarget);
             Controls.Add(voltarBtn);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Mouse";
             Text = "Form1";
             Load += Mouse_Load;

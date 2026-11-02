@@ -51,17 +51,17 @@ namespace DigitalInclusionApp
             var centerX = panel1.ClientSize.Width / 2;
 
             lblTitulo.Left = centerX - (lblTitulo.Width / 2);
-            socialProjectTxt.Left = centerX - (socialProjectTxt.Width / 2);
-            textBox1.Left = centerX - (textBox1.Width / 2);
+            socialProjectTxt.Left = centerX - Convert.ToInt32(Width / 50);
+            textBox1.Left = centerX - Convert.ToInt32(Width / 10);
             btnBack.Left = centerX - (btnBack.Width / 2);
 
-            socialProjectTxt.Location = new Point(centerX - Convert.ToInt32(Width / 4.8), Height / 5);
-            textBox1.Location = new Point(centerX - Convert.ToInt32(Width / 4.8), Convert.ToInt32(Height / 1.6));
+            socialProjectTxt.Location = new Point(centerX - Convert.ToInt32(Width / 3.6), Height / 5);
+            textBox1.Location = new Point(centerX - Convert.ToInt32(Width / 3.6), Convert.ToInt32(Height / 1.6));
 
-            socialProjectTxt.Font = new Font("Segoe UI", 30, FontStyle.Bold);
+            socialProjectTxt.Font = new Font("Segoe UI", 25, FontStyle.Bold);
             socialProjectTxt.CharacterCasing = CharacterCasing.Upper;
 
-            textBox1.Font = new Font("Segoe UI", 30, FontStyle.Bold);
+            textBox1.Font = new Font("Segoe UI", 25, FontStyle.Bold);
             textBox1.CharacterCasing = CharacterCasing.Upper;
         }
 
