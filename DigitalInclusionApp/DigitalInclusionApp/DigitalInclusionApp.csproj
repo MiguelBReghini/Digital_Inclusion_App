@@ -21,6 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Learning\Security\Scam\ScamPage3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning\Security\Scam\ScamPage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning\Security\Scam\ScamPage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="_Learning\_Informatics\Keyboard\KeyboardPage2.cs">
       <SubType>Form</SubType>
     </Compile>

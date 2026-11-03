@@ -66,7 +66,11 @@ namespace DigitalInclusionApp
             // 
             // btnScam
             // 
+            btnScam.FlatStyle = FlatStyle.Flat;
             btnScam.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnScam.ForeColor = SystemColors.ButtonFace;
+            btnScam.Image = Properties.Resources.brave_Oy4IGklObx;
+            btnScam.ImageAlign = ContentAlignment.TopCenter;
             btnScam.Location = new Point(312, 248);
             btnScam.Name = "btnScam";
             btnScam.Size = new Size(300, 254);

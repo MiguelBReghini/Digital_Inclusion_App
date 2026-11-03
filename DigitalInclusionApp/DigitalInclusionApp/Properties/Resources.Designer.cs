@@ -235,5 +235,16 @@ namespace DigitalInclusionApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_Oy4IGklObx
+        {
+            get {
+                object obj = ResourceManager.GetObject("brave_Oy4IGklObx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -71,10 +71,10 @@ namespace DigitalInclusionApp
 
         private void btnScam_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //t1 = new Thread(openScams);
-            //t1.SetApartmentState(ApartmentState.STA);
-            //t1.Start();
+            this.Close();
+            t1 = new Thread(openScams);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
             return;
         }
         private void btnBack_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace DigitalInclusionApp
 
         public void openScams()
         {
-            //Application.Run(new Scams());
+            Application.Run(new ScamPage1());
             return;
         }
         public void openLearning()
