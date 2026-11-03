@@ -84,13 +84,13 @@ namespace DigitalInclusionApp
             // 
             textBox1.BackColor = Color.FromArgb(1, 34, 62);
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Segoe UI", 32F, FontStyle.Bold);
             textBox1.ForeColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(614, 200);
+            textBox1.Location = new Point(546, 124);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(416, 321);
+            textBox1.Size = new Size(633, 493);
             textBox1.TabIndex = 7;
             textBox1.Text = "A imagem mostra um guia visual da posição ideal dos dedos em um teclado de computador, com cada cor correspondendo a um dedo e às teclas que ele deve acionar. Note que há um padrão para facilitar.";
             textBox1.TextAlign = HorizontalAlignment.Center;

@@ -175,5 +175,65 @@ namespace DigitalInclusionApp.Properties {
                 return ResourceManager.GetString("portuguese", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TecladoAcentos {
+            get {
+                object obj = ResourceManager.GetObject("TecladoAcentos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TecladoCapslock {
+            get {
+                object obj = ResourceManager.GetObject("TecladoCapslock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TecladoEnter {
+            get {
+                object obj = ResourceManager.GetObject("TecladoEnter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TecladoLetras {
+            get {
+                object obj = ResourceManager.GetObject("TecladoLetras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TecladoNumeros {
+            get {
+                object obj = ResourceManager.GetObject("TecladoNumeros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TecladoShift {
+            get {
+                object obj = ResourceManager.GetObject("TecladoShift", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

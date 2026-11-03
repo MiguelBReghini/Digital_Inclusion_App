@@ -33,7 +33,6 @@ namespace DigitalInclusionApp
             panel1 = new Panel();
             btnTarget = new Button();
             textBox1 = new TextBox();
-            pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox2 = new TextBox();
             pictureBox2 = new PictureBox();
@@ -42,7 +41,6 @@ namespace DigitalInclusionApp
             panel2 = new Panel();
             process1 = new System.Diagnostics.Process();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
@@ -68,7 +66,6 @@ namespace DigitalInclusionApp
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(btnTarget);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(pictureBox2);
@@ -91,13 +88,13 @@ namespace DigitalInclusionApp
             btnTarget.FlatStyle = FlatStyle.Flat;
             btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTarget.ForeColor = SystemColors.ActiveCaptionText;
-            btnTarget.Location = new Point(374, 196);
+            btnTarget.Location = new Point(392, 202);
             btnTarget.Name = "btnTarget";
             btnTarget.Size = new Size(212, 161);
             btnTarget.TabIndex = 15;
             btnTarget.Text = "Clique com o Botão Direito do Mouse aqui!";
             btnTarget.UseVisualStyleBackColor = false;
-            btnTarget.Click += btnTarget_Click;
+            btnTarget.MouseDown += btnTarget_Click_MouseDown;
             // 
             // textBox1
             // 
@@ -105,31 +102,21 @@ namespace DigitalInclusionApp
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(708, 450);
+            textBox1.Location = new Point(670, 450);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(416, 121);
+            textBox1.Size = new Size(475, 162);
             textBox1.TabIndex = 14;
-            textBox1.Text = "Este quadro terá informações sobre Abrir pastas e Arquivos";
+            textBox1.Text = "Uma das funcionalidades mais utilizadas é a navegação pelo computador, assim como a criação de outros arquivos.";
             textBox1.TextAlign = HorizontalAlignment.Center;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.KeyboardImage;
-            pictureBox3.Location = new Point(922, 133);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(293, 298);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 13;
-            pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.KeyboardImage;
-            pictureBox1.Location = new Point(623, 133);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(670, 133);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(293, 298);
+            pictureBox1.Size = new Size(475, 311);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
@@ -145,9 +132,9 @@ namespace DigitalInclusionApp
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(416, 121);
+            textBox2.Size = new Size(499, 162);
             textBox2.TabIndex = 11;
-            textBox2.Text = "Este quadro terá informações sobre Botão Direito";
+            textBox2.Text = "O Botão Direito do Mouse permite o acesso a outras funcionalidades.\r\nTeste acima em usar o Botão Direito!";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox2
@@ -189,7 +176,7 @@ namespace DigitalInclusionApp
             btnPraticaKeyboard.Name = "btnPraticaKeyboard";
             btnPraticaKeyboard.Size = new Size(500, 93);
             btnPraticaKeyboard.TabIndex = 4;
-            btnPraticaKeyboard.Text = "Próximo   ➞";
+            btnPraticaKeyboard.Text = "Praticar   ➞";
             btnPraticaKeyboard.TextAlign = ContentAlignment.MiddleRight;
             btnPraticaKeyboard.UseVisualStyleBackColor = false;
             btnPraticaKeyboard.Click += btnPraticaKeyboard_Click;
@@ -229,7 +216,6 @@ namespace DigitalInclusionApp
             Text = "Teclado";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
@@ -250,7 +236,6 @@ namespace DigitalInclusionApp
         private PictureBox pictureBox2;
         private TextBox textBox2;
         private TextBox textBox1;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox1;
         private Button btnTarget;
     }

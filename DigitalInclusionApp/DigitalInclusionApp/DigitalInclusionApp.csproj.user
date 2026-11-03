@@ -40,9 +40,6 @@
     <Compile Update="Learning\Security\Security.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MousePractice.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">

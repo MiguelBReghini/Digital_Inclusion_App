@@ -58,17 +58,24 @@ namespace DigitalInclusionApp
             pictureBox3.Width = imageWidth;
             pictureBox3.Height = imageWidth;
 
+            textBox1.Width = Convert.ToInt32(imageWidth * 1.3);
+            textBox1.Height = Convert.ToInt32(imageWidth * 0.7);
+            textBox2.Width = Convert.ToInt32(imageWidth * 1.3);
+            textBox2.Height = Convert.ToInt32(imageWidth * 0.7);
+            textBox3.Width = Convert.ToInt32(imageWidth * 1.3);
+            textBox3.Height = Convert.ToInt32(imageWidth * 0.7);
+
             //Images X
-            pictureBox1.Left = centerX - Convert.ToInt32(Width / 10);
-            pictureBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
+            pictureBox2.Left = centerX - Convert.ToInt32(Width / 10);
+            pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
             pictureBox3.Left = centerX + Convert.ToInt32(Width / 5);
             //Button X
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
             btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
             //Text X
-            textBox3.Left = centerX + Convert.ToInt32(Width / 5);
-            textBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
-            textBox2.Left = centerX - Convert.ToInt32(Width / 10);
+            textBox3.Left = centerX + Convert.ToInt32(Width / 5.8);
+            textBox1.Left = centerX - Convert.ToInt32(Width / 2.33);
+            textBox2.Left = centerX - Convert.ToInt32(Width / 8);
 
             //Images Y
             double divTop = 6;
@@ -96,7 +103,7 @@ namespace DigitalInclusionApp
         private void voltarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openInformatics);
+            t1 = new Thread(openKeyboardPage1);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
@@ -105,9 +112,9 @@ namespace DigitalInclusionApp
             Application.Run(new KeyboardPage3());
             return;
         }
-        public void openInformatics()
+        public void openKeyboardPage1()
         {
-            Application.Run(new Informatics());
+            Application.Run(new KeyboardPage1());
             return;
         }
 

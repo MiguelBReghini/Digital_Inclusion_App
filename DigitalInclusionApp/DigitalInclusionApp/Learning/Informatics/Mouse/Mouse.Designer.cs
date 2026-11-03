@@ -43,7 +43,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1326, 100);
+            panel1.Size = new Size(962, 100);
             panel1.TabIndex = 0;
             // 
             // mouseLabel
@@ -85,7 +85,7 @@
             btnTarget.FlatAppearance.MouseDownBackColor = Color.Green;
             btnTarget.FlatAppearance.MouseOverBackColor = Color.Green;
             btnTarget.FlatStyle = FlatStyle.Flat;
-            btnTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTarget.Font = new Font("Segoe UI", 18.25F, FontStyle.Bold);
             btnTarget.ForeColor = SystemColors.ActiveCaptionText;
             btnTarget.Location = new Point(375, 197);
             btnTarget.Name = "btnTarget";
@@ -117,10 +117,12 @@
             // 
             // progressMouse
             // 
+            progressMouse.Anchor = AnchorStyles.Bottom;
             progressMouse.ForeColor = Color.Lime;
-            progressMouse.Location = new Point(348, 648);
+            progressMouse.Location = new Point(186, 448);
+            progressMouse.Margin = new Padding(3, 2, 3, 8);
             progressMouse.Name = "progressMouse";
-            progressMouse.Size = new Size(675, 48);
+            progressMouse.Size = new Size(591, 36);
             progressMouse.TabIndex = 4;
             // 
             // Mouse
@@ -128,7 +130,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(1, 34, 62);
-            ClientSize = new Size(1326, 833);
+            ClientSize = new Size(962, 616);
             Controls.Add(progressMouse);
             Controls.Add(btnTargetDir);
             Controls.Add(btnTarget);

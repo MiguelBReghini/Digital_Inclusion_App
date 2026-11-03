@@ -42,35 +42,39 @@ namespace DigitalInclusionApp
             // keyboardProgressBar
             // 
             keyboardProgressBar.Anchor = AnchorStyles.Bottom;
-            keyboardProgressBar.Location = new Point(297, 547);
+            keyboardProgressBar.Location = new Point(167, 547);
             keyboardProgressBar.Name = "keyboardProgressBar";
-            keyboardProgressBar.Size = new Size(330, 23);
+            keyboardProgressBar.Size = new Size(591, 36);
             keyboardProgressBar.TabIndex = 1;
-           
             // 
             // backBtnKeyboardPractice
             // 
-            backBtnKeyboardPractice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            backBtnKeyboardPractice.Anchor = AnchorStyles.Bottom;
+            backBtnKeyboardPractice.BackColor = Color.FromArgb(231, 237, 58);
+            backBtnKeyboardPractice.FlatStyle = FlatStyle.Flat;
             backBtnKeyboardPractice.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            backBtnKeyboardPractice.Location = new Point(302, 586);
+            backBtnKeyboardPractice.ForeColor = Color.FromArgb(1, 34, 62);
+            backBtnKeyboardPractice.Location = new Point(212, 586);
             backBtnKeyboardPractice.Name = "backBtnKeyboardPractice";
-            backBtnKeyboardPractice.Size = new Size(320, 93);
+            backBtnKeyboardPractice.Size = new Size(500, 80);
             backBtnKeyboardPractice.TabIndex = 0;
             backBtnKeyboardPractice.TabStop = false;
-            backBtnKeyboardPractice.Text = "Voltar";
-            backBtnKeyboardPractice.UseVisualStyleBackColor = true;
+            backBtnKeyboardPractice.Text = "⬅       Voltar";
+            backBtnKeyboardPractice.TextAlign = ContentAlignment.MiddleLeft;
+            backBtnKeyboardPractice.UseVisualStyleBackColor = false;
             backBtnKeyboardPractice.Click += backBtnKeyboardPractice_Click;
             // 
             // Palavra
             // 
             Palavra.Anchor = AnchorStyles.Top;
             Palavra.AutoSize = true;
-            Palavra.Font = new Font("Segoe UI", 40F);
+            Palavra.FlatStyle = FlatStyle.Flat;
+            Palavra.Font = new Font("Segoe UI", 120F, FontStyle.Bold);
             Palavra.ForeColor = SystemColors.ButtonHighlight;
             Palavra.ImageAlign = ContentAlignment.TopCenter;
-            Palavra.Location = new Point(401, 37);
+            Palavra.Location = new Point(462, 37);
             Palavra.Name = "Palavra";
-            Palavra.Size = new Size(0, 72);
+            Palavra.Size = new Size(0, 212);
             Palavra.TabIndex = 2;
             Palavra.TextAlign = ContentAlignment.TopCenter;
             // 
@@ -102,10 +106,12 @@ namespace DigitalInclusionApp
             // 
             // instructionsKeyboardPractice
             // 
+            instructionsKeyboardPractice.Anchor = AnchorStyles.Top;
             instructionsKeyboardPractice.AutoSize = true;
             instructionsKeyboardPractice.Font = new Font("Segoe UI", 20F);
             instructionsKeyboardPractice.ForeColor = SystemColors.ButtonHighlight;
             instructionsKeyboardPractice.Location = new Point(184, 218);
+            instructionsKeyboardPractice.Margin = new Padding(3, 5, 3, 0);
             instructionsKeyboardPractice.Name = "instructionsKeyboardPractice";
             instructionsKeyboardPractice.Size = new Size(556, 37);
             instructionsKeyboardPractice.TabIndex = 5;

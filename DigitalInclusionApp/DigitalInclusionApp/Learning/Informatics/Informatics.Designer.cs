@@ -28,6 +28,7 @@ namespace DigitalInclusionApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Informatics));
             panel1 = new Panel();
             btnBack = new Button();
             btnMouse = new Button();
@@ -68,7 +69,11 @@ namespace DigitalInclusionApp
             // 
             // btnMouse
             // 
+            btnMouse.BackgroundImage = (Image)resources.GetObject("btnMouse.BackgroundImage");
+            btnMouse.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMouse.FlatStyle = FlatStyle.Flat;
             btnMouse.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnMouse.ForeColor = SystemColors.ControlText;
             btnMouse.Location = new Point(520, 246);
             btnMouse.Name = "btnMouse";
             btnMouse.Size = new Size(300, 254);
@@ -80,7 +85,10 @@ namespace DigitalInclusionApp
             // 
             // btnKeyboard
             // 
+            btnKeyboard.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKeyboard.FlatStyle = FlatStyle.Flat;
             btnKeyboard.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnKeyboard.Image = (Image)resources.GetObject("btnKeyboard.Image");
             btnKeyboard.Location = new Point(104, 246);
             btnKeyboard.Name = "btnKeyboard";
             btnKeyboard.Size = new Size(300, 254);

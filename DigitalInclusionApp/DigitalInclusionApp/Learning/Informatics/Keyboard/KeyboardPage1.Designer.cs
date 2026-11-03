@@ -90,9 +90,9 @@ namespace DigitalInclusionApp
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(416, 121);
+            textBox3.Size = new Size(416, 163);
             textBox3.TabIndex = 12;
-            textBox3.Text = "Este quadro terá informações sobre Quebra de Linha";
+            textBox3.Text = "À direita no Teclado podem ser encontradas as acentuações. Para utiliza-las, aperte elas primeiro e, depois, a Letra que se espera colocar.";
             textBox3.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox2
@@ -105,14 +105,14 @@ namespace DigitalInclusionApp
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(416, 88);
+            textBox2.Size = new Size(416, 163);
             textBox2.TabIndex = 11;
-            textBox2.Text = "Este quadro terá informações sobre Números";
+            textBox2.Text = "Pensando em escrever Letras Maiúsculas, o botão Capslock serve para trocar entre Minúsculas e Maiúsculas.";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.KeyboardImage;
+            pictureBox3.Image = Properties.Resources.TecladoAcentos;
             pictureBox3.Location = new Point(888, 124);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(293, 298);
@@ -122,7 +122,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.KeyboardImage;
+            pictureBox2.Image = Properties.Resources.TecladoCapslock;
             pictureBox2.Location = new Point(487, 124);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(293, 298);
@@ -132,7 +132,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.KeyboardImage;
+            pictureBox1.Image = Properties.Resources.TecladoLetras;
             pictureBox1.Location = new Point(85, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);
@@ -150,9 +150,9 @@ namespace DigitalInclusionApp
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(416, 88);
+            textBox1.Size = new Size(416, 121);
             textBox1.TabIndex = 7;
-            textBox1.Text = "Este quadro terá informações sobre Letras";
+            textBox1.Text = "As Letras no teclado ficam no centro dele, facilitando a digitação.";
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 

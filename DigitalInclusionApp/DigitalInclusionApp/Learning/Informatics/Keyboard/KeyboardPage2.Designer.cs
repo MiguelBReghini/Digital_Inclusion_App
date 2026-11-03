@@ -86,13 +86,13 @@ namespace DigitalInclusionApp
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = SystemColors.ActiveCaption;
-            textBox3.Location = new Point(848, 454);
+            textBox3.Location = new Point(845, 436);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(416, 106);
+            textBox3.Size = new Size(416, 202);
             textBox3.TabIndex = 12;
-            textBox3.Text = "Este quadro terá informações sobre Shift";
+            textBox3.Text = "E, para Quebrar a Linha de uma página, é usado o Enter.";
             textBox3.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox2
@@ -107,12 +107,12 @@ namespace DigitalInclusionApp
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(416, 202);
             textBox2.TabIndex = 11;
-            textBox2.Text = "Este quadro terá informações sobre Acentos (Ideia colocar jogo do teclado dentro de cada tela dessas";
+            textBox2.Text = "O Shift pode ser tanto usado como o Capslock, quanto para utilizar os Simbolos que ficam na mesma tecla que os Números.";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.KeyboardImage;
+            pictureBox3.Image = Properties.Resources.TecladoEnter;
             pictureBox3.Location = new Point(888, 124);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(293, 298);
@@ -122,7 +122,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.KeyboardImage;
+            pictureBox2.Image = Properties.Resources.TecladoShift;
             pictureBox2.Location = new Point(487, 124);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(293, 298);
@@ -132,7 +132,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.KeyboardImage;
+            pictureBox1.Image = Properties.Resources.TecladoNumeros;
             pictureBox1.Location = new Point(85, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);
@@ -146,13 +146,13 @@ namespace DigitalInclusionApp
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(27, 454);
+            textBox1.Location = new Point(25, 436);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(416, 88);
+            textBox1.Size = new Size(416, 204);
             textBox1.TabIndex = 7;
-            textBox1.Text = "Este quadro terá informações sobre Capslock";
+            textBox1.Text = "Os Números ficam em uma fileira logo acima das Letras.";
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
