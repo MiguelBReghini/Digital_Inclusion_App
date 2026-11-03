@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DigitalInclusionApp.Games;
+using System;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using DigitalInclusionApp.Games;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DigitalInclusionApp
 {
@@ -53,10 +54,14 @@ namespace DigitalInclusionApp
                 return;
 
             var centerX = panel2.ClientSize.Width / 2;
+            var centerY = panel2.ClientSize.Height / 2;
             keyboardProgressBar.Left = centerX - (keyboardProgressBar.Width / 2);
             backBtnKeyboardPractice.Left = centerX - (backBtnKeyboardPractice.Width / 2);
             Palavra.Left = centerX - (Palavra.Width / 2);
+
             instructionsKeyboardPractice.Left = centerX - (instructionsKeyboardPractice.Width / 2);
+            instructionsKeyboardPractice.Top = centerY;
+
             inputWord.Left = centerX - (inputWord.Width / 2);
             disclaimerKeyboardPractice.Left = centerX - (disclaimerKeyboardPractice.Width / 2);
             diclaimerKeyboardPractice2.Left = centerX - (diclaimerKeyboardPractice2.Width / 2);
@@ -165,6 +170,7 @@ namespace DigitalInclusionApp
             validator.StartWord(randomizer.RandomWord);
             inputWord.Clear();
             erroAtivo = false;
+            Palavra.Left = panel2.ClientSize.Width / 2 - (Palavra.Width / 2);
         }
 
        

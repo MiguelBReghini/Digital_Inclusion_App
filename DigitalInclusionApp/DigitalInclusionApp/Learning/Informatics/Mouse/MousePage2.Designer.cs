@@ -118,7 +118,7 @@ namespace DigitalInclusionApp
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(985, 130);
+            vScrollBar1.Location = new Point(985, 54);
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(111, 384);
             vScrollBar1.SmallChange = 5;
@@ -175,13 +175,13 @@ namespace DigitalInclusionApp
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = SystemColors.ActiveCaption;
-            textBox2.Location = new Point(706, 517);
+            textBox2.Location = new Point(690, 466);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(416, 121);
+            textBox2.Size = new Size(499, 121);
             textBox2.TabIndex = 11;
-            textBox2.Text = "Este quadro terá informações sobre Scroll";
+            textBox2.Text = "A Rodinha do Mouse é bastante usada para navegar por páginas no computador. \r\nTente rolar ela para baixo e para cima!";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox2

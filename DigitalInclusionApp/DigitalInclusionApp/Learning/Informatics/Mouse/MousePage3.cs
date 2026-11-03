@@ -53,22 +53,23 @@ namespace DigitalInclusionApp
             var centerX = panel1.ClientSize.Width / 2;
             //Image Sizes
             var imageWidth = Math.Min(520, panel1.ClientSize.Width / 4 - 80);
-            pictureBox1.Width = imageWidth;
-            pictureBox1.Height = imageWidth;
+            pictureBox1.Width = Convert.ToInt32(imageWidth * 2);
+            pictureBox1.Height = Convert.ToInt32(imageWidth);
             pictureBox2.Width = imageWidth;
             pictureBox2.Height = imageWidth;
-            pictureBox3.Width = imageWidth;
-            pictureBox3.Height = imageWidth;
             //Button Sizes
             double divSize = 6;
             btnTarget.Width = Convert.ToInt32(Width / divSize - 100);
             btnTarget.Height = Convert.ToInt32(Height / divSize);
 
+            textBox1.Width = Convert.ToInt32(imageWidth * 2);
+
+            textBox2.Width = Convert.ToInt32(imageWidth * 2);
+
 
             //Images X
             pictureBox1.Left = centerX + Convert.ToInt32(Width / 30);
             pictureBox2.Left = centerX - Convert.ToInt32(Width / 2.5);
-            pictureBox3.Left = centerX + Convert.ToInt32(Width / 4);
             //Button X
             btnTarget.Left = centerX - Convert.ToInt32(Width / 7);
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
@@ -81,7 +82,6 @@ namespace DigitalInclusionApp
             double divTop = 6;
             pictureBox1.Top = Convert.ToInt32(Height / divTop);
             pictureBox2.Top = Convert.ToInt32(Height / divTop);
-            pictureBox3.Top = Convert.ToInt32(Height / divTop);
             //Button Y
             btnTarget.Top = Convert.ToInt32(Height / divTop);
             //Text Y
@@ -96,7 +96,7 @@ namespace DigitalInclusionApp
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openKeyboardPage2);
+            t1 = new Thread(openMouse);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
             return;
@@ -106,18 +106,18 @@ namespace DigitalInclusionApp
         private void voltarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openInformatics);
+            t1 = new Thread(openMousePage2);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
-        private void openKeyboardPage2()
+        private void openMouse()
         {
             Application.Run(new Mouse());
             return;
         }
-        public void openInformatics()
+        public void openMousePage2()
         {
-            Application.Run(new Informatics());
+            Application.Run(new MousePage2());
             return;
         }
 

@@ -64,6 +64,11 @@ namespace DigitalInclusionApp
             //btnTarget.Width = Convert.ToInt32(Width / divSize - 100);
             //btnTarget.Height = Convert.ToInt32(Height / divSize);
 
+            textBox1.Width = Convert.ToInt32(imageWidth * 2);
+
+            textBox2.Width = Convert.ToInt32(imageWidth * 2);
+
+
 
             //Images X
             pictureBox2.Left = centerX + Convert.ToInt32(Width / 30);
@@ -76,7 +81,7 @@ namespace DigitalInclusionApp
             vScrollBar1.Left = centerX + Convert.ToInt32(Width / 3.5);
 
             //Text X
-            textBox2.Left = centerX + Convert.ToInt32(Width / 7);
+            textBox2.Left = centerX + Convert.ToInt32(Width / 20);
             textBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
             label2.Left = centerX - Convert.ToInt32(Width / 10);
             label3.Left = centerX - Convert.ToInt32(Width / 6);
@@ -91,7 +96,7 @@ namespace DigitalInclusionApp
             hScrollBar1.Top = Convert.ToInt32(Height / 6);
             vScrollBar1.Top = Convert.ToInt32(Height / 6);
             //Text Y
-            double textTop = 1.5;
+            double textTop = 1.75;
             textBox1.Top = Convert.ToInt32(Height / textTop);
             textBox2.Top = Convert.ToInt32(Height / textTop);
             label2.Top = centerX - Convert.ToInt32(Height / 1.75);
@@ -113,7 +118,7 @@ namespace DigitalInclusionApp
         private void voltarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openInformatics);
+            t1 = new Thread(openMousePage1);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
@@ -122,9 +127,9 @@ namespace DigitalInclusionApp
             Application.Run(new MousePage3());
             return;
         }
-        public void openInformatics()
+        public void openMousePage1()
         {
-            Application.Run(new Informatics());
+            Application.Run(new MousePage1());
             return;
         }
 

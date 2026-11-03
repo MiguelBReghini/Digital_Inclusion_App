@@ -124,13 +124,13 @@ namespace DigitalInclusionApp
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = SystemColors.ActiveCaption;
-            textBox3.Location = new Point(753, 483);
+            textBox3.Location = new Point(678, 463);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(416, 121);
+            textBox3.Size = new Size(515, 175);
             textBox3.TabIndex = 12;
-            textBox3.Text = "Este quadro terá informações sobre Duplo Clique";
+            textBox3.Text = "Também é usado o Duplo Clique, que é apertar rapidamente o Botão Esquerdo duas vezes. \r\nTente acima, mas precisa ser rápido!";
             textBox3.TextAlign = HorizontalAlignment.Center;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
@@ -167,7 +167,7 @@ namespace DigitalInclusionApp
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(416, 121);
             textBox1.TabIndex = 7;
-            textBox1.Text = "Este quadro terá informações sobre Botão Esquerdo";
+            textBox1.Text = "O Botão Esquerdo do Mouse é o mais usado. \r\nTeste clicar no botão acima!";
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -176,11 +176,12 @@ namespace DigitalInclusionApp
             voltarBtn.Anchor = AnchorStyles.Bottom;
             voltarBtn.AutoSize = true;
             voltarBtn.BackColor = Color.FromArgb(231, 237, 58);
+            voltarBtn.FlatStyle = FlatStyle.Flat;
             voltarBtn.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, 0);
             voltarBtn.ForeColor = Color.FromArgb(1, 34, 62);
-            voltarBtn.Location = new Point(96, 646);
+            voltarBtn.Location = new Point(96, 644);
             voltarBtn.Name = "voltarBtn";
-            voltarBtn.Size = new Size(500, 91);
+            voltarBtn.Size = new Size(500, 93);
             voltarBtn.TabIndex = 5;
             voltarBtn.Text = "⬅       Voltar";
             voltarBtn.TextAlign = ContentAlignment.MiddleLeft;

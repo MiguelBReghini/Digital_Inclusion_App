@@ -28,6 +28,7 @@ namespace DigitalInclusionApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Learning));
             panel1 = new Panel();
             btnBack = new Button();
             btnSecurity = new Button();
@@ -69,6 +70,9 @@ namespace DigitalInclusionApp
             // btnSecurity
             // 
             btnSecurity.Anchor = AnchorStyles.Left;
+            btnSecurity.BackgroundImage = (Image)resources.GetObject("btnSecurity.BackgroundImage");
+            btnSecurity.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSecurity.FlatStyle = FlatStyle.Flat;
             btnSecurity.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold);
             btnSecurity.Location = new Point(520, 246);
             btnSecurity.Name = "btnSecurity";
@@ -82,7 +86,9 @@ namespace DigitalInclusionApp
             // btnInformatics
             // 
             btnInformatics.Anchor = AnchorStyles.Left;
-            btnInformatics.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnInformatics.BackgroundImage = (Image)resources.GetObject("btnInformatics.BackgroundImage");
+            btnInformatics.BackgroundImageLayout = ImageLayout.Stretch;
+            btnInformatics.FlatStyle = FlatStyle.Flat;
             btnInformatics.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
             btnInformatics.Location = new Point(104, 246);
             btnInformatics.Name = "btnInformatics";

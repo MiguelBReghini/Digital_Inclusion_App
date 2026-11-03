@@ -55,8 +55,8 @@ namespace DigitalInclusionApp
             textBox1.Left = centerX - Convert.ToInt32(Width / 10);
             btnBack.Left = centerX - (btnBack.Width / 2);
 
-            socialProjectTxt.Location = new Point(centerX - Convert.ToInt32(Width / 3.6), Height / 5);
-            textBox1.Location = new Point(centerX - Convert.ToInt32(Width / 3.6), Convert.ToInt32(Height / 1.6));
+            socialProjectTxt.Location = new Point(centerX - socialProjectTxt.Width / 2, Height / 5);
+            textBox1.Location = new Point(centerX - textBox1.Width / 2, Convert.ToInt32(Height / 1.6));
 
             socialProjectTxt.Font = new Font("Segoe UI", 25, FontStyle.Bold);
             socialProjectTxt.CharacterCasing = CharacterCasing.Upper;

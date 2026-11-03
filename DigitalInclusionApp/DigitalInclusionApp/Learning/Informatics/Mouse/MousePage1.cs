@@ -74,7 +74,7 @@ namespace DigitalInclusionApp
             btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
             //Text X
             textBox3.Left = centerX + Convert.ToInt32(Width / 7);
-            textBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
+            textBox1.Left = centerX - Convert.ToInt32(Width / 3);
 
             //Images Y
             double divTop = 3.8;

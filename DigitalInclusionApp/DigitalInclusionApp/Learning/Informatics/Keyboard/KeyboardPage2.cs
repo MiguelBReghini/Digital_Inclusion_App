@@ -96,7 +96,7 @@ namespace DigitalInclusionApp
         private void voltarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openInformatics);
+            t1 = new Thread(openKeyboardPage1);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
@@ -105,9 +105,9 @@ namespace DigitalInclusionApp
             Application.Run(new KeyboardPage3());
             return;
         }
-        public void openInformatics()
+        public void openKeyboardPage1()
         {
-            Application.Run(new Informatics());
+            Application.Run(new KeyboardPage1());
             return;
         }
 
