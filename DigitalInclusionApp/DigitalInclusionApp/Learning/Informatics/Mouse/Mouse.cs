@@ -68,13 +68,13 @@ namespace DigitalInclusionApp
         private void voltarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openInformatics);
+            t1 = new Thread(openMousePage3);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
         }
-        public void openInformatics()
+        public void openMousePage3()
         {
-            Application.Run(new Informatics());
+            Application.Run(new MousePage3());
             return;
         }
 
