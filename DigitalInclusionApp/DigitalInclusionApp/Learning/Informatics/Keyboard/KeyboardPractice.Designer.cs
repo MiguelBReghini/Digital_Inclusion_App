@@ -42,9 +42,9 @@ namespace DigitalInclusionApp
             // keyboardProgressBar
             // 
             keyboardProgressBar.Anchor = AnchorStyles.Bottom;
-            keyboardProgressBar.Location = new Point(297, 547);
+            keyboardProgressBar.Location = new Point(167, 547);
             keyboardProgressBar.Name = "keyboardProgressBar";
-            keyboardProgressBar.Size = new Size(330, 23);
+            keyboardProgressBar.Size = new Size(591, 36);
             keyboardProgressBar.TabIndex = 1;
             // 
             // backBtnKeyboardPractice
