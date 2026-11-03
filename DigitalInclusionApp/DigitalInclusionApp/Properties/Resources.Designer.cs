@@ -246,5 +246,49 @@ namespace DigitalInclusionApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_ASHmrairbl
+        {
+            get {
+                object obj = ResourceManager.GetObject("brave_ASHmrairbl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_R72OJXDYIP
+        {
+            get {
+                object obj = ResourceManager.GetObject("brave_R72OJXDYIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_j9bXEuuC5Q
+        {
+            get {
+                object obj = ResourceManager.GetObject("brave_j9bXEuuC5Q", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_zFomwUXpNu
+        {
+            get {
+                object obj = ResourceManager.GetObject("brave_zFomwUXpNu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

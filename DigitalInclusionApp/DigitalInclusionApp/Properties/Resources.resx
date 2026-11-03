@@ -130,6 +130,12 @@
   <data name="TecladoCapslock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoCapslock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="brave_Oy4IGklObx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_Oy4IGklObx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KeyboardImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d609243a20117cb8132988815ded3c8b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,17 +145,26 @@
   <data name="TecladoEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="16001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="brave_ASHmrairbl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_ASHmrairbl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KeyboardImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d609243a20117cb8132988815ded3c8b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="brave_R72OJXDYIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_R72OJXDYIP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fundo Abstrato Azul com Ondas Fluídas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Abstrato Azul com Ondas Fluídas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_j9bXEuuC5Q" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_j9bXEuuC5Q.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_td4snZ4iRz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_td4snZ4iRz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TecladoNumeros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoNumeros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +175,7 @@
   <data name="TecladoShift" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoShift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brave_Oy4IGklObx" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_Oy4IGklObx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="brave_zFomwUXpNu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_zFomwUXpNu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

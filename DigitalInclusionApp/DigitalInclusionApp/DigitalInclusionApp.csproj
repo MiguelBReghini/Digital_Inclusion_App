@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Learning\Security\Scam\ScamPage4.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Learning\Security\Scam\ScamPage3.cs">
       <SubType>Form</SubType>
     </Compile>

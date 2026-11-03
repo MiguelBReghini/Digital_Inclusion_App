@@ -92,7 +92,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.TecladoAcentos;
+            pictureBox3.Image = Properties.Resources.brave_ASHmrairbl;
             pictureBox3.Location = new Point(749, 124);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(293, 298);
@@ -102,7 +102,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.TecladoLetras;
+            pictureBox1.Image = Properties.Resources.brave_R72OJXDYIP;
             pictureBox1.Location = new Point(243, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);

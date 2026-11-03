@@ -105,7 +105,7 @@ namespace DigitalInclusionApp
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.TecladoLetras;
+            pictureBox1.Image = Properties.Resources.brave_zFomwUXpNu;
             pictureBox1.Location = new Point(187, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 298);
