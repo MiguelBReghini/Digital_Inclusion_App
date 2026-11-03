@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             mouseLabel = new Label();
             voltarBtn = new Button();
             btnTarget = new Button();
             btnTargetDir = new Button();
             progressMouse = new ProgressBar();
+            btnDoubleTarget = new Button();
+            timerDoubleClick = new System.Windows.Forms.Timer(components);
+            hScrollBar1 = new HScrollBar();
+            vScrollBar1 = new VScrollBar();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -125,12 +130,55 @@
             progressMouse.Size = new Size(591, 36);
             progressMouse.TabIndex = 4;
             // 
+            // btnDoubleTarget
+            // 
+            btnDoubleTarget.BackColor = SystemColors.ActiveCaption;
+            btnDoubleTarget.BackgroundImageLayout = ImageLayout.None;
+            btnDoubleTarget.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            btnDoubleTarget.FlatAppearance.MouseDownBackColor = Color.Green;
+            btnDoubleTarget.FlatAppearance.MouseOverBackColor = Color.Green;
+            btnDoubleTarget.FlatStyle = FlatStyle.Flat;
+            btnDoubleTarget.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold);
+            btnDoubleTarget.ForeColor = Color.Black;
+            btnDoubleTarget.Location = new Point(683, 118);
+            btnDoubleTarget.Name = "btnDoubleTarget";
+            btnDoubleTarget.Size = new Size(212, 84);
+            btnDoubleTarget.TabIndex = 5;
+            btnDoubleTarget.Text = "Clique duplo";
+            btnDoubleTarget.UseVisualStyleBackColor = false;
+            btnDoubleTarget.Visible = false;
+            btnDoubleTarget.Click += btnDoubleTarget_Click;
+            // 
+            // timerDoubleClick
+            // 
+            timerDoubleClick.Interval = 500;
+            // 
+            // hScrollBar1
+            // 
+            hScrollBar1.Location = new Point(735, 296);
+            hScrollBar1.Name = "hScrollBar1";
+            hScrollBar1.Size = new Size(200, 111);
+            hScrollBar1.TabIndex = 14;
+            hScrollBar1.Visible = false;
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(26, 296);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(111, 200);
+            vScrollBar1.SmallChange = 5;
+            vScrollBar1.TabIndex = 18;
+            vScrollBar1.Visible = false;
+            // 
             // Mouse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(1, 34, 62);
             ClientSize = new Size(962, 616);
+            Controls.Add(vScrollBar1);
+            Controls.Add(hScrollBar1);
+            Controls.Add(btnDoubleTarget);
             Controls.Add(progressMouse);
             Controls.Add(btnTargetDir);
             Controls.Add(btnTarget);
@@ -152,5 +200,9 @@
         private Button btnTarget;
         private Button btnTargetDir;
         private ProgressBar progressMouse;
+        private Button btnDoubleTarget;
+        private System.Windows.Forms.Timer timerDoubleClick;
+        private HScrollBar hScrollBar1;
+        private VScrollBar vScrollBar1;
     }
 }

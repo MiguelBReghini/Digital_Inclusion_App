@@ -7,20 +7,29 @@ using System.Drawing;
 using System.Numerics;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DigitalInclusionApp
 {
-   
+
 
     public partial class Mouse : Form
     {
         Thread? t1;
         private Random random = new Random();
-        private int clicks = 0;
-        private int quotaClicks = 15;
+        private int clicks;
+        private int quotaClicks = 20;
+        private int doubleClickCount;
+        private bool horizontalDone = false;
+        private bool verticalDone = false;
+        private bool scrollTaskCompleted = false;
         public Mouse()
         {
             InitializeComponent();
+
+            hScrollBar1.Scroll += ScrollBar_Scroll;
+            vScrollBar1.Scroll += ScrollBar_Scroll;
+
             progressMouse.Minimum = 0;
             progressMouse.Maximum = quotaClicks;
             progressMouse.Value = 0;
@@ -29,7 +38,7 @@ namespace DigitalInclusionApp
             this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        
+
 
         protected override void OnLoad(EventArgs e)
         {
@@ -95,13 +104,58 @@ namespace DigitalInclusionApp
 
         private void btnTarget_Click(object sender, EventArgs e)
         {
+            btnTarget.Text = "Botão Esquerdo";
+
             if (RegisterClick())
                 return;
 
-            if (TryMoveToValidPosition(btnTargetDir))
+            
+        }
+        private void NextTask()
+        {
+            btnTarget.Visible = false;
+            btnTargetDir.Visible = false;
+            btnDoubleTarget.Visible = false;
+
+            hScrollBar1.Visible = false;
+            vScrollBar1.Visible = false;
+
+            horizontalDone = false;
+            verticalDone = false;
+
+            scrollTaskCompleted = false;
+
+            int desafio = random.Next(0, 5);
+
+            switch (desafio)
             {
-                btnTarget.Visible = false;
-                btnTargetDir.Visible = true;
+                case 0:
+                    if (TryMoveToValidPosition(btnTarget))
+                    {
+                        btnTarget.Text = "Botão Esquerdo";
+                        btnTarget.Visible = true;
+                    }
+                    break;
+
+                case 1:
+                    if (TryMoveToValidPosition(btnTargetDir))
+                        btnTargetDir.Visible = true;
+                    break;
+
+                case 2:
+                    if (TryMoveToValidPosition(btnDoubleTarget))
+                        btnDoubleTarget.Visible = true;
+                    break;
+
+                case 3:
+                    hScrollBar1.Value = hScrollBar1.Minimum;
+                    hScrollBar1.Visible = true;
+                    break;
+
+                case 4:
+                    vScrollBar1.Value = vScrollBar1.Minimum;
+                    vScrollBar1.Visible = true;
+                    break;
             }
         }
 
@@ -110,41 +164,24 @@ namespace DigitalInclusionApp
             if (e.Button != MouseButtons.Right)
                 return;
 
-            if (RegisterClick())
-                return;
-
-            if (TryMoveToValidPosition(btnTarget))
-            {
-                btnTargetDir.Visible = false;
-                btnTarget.Text = "Botão Esquerdo";
-                btnTarget.Visible = true;
-            }
-
-            int maxX = this.ClientSize.Width - btnTarget.Width;
-            int maxY = this.ClientSize.Height - btnTarget.Height;
+            RegisterClick();
         }
 
         private bool RegisterClick()
         {
             clicks++;
 
-            progressMouse.Value = Math.Min(
-                clicks,
-                progressMouse.Maximum
-            );
+            progressMouse.Value = Math.Min(clicks, quotaClicks);
 
             if (clicks >= quotaClicks)
             {
-                progressMouse.Value = progressMouse.Maximum;
-
-                MessageBox.Show(
-                    "Você concluiu 15 cliques! Prossiga ao próximo exercício de mouse!"
-                );
+                MessageBox.Show("Você concluiu todos os desafios!");
 
                 ResetGame();
                 return true;
             }
 
+            NextTask();
             return false;
         }
 
@@ -153,10 +190,7 @@ namespace DigitalInclusionApp
             clicks = 0;
             progressMouse.Value = 0;
 
-            btnTargetDir.Visible = false;
-            btnTarget.Visible = true;
-
-            TryMoveToValidPosition(btnTarget);
+            NextTask();
         }
         private bool TryMoveToValidPosition(Control alvo)
         {
@@ -216,18 +250,18 @@ namespace DigitalInclusionApp
             if (controle == alvo || !controle.Visible)
                 return true;
 
-          
+
             if (controle == btnTarget || controle == btnTargetDir)
                 return true;
 
-            
+
             foreach (Control filho in controle.Controls)
             {
                 if (!CheckControlTree(filho, alvo, pai, areaAlvo))
                     return false;
             }
 
-            
+
             Rectangle areaControle = new Rectangle(
                 pai.PointToClient(controle.Parent.PointToScreen(controle.Location)),
                 controle.Size
@@ -236,6 +270,62 @@ namespace DigitalInclusionApp
             return !areaAlvo.IntersectsWith(areaControle);
         }
 
+        private void btnDoubleTarget_Click(object sender, EventArgs e)
+        {
+            doubleClickCount++;
 
+            if (doubleClickCount == 1)
+            {
+                timerDoubleClick.Start();
+            }
+            else if (doubleClickCount == 2)
+            {
+                timerDoubleClick.Stop();
+                doubleClickCount = 0;
+
+                RegisterClick();
+            }
+        }
+            private void timerDoubleClick_Tick(object sender, EventArgs e)
+        {
+            timerDoubleClick.Stop();
+            doubleClickCount = 0;
+        }
+        private void CheckScrollCompletion()
+        {
+            int limiteH = hScrollBar1.Maximum
+                - hScrollBar1.LargeChange + 1;
+
+            int limiteV = vScrollBar1.Maximum
+                - vScrollBar1.LargeChange + 1;
+
+            if (hScrollBar1.Value >= limiteH)
+                horizontalDone = true;
+
+            if (vScrollBar1.Value >= limiteV)
+                verticalDone = true;
+
+            if (horizontalDone && verticalDone)
+            {
+                RegisterClick();
+            }
+        }
+        private void ScrollBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (scrollTaskCompleted)
+                return;
+
+            System.Windows.Forms.ScrollBar barra = (System.Windows.Forms.ScrollBar)sender;
+
+
+            int limite = barra.Maximum - barra.LargeChange + 1;
+
+            if (barra.Value >= limite)
+            {
+                scrollTaskCompleted = true;
+                RegisterClick();
+            }
+        }
     }
+    
 }
