@@ -30,17 +30,22 @@ namespace DigitalInclusionApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             panel1 = new Panel();
+            panel2 = new Panel();
+            imgCienciaComp = new PictureBox();
             textBox1 = new TextBox();
             socialProjectTxt = new TextBox();
             btnBack = new Button();
             lblTitulo = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imgCienciaComp).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(imgCienciaComp);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(socialProjectTxt);
             panel1.Controls.Add(btnBack);
@@ -51,37 +56,58 @@ namespace DigitalInclusionApp
             panel1.Size = new Size(924, 700);
             panel1.TabIndex = 3;
             // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Right;
+            panel2.BackColor = Color.Transparent;
+            panel2.BackgroundImage = Properties.Resources.coordenadoria_de_extensao;
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Location = new Point(570, 442);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(301, 85);
+            panel2.TabIndex = 8;
+            // 
+            // imgCienciaComp
+            // 
+            imgCienciaComp.Anchor = AnchorStyles.Left;
+            imgCienciaComp.BackgroundImage = Properties.Resources.Ciencia_da_Computacao;
+            imgCienciaComp.BackgroundImageLayout = ImageLayout.Stretch;
+            imgCienciaComp.Location = new Point(42, 442);
+            imgCienciaComp.Name = "imgCienciaComp";
+            imgCienciaComp.Size = new Size(301, 85);
+            imgCienciaComp.TabIndex = 7;
+            imgCienciaComp.TabStop = false;
+            // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top;
             textBox1.BackColor = Color.FromArgb(1, 34, 62);
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(38, 385);
+            textBox1.Location = new Point(349, 188);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(848, 173);
+            textBox1.Size = new Size(555, 248);
             textBox1.TabIndex = 6;
-            textBox1.Text = "Desenvolvimento: \r\nFelipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // socialProjectTxt
             // 
             socialProjectTxt.Anchor = AnchorStyles.Top;
             socialProjectTxt.BackColor = Color.FromArgb(1, 34, 62);
             socialProjectTxt.BorderStyle = BorderStyle.None;
-            socialProjectTxt.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            socialProjectTxt.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             socialProjectTxt.ForeColor = SystemColors.ActiveCaption;
-            socialProjectTxt.Location = new Point(38, 188);
+            socialProjectTxt.Location = new Point(0, 188);
             socialProjectTxt.Multiline = true;
             socialProjectTxt.Name = "socialProjectTxt";
             socialProjectTxt.ReadOnly = true;
-            socialProjectTxt.Size = new Size(848, 370);
+            socialProjectTxt.Size = new Size(343, 248);
             socialProjectTxt.TabIndex = 5;
-            socialProjectTxt.Text = resources.GetString("socialProjectTxt.Text");
-            socialProjectTxt.TextAlign = HorizontalAlignment.Center;
+            socialProjectTxt.Text = "Disciplina:\r\nProfessor Responsável:\r\nProfessor Colaborador:\r\nDesenvolvedores:\r\nCurso:\r\nInstituição:\r\nPeríodo:\r\nVersão:\r\nTecnologias:";
+            socialProjectTxt.TextAlign = HorizontalAlignment.Right;
             socialProjectTxt.TextChanged += socialProjectTxt_TextChanged;
             // 
             // btnBack
@@ -128,6 +154,7 @@ namespace DigitalInclusionApp
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)imgCienciaComp).EndInit();
             ResumeLayout(false);
         }
 
@@ -138,5 +165,7 @@ namespace DigitalInclusionApp
         private Label lblTitulo;
         private TextBox socialProjectTxt;
         private TextBox textBox1;
+        private PictureBox imgCienciaComp;
+        private Panel panel2;
     }
 }

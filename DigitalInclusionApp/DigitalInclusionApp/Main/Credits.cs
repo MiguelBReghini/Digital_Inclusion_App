@@ -51,18 +51,24 @@ namespace DigitalInclusionApp
             var centerX = panel1.ClientSize.Width / 2;
 
             lblTitulo.Left = centerX - (lblTitulo.Width / 2);
-            socialProjectTxt.Left = centerX - Convert.ToInt32(Width / 50);
-            textBox1.Left = centerX - Convert.ToInt32(Width / 10);
             btnBack.Left = centerX - (btnBack.Width / 2);
+            imgCienciaComp.Left = centerX - Convert.ToInt32(Width / 2.5);
+            //imgCoordEx.Left = centerX + Width / 20;
+            //imgCoordEx.Image = Properties.Resources.coordenadoria_de_extensao;
+            //imgCoordEx.SizeMode = PictureBoxSizeMode.StretchImage;
+            //panel1.Controls.SetChildIndex(imgCoordEx, panel1.Controls.Count - 1);
 
-            socialProjectTxt.Location = new Point(centerX - socialProjectTxt.Width / 2, Height / 5);
-            textBox1.Location = new Point(centerX - textBox1.Width / 2, Convert.ToInt32(Height / 1.6));
+            imgCienciaComp.Top = Convert.ToInt32(Height / 1.5);
+            //imgCoordEx.Top = Convert.ToInt32(Height / 1.5);
 
-            socialProjectTxt.Font = new Font("Segoe UI", 25, FontStyle.Bold);
-            socialProjectTxt.CharacterCasing = CharacterCasing.Upper;
+            socialProjectTxt.Location = new Point(centerX - Convert.ToInt32(Width / 1.9), Height / 5);
+            textBox1.Location = new Point(centerX - Width / 80, Convert.ToInt32(Height / 5));
 
-            textBox1.Font = new Font("Segoe UI", 25, FontStyle.Bold);
-            textBox1.CharacterCasing = CharacterCasing.Upper;
+            socialProjectTxt.Font = new Font("Segoe UI", Width/100, FontStyle.Bold);
+            textBox1.Font = new Font("Segoe UI", Width / 100);
+
+            socialProjectTxt.Width = Width / 2;
+            textBox1.Width = Width / 2;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

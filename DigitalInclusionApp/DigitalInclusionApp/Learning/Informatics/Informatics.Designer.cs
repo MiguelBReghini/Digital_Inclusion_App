@@ -30,6 +30,7 @@ namespace DigitalInclusionApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Informatics));
             panel1 = new Panel();
+            btnBasics = new Button();
             btnBack = new Button();
             btnMouse = new Button();
             btnKeyboard = new Button();
@@ -41,6 +42,7 @@ namespace DigitalInclusionApp
             // 
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(btnBasics);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnMouse);
             panel1.Controls.Add(btnKeyboard);
@@ -50,6 +52,21 @@ namespace DigitalInclusionApp
             panel1.Name = "panel1";
             panel1.Size = new Size(924, 700);
             panel1.TabIndex = 2;
+            // 
+            // btnBasics
+            // 
+            btnBasics.BackgroundImage = Properties.Resources.LivroBase;
+            btnBasics.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBasics.FlatStyle = FlatStyle.Flat;
+            btnBasics.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            btnBasics.Location = new Point(315, 246);
+            btnBasics.Name = "btnBasics";
+            btnBasics.Size = new Size(300, 254);
+            btnBasics.TabIndex = 5;
+            btnBasics.Text = "Básico";
+            btnBasics.TextAlign = ContentAlignment.BottomCenter;
+            btnBasics.UseVisualStyleBackColor = true;
+            btnBasics.Click += btnBasics_Click;
             // 
             // btnBack
             // 
@@ -74,7 +91,7 @@ namespace DigitalInclusionApp
             btnMouse.FlatStyle = FlatStyle.Flat;
             btnMouse.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             btnMouse.ForeColor = SystemColors.ControlText;
-            btnMouse.Location = new Point(520, 246);
+            btnMouse.Location = new Point(621, 246);
             btnMouse.Name = "btnMouse";
             btnMouse.Size = new Size(300, 254);
             btnMouse.TabIndex = 3;
@@ -89,7 +106,7 @@ namespace DigitalInclusionApp
             btnKeyboard.FlatStyle = FlatStyle.Flat;
             btnKeyboard.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
             btnKeyboard.Image = (Image)resources.GetObject("btnKeyboard.Image");
-            btnKeyboard.Location = new Point(104, 246);
+            btnKeyboard.Location = new Point(9, 246);
             btnKeyboard.Name = "btnKeyboard";
             btnKeyboard.Size = new Size(300, 254);
             btnKeyboard.TabIndex = 1;
@@ -136,5 +153,6 @@ namespace DigitalInclusionApp
         private Button btnMouse;
         private Button btnKeyboard;
         private Label lblTitulo;
+        private Button btnBasics;
     }
 }

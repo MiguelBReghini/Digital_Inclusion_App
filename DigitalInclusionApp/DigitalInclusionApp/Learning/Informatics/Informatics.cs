@@ -52,21 +52,26 @@ namespace DigitalInclusionApp
             var centerX = panel1.ClientSize.Width / 2;
 
             lblTitulo.Left = centerX - (lblTitulo.Width / 2);
-            btnKeyboard.Left = centerX - Convert.ToInt32(Width / 2.3);
-            btnMouse.Left = centerX + Convert.ToInt32(Width / 20);
+            btnKeyboard.Left = centerX - Convert.ToInt32(Width / 2.6);
+            btnBasics.Left = centerX - Convert.ToInt32(btnBasics.Width / 2);
+            btnMouse.Left = centerX + Convert.ToInt32(Width / 15);
             btnBack.Left = centerX - (btnBack.Width / 2);
 
-            double divTop = 3;
-            double divSize = 2.6;
+            double divTop = 5.5;
+            double divTop2 = 1.9;
+            double divSize = 3.1;
 
             btnKeyboard.Top = Convert.ToInt32(Height / divTop);
             btnMouse.Top = Convert.ToInt32(Height / divTop);
+            btnBasics.Top = Convert.ToInt32(Height / divTop2);
 
             btnKeyboard.Width = Convert.ToInt32(Width / divSize);
             btnMouse.Width = Convert.ToInt32(Width / divSize);
+            btnBasics.Width = Convert.ToInt32(Width / divSize);
 
             btnKeyboard.Height = Convert.ToInt32(Height / divSize);
             btnMouse.Height = Convert.ToInt32(Height / divSize);
+            btnBasics.Height = Convert.ToInt32(Height / divSize);
         }
 
         private void btnKeyboard_Click(object sender, EventArgs e)
@@ -82,6 +87,15 @@ namespace DigitalInclusionApp
         {
             this.Close();
             t1 = new Thread(openMouse);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+            return;
+        }
+
+        private void btnBasics_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(openBasics);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
             return;
@@ -106,10 +120,18 @@ namespace DigitalInclusionApp
             return;
         }
 
+        public void openBasics()
+        {
+            Application.Run(new BasicPage1());
+            return;
+        }
+
         public void openLearning()
         {
             Application.Run(new Learning());
             return;
         }
+
+        
     }
 }

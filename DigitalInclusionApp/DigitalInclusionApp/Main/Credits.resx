@@ -117,8 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="socialProjectTxt.Text" xml:space="preserve">
-    <value>Projeto Social: 
-Ana Clara Moliterno, André Victor Medeiros, Felipe Juliano dos Santos, Guilherme Cegielkovisk de Menezes, Gustavo Marinho da Sillva Brandão, Matheus Luiz da Rocha e Miguel Bricailo Reghini.</value>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Programação de Computadores
+Prof. Dr. Elvio Gilberto da Silva
+Profa. Dra. Jessica de Cassia Rossi
+Felipe Juliano dos Santos, Miguel Bricailo Reghini e Pedro Henrique Zanella
+Ciência da Computação
+UNISAGRADO
+2°semestre de 2026
+1.0
+C#, .NET 10 e Windows Forms</value>
   </data>
 </root>
