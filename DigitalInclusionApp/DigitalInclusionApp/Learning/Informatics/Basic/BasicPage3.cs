@@ -58,7 +58,7 @@ namespace DigitalInclusionApp
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            FormNavigator.NavigateAndClose<BasicPage1>(this);
+            FormNavigator.NavigateAndClose<BasicPractice>(this);
         }
 
         private void voltarBtn_Click(object sender, EventArgs e)

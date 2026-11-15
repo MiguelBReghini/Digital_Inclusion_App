@@ -46,6 +46,8 @@ namespace DigitalInclusionApp
 
             socialProjectTxt.Width = Width / 2;
             textBox1.Width = Width / 2;
+            socialProjectTxt.Height = Height / 3;
+            textBox1.Height = Height / 3;
 
             double LarguraImagens = 2.53;
             double AlturaImagens = 5;
