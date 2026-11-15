@@ -1,54 +1,36 @@
 ﻿using DigitalInclusionApp.Games;
+using DigitalInclusionApp.Infrastructure;
 using System;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DigitalInclusionApp
 {
-    public partial class KeyboardPractice : Form
+    /// <summary>
+    /// Formulário de prática do teclado com validação de digitação.
+    /// Utiliza mecanismos de gamificação para incentivar o aprendizado.
+    /// </summary>
+    public partial class KeyboardPractice : BaseForm
     {
         private bool placeholderAtivo = true;
         private bool erroAtivo = false;
         private int palavrasCompletadas = 0;
         private const int quotaPalavras = 10;
-        private Thread? t1;
         private readonly WordRandomizer randomizer = new();
         private readonly TypingValidator validator = new();
 
+        /// <summary>
+        /// Inicializa uma nova instância de KeyboardPractice.
+        /// </summary>
         public KeyboardPractice()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        /// <summary>
+        /// Centraliza os controles do formulário quando redimensionado.
+        /// </summary>
+        protected override void CenterControls()
         {
             if (panel2 == null)
                 return;
@@ -79,15 +61,7 @@ namespace DigitalInclusionApp
 
         private void backBtnKeyboardPractice_Click(object sender, EventArgs e)
         {
-            Close();
-            t1 = new Thread(openKeyboard);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-        }
-
-        private void openKeyboard()
-        {
-            Application.Run(new KeyboardPage3());
+            FormNavigator.NavigateAndClose<KeyboardPage3>(this);
         }
 
         private void inputWord_TextChanged(object sender, EventArgs e)

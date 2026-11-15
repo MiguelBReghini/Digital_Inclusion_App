@@ -1,104 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using DigitalInclusionApp.Infrastructure;
 
 namespace DigitalInclusionApp
 {
-
-    public partial class KeyboardPage3 : Form
+    public partial class KeyboardPage3 : BaseForm
     {
-        Thread? t1;
         public KeyboardPage3()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
-            //Image Sizes
+            // Image Sizes
             var imageWidth = Convert.ToInt32(Width / 2.5);
             pictureBox1.Width = imageWidth;
             pictureBox1.Height = imageWidth;
 
-            //Images X
+            // Images X
             pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
-            //Button X
+            // Button X
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
             btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
-            //Text X
+            // Text X
             textBox1.Left = centerX + Convert.ToInt32(Width / 10);
 
-            //Images Y
+            // Images Y
             double divTop = 7;
             pictureBox1.Top = Convert.ToInt32(Height / divTop);
-            //Button Y
-            //Text Y
+            // Button Y
+            // Text Y
             double textTop = 5;
             textBox1.Top = Convert.ToInt32(Height / textTop);
         }
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openKeyboardPractice);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
+            FormNavigator.NavigateAndClose<KeyboardPractice>(this);
         }
-     
 
         private void voltarBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openKeyboardPage2);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            FormNavigator.NavigateAndClose<KeyboardPage2>(this);
         }
-        private void openKeyboardPractice()
-        {
-            Application.Run(new KeyboardPractice());
-            return;
-        }
-        public void openKeyboardPage2()
-        {
-            Application.Run(new KeyboardPage2());
-            return;
-        }
-       
     }
 }

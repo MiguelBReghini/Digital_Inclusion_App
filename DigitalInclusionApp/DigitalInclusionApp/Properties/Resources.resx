@@ -130,11 +130,14 @@
   <data name="ImpressoraBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImpressoraBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="i_view32_zfbgVGLN9W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\i_view32_zfbgVGLN9W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fundo Abstrato Azul com Ondas Fluídas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Abstrato Azul com Ondas Fluídas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brave_vSZOW1oQ9V" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_vSZOW1oQ9V.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coordenadoria-de-extensao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coordenadoria-de-extensao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoldemBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoldemBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,20 +175,20 @@
   <data name="TecladoCapslock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoCapslock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coordenadoria-de-extensao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coordenadoria-de-extensao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="brave_zFomwUXpNu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brave_zFomwUXpNu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LivroBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LivroBase.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="portuguese" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\portuguese.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="brave_vSZOW1oQ9V" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_vSZOW1oQ9V.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KeyboardImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d609243a20117cb8132988815ded3c8b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +199,8 @@
   <data name="brave_ASHmrairbl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brave_ASHmrairbl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="16001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="portuguese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portuguese.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="brave_j9bXEuuC5Q" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brave_j9bXEuuC5Q.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,7 @@
   <data name="brave_td4snZ4iRz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brave_td4snZ4iRz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="i_view32_zfbgVGLN9W" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\i_view32_zfbgVGLN9W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ScamIntro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScamIntro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,49 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
+using DigitalInclusionApp.Infrastructure;
 
 namespace DigitalInclusionApp
 {
-    public partial class Credits : Form
+    /// <summary>
+    /// Formulário que exibe os créditos da aplicação.
+    /// Mostra informações sobre desenvolvedores e parceiros.
+    /// </summary>
+    public partial class Credits : BaseForm
     {
-        Thread? t1;
         public Credits()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
@@ -84,15 +57,7 @@ namespace DigitalInclusionApp
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openMain);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-        }
-        public void openMain()
-        {
-            Application.Run(new MainForm());
-            return;
+            FormNavigator.NavigateAndClose<MainForm>(this);
         }
 
         private void SocialProjectlbl_Click(object sender, EventArgs e)
