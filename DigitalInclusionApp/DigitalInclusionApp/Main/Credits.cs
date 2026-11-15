@@ -52,14 +52,18 @@ namespace DigitalInclusionApp
 
             lblTitulo.Left = centerX - (lblTitulo.Width / 2);
             btnBack.Left = centerX - (btnBack.Width / 2);
-            imgCienciaComp.Left = centerX - Convert.ToInt32(Width / 2.5);
-            //imgCoordEx.Left = centerX + Width / 20;
-            //imgCoordEx.Image = Properties.Resources.coordenadoria_de_extensao;
-            //imgCoordEx.SizeMode = PictureBoxSizeMode.StretchImage;
-            //panel1.Controls.SetChildIndex(imgCoordEx, panel1.Controls.Count - 1);
+            lblDev.Left = centerX - Convert.ToInt32(Width / 2.2);
+            lblApoio.Left = centerX + Convert.ToInt32(Width / 9);
+            imgCienciaComp.Left = centerX - Convert.ToInt32(Width / 2.2);
+            imgCoordEx.Left = centerX + Convert.ToInt32(Width / 9);
 
-            imgCienciaComp.Top = Convert.ToInt32(Height / 1.5);
-            //imgCoordEx.Top = Convert.ToInt32(Height / 1.5);
+            double VerticalLabels = 1.8;
+            lblDev.Top = Convert.ToInt32(Height / VerticalLabels);
+            lblApoio.Top = Convert.ToInt32(Height / VerticalLabels);
+
+            double VerticalImagens = 1.7;
+            imgCienciaComp.Top = Convert.ToInt32(Height / VerticalImagens);
+            imgCoordEx.Top = Convert.ToInt32(Height / VerticalImagens);
 
             socialProjectTxt.Location = new Point(centerX - Convert.ToInt32(Width / 1.9), Height / 5);
             textBox1.Location = new Point(centerX - Width / 80, Convert.ToInt32(Height / 5));
@@ -69,6 +73,13 @@ namespace DigitalInclusionApp
 
             socialProjectTxt.Width = Width / 2;
             textBox1.Width = Width / 2;
+
+            double LarguraImagens = 2.53;
+            double AlturaImagens = 5;
+            imgCienciaComp.Width = Width / Convert.ToInt32(LarguraImagens);
+            imgCoordEx.Width = Width / Convert.ToInt32(LarguraImagens);
+            imgCienciaComp.Height = Height / Convert.ToInt32(AlturaImagens);
+            imgCoordEx.Height = Height / Convert.ToInt32(AlturaImagens);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
