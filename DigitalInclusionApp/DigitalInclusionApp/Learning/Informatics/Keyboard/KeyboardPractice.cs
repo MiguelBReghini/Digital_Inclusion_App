@@ -103,6 +103,11 @@ namespace DigitalInclusionApp
                 return;
             }
 
+            if (e.KeyChar == '\b')
+            {
+                HandleBackspace();
+                return;
+            }
             if (placeholderAtivo)
             {
                 inputWord.Clear();
@@ -171,6 +176,27 @@ namespace DigitalInclusionApp
             inputWord.Clear();
             erroAtivo = false;
             Palavra.Left = panel2.ClientSize.Width / 2 - (Palavra.Width / 2);
+        }
+        private void HandleBackspace()
+        {
+            if (placeholderAtivo)
+            {
+                return;
+            }
+            if (erroAtivo)
+            {
+                RemoveLastChar();
+                erroAtivo = false;
+            }
+            else if (validator.ProgressIndex > 0)
+            {
+                RemoveLastChar();
+                validator.StepBack();
+            }
+        }
+        private void RemoveLastChar()
+        {
+            inputWord.Text = inputWord.Text.Substring(0, inputWord.Text.Length - 1);
         }
 
        

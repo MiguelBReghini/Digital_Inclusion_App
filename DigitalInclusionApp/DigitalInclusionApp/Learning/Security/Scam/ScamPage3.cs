@@ -84,10 +84,10 @@ namespace DigitalInclusionApp
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //t1 = new Thread(openScamPage4);
-            //t1.SetApartmentState(ApartmentState.STA);
-            //t1.Start();
+            this.Close();
+            t1 = new Thread(openScamPage4);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
             return;
         }
 

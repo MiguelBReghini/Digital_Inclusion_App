@@ -33,7 +33,7 @@ namespace DigitalInclusionApp
             textBox3 = new TextBox();
             textBox1 = new TextBox();
             voltarBtn = new Button();
-            btnPraticaKeyboard = new Button();
+            btnPraticaScam = new Button();
             panel2 = new Panel();
             process1 = new System.Diagnostics.Process();
             panel1.SuspendLayout();
@@ -61,7 +61,7 @@ namespace DigitalInclusionApp
             panel1.Controls.Add(textBox3);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(voltarBtn);
-            panel1.Controls.Add(btnPraticaKeyboard);
+            panel1.Controls.Add(btnPraticaScam);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -117,22 +117,22 @@ namespace DigitalInclusionApp
             voltarBtn.UseVisualStyleBackColor = false;
             voltarBtn.Click += voltarBtn_Click;
             // 
-            // btnPraticaKeyboard
+            // btnPraticaScam
             // 
-            btnPraticaKeyboard.Anchor = AnchorStyles.Bottom;
-            btnPraticaKeyboard.AutoSize = true;
-            btnPraticaKeyboard.BackColor = Color.FromArgb(128, 255, 255);
-            btnPraticaKeyboard.FlatStyle = FlatStyle.Flat;
-            btnPraticaKeyboard.Font = new Font("Segoe UI", 45F, FontStyle.Bold);
-            btnPraticaKeyboard.ForeColor = Color.FromArgb(1, 34, 62);
-            btnPraticaKeyboard.Location = new Point(654, 642);
-            btnPraticaKeyboard.Name = "btnPraticaKeyboard";
-            btnPraticaKeyboard.Size = new Size(500, 93);
-            btnPraticaKeyboard.TabIndex = 4;
-            btnPraticaKeyboard.Text = "Próximo   ➞";
-            btnPraticaKeyboard.TextAlign = ContentAlignment.MiddleRight;
-            btnPraticaKeyboard.UseVisualStyleBackColor = false;
-            btnPraticaKeyboard.Click += btnPraticaKeyboard_Click;
+            btnPraticaScam.Anchor = AnchorStyles.Bottom;
+            btnPraticaScam.AutoSize = true;
+            btnPraticaScam.BackColor = Color.FromArgb(128, 255, 255);
+            btnPraticaScam.FlatStyle = FlatStyle.Flat;
+            btnPraticaScam.Font = new Font("Segoe UI", 45F, FontStyle.Bold);
+            btnPraticaScam.ForeColor = Color.FromArgb(1, 34, 62);
+            btnPraticaScam.Location = new Point(654, 642);
+            btnPraticaScam.Name = "btnPraticaScam";
+            btnPraticaScam.Size = new Size(500, 93);
+            btnPraticaScam.TabIndex = 4;
+            btnPraticaScam.Text = "Próximo   ➞";
+            btnPraticaScam.TextAlign = ContentAlignment.MiddleRight;
+            btnPraticaScam.UseVisualStyleBackColor = false;
+            btnPraticaScam.Click += btnPraticaScam_Click;
             // 
             // panel2
             // 
@@ -180,7 +180,7 @@ namespace DigitalInclusionApp
         private Label label1;
         private Panel panel1;
         private Panel panel2;
-        private Button btnPraticaKeyboard;
+        private Button btnPraticaScam;
         private Button voltarBtn;
         private System.Diagnostics.Process process1;
         private TextBox textBox1;
