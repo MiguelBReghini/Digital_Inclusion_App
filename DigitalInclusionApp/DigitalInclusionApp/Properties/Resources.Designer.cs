@@ -290,5 +290,124 @@ namespace DigitalInclusionApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LivroBase
+        {
+            get {
+                object obj = ResourceManager.GetObject("LivroBase", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj)); 
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_vSZOW1oQ9V
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("brave_vSZOW1oQ9V", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CabosBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("CabosBasico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RoteadorBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("RoteadorBasico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoldemBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("MoldemBasico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FoneBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("FoneBasico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImpressoraBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("ImpressoraBasico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ArmazenadoresBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("ArmazenadoresBasico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ciencia_da_Computacao
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Ciencia_da_Computacao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coordenadoria_de_extensao
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("coordenadoria_de_extensao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

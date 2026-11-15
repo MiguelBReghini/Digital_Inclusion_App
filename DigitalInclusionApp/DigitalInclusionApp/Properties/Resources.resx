@@ -118,64 +118,97 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TecladoLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TecladoLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1600" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1600.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TecladoAcentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TecladoAcentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TecladoCapslock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TecladoCapslock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brave_Oy4IGklObx" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_Oy4IGklObx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KeyboardImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d609243a20117cb8132988815ded3c8b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="portuguese" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\portuguese.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="TecladoEnter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoEnter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brave_ASHmrairbl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_ASHmrairbl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FoneBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FoneBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TecladoLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TecladoLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brave_R72OJXDYIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_R72OJXDYIP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="16001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImpressoraBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImpressoraBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fundo Abstrato Azul com Ondas Fluídas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Abstrato Azul com Ondas Fluídas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brave_j9bXEuuC5Q" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_j9bXEuuC5Q.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="brave_vSZOW1oQ9V" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_vSZOW1oQ9V.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brave_td4snZ4iRz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brave_td4snZ4iRz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TecladoNumeros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TecladoNumeros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="16002" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoldemBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoldemBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TecladoShift" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TecladoShift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="brave_R72OJXDYIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_R72OJXDYIP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RoteadorBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoteadorBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ciencia_da_Computacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ciencia_da_Computacao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CabosBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CabosBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_Oy4IGklObx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_Oy4IGklObx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArmazenadoresBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArmazenadoresBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TecladoCapslock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TecladoCapslock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="brave_zFomwUXpNu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brave_zFomwUXpNu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LivroBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LivroBase.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portuguese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portuguese.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KeyboardImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d609243a20117cb8132988815ded3c8b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CelularBasico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CelularBasico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_ASHmrairbl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_ASHmrairbl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_j9bXEuuC5Q" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_j9bXEuuC5Q.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TecladoNumeros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TecladoNumeros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TecladoAcentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TecladoAcentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_td4snZ4iRz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brave_td4snZ4iRz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coordenadoria-de-extensao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coordenadoria-de-extensao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
