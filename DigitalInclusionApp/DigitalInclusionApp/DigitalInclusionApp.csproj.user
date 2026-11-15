@@ -7,6 +7,9 @@
     <Compile Update="Infrastructure\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Learning\Informatics\Basic\BasicPractice.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Learning\Security\Scam\ScamPractice.cs">
       <SubType>Form</SubType>
     </Compile>
