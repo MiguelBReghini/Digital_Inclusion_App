@@ -60,7 +60,7 @@ namespace DigitalInclusionApp
             //Images X
             //Button X
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
-            btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
+            btnPraticaScam.Left = centerX + Convert.ToInt32(Width / 12);
             //Text X
             textBox3.Left = centerX - Convert.ToInt32(Width / 10);
             textBox1.Left = centerX - Convert.ToInt32(Width / 2.33);
@@ -74,10 +74,10 @@ namespace DigitalInclusionApp
             textBox3.Top = Convert.ToInt32(Height / 7);
         }
 
-        private void btnPraticaKeyboard_Click(object sender, EventArgs e)
+        private void btnPraticaScam_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openKeyboardPage2);
+            t1 = new Thread(openScamPractice);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
             return;
@@ -105,6 +105,11 @@ namespace DigitalInclusionApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void openScamPractice()
+        {
+            Application.Run(new ScamPractice());
+            return;
         }
     }
 }
