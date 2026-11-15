@@ -12,6 +12,13 @@ namespace DigitalInclusionApp.Games
         public bool IsComplete => progressIndex == targetWord.Length;
         public int ProgressIndex => progressIndex;
 
+        public void StepBack()
+        {
+            if(ProgressIndex > 0)
+            {
+                progressIndex--;
+            }
+        }
         public void StartWord(string word)
         {
             targetWord = word;
