@@ -1,50 +1,22 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
+using DigitalInclusionApp.Infrastructure;
 
 namespace DigitalInclusionApp
 {
-    public partial class Informatics : Form
+    /// <summary>
+    /// Formulário de seleção de tópicos de Informática.
+    /// Oferece acesso aos módulos: Teclado, Mouse e Conceitos Básicos.
+    /// </summary>
+    public partial class Informatics : BaseForm
     {
-        Thread? t1;
         public Informatics()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
@@ -54,12 +26,12 @@ namespace DigitalInclusionApp
             lblTitulo.Left = centerX - (lblTitulo.Width / 2);
             btnKeyboard.Left = centerX - Convert.ToInt32(Width / 2.6);
             btnBasics.Left = centerX - Convert.ToInt32(btnBasics.Width / 2);
-            btnMouse.Left = centerX + Convert.ToInt32(Width / 15);
+            btnMouse.Left = centerX + Convert.ToInt32(Width / 10);
             btnBack.Left = centerX - (btnBack.Width / 2);
 
-            double divTop = 5.5;
+            double divTop = 4.7;
             double divTop2 = 1.9;
-            double divSize = 3.1;
+            double divSize = 3.6;
 
             btnKeyboard.Top = Convert.ToInt32(Height / divTop);
             btnMouse.Top = Convert.ToInt32(Height / divTop);
@@ -76,62 +48,22 @@ namespace DigitalInclusionApp
 
         private void btnKeyboard_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openKeyboard);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
+            FormNavigator.NavigateAndClose<KeyboardPage1>(this);
         }
 
         private void btnMouse_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openMouse);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
+            FormNavigator.NavigateAndClose<MousePage1>(this);
         }
 
         private void btnBasics_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openBasics);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
+            FormNavigator.NavigateAndClose<BasicPage1>(this);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openLearning);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            FormNavigator.NavigateAndClose<Learning>(this);
         }
-        public void openKeyboard()
-        {
-            Application.Run(new KeyboardPage1());
-            return;
-        }
-
-        public void openMouse()
-        {
-            Application.Run(new MousePage1());
-            return;
-        }
-
-        public void openBasics()
-        {
-            Application.Run(new BasicPage1());
-            return;
-        }
-
-        public void openLearning()
-        {
-            Application.Run(new Learning());
-            return;
-        }
-
-        
     }
 }

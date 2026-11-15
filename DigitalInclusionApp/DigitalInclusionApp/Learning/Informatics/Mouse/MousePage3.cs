@@ -1,51 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using DigitalInclusionApp.Infrastructure;
+using System;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DigitalInclusionApp
 {
-
-    public partial class MousePage3 : Form
+    /// <summary>
+    /// Terceira página do módulo de aprendizado do mouse.
+    /// Demonstra cliques direitos do mouse.
+    /// </summary>
+    public partial class MousePage3 : BaseForm
     {
-        Thread? t1;
+        /// <summary>
+        /// Inicializa uma nova instância de MousePage3.
+        /// </summary>
         public MousePage3()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-            double Width = Bounds.Width;
-            double Height = Bounds.Height;
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        /// <summary>
+        /// Centraliza os controles do formulário quando redimensionado.
+        /// </summary>
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
@@ -95,30 +72,12 @@ namespace DigitalInclusionApp
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openMouse);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
+            FormNavigator.NavigateAndClose<Mouse>(this);
         }
-
 
         private void voltarBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openMousePage2);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-        }
-        private void openMouse()
-        {
-            Application.Run(new Mouse());
-            return;
-        }
-        public void openMousePage2()
-        {
-            Application.Run(new MousePage2());
-            return;
+            FormNavigator.NavigateAndClose<MousePage2>(this);
         }
 
         private void btnTarget_Click_MouseDown(object sender, MouseEventArgs e)

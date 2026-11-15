@@ -1,51 +1,27 @@
-using System.Reflection.Emit;
-using System.Reflection.Metadata.Ecma335;
-using System.Text.RegularExpressions;
-using System.Threading;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using DigitalInclusionApp.Infrastructure;
 
 namespace DigitalInclusionApp
 {
-    public partial class MainForm : Form
+    /// <summary>
+    /// Formulário principal da aplicação Digital Inclusion.
+    /// Apresenta as opções principais: Aprender, Créditos e Sair.
+    /// </summary>
+    public partial class MainForm : BaseForm
     {
-        Thread? t1;
         public MainForm()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-        private void CenterControls()
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
-            var centerY = panel1.ClientSize.Height / 2;
 
             lblTitulo.Left = centerX - (lblTitulo.Width / 2);
             btnAprender.Left = centerX - Convert.ToInt32(Width / 2.8);
@@ -78,18 +54,12 @@ namespace DigitalInclusionApp
 
         private void btnAprender_Click(object sender, EventArgs e)
         {
-            Close();
-            t1 = new Thread(openLearning);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            FormNavigator.NavigateAndClose<Learning>(this);
         }
 
         private void btnCreditos_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openCredits);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
+            FormNavigator.NavigateAndClose<Credits>(this);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -97,27 +67,12 @@ namespace DigitalInclusionApp
             this.Close();
         }
 
-        public void openLearning()
-        {
-            Application.Run(new Learning());
-            return;
-        }
-        public void openCredits()
-        {
-            Application.Run(new Credits());
-            return;
-        }
-
         private void lblTitulo_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
-        
     }
 }

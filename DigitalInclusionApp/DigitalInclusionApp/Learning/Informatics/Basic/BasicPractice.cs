@@ -1,23 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using DigitalInclusionApp.Games;
+using DigitalInclusionApp.Infrastructure;
+using System;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using DigitalInclusionApp.Games;
-
 
 namespace DigitalInclusionApp
 {
-    public partial class BasicPractice : Form
+    /// <summary>
+    /// Formulário de prática (quiz) sobre conceitos básicos de informática.
+    /// Testa conhecimento do usuário sobre componentes e conceitos fundamentais.
+    /// </summary>
+    public partial class BasicPractice : BaseForm
     {
-        Thread? t1;
         private BasicQuiz.Quiz quiz = new BasicQuiz.Quiz();
+
+        /// <summary>
+        /// Inicializa uma nova instância de BasicPractice.
+        /// </summary>
         public BasicPractice()
         {
             InitializeComponent();
             ShowQuestion();
+        }
+
+        /// <summary>
+        /// Método abstrato não utilizado neste formulário.
+        /// </summary>
+        protected override void CenterControls()
+        {
+            // Formulário de quiz não requer centralização dinâmica de controles
         }
         private void ShowQuestion()
         {
@@ -35,7 +46,7 @@ namespace DigitalInclusionApp
 
             lblExplanation.Text = (correct ? "Você acertou! " : "Não foi dessa vez. ")
                                   + quiz.CurrentQuestion.Explanation;
-            lblExplanation.ForeColor = correct ? Color.DarkGreen : Color.DarkRed;
+            lblExplanation.ForeColor = correct ? Color.Lime : Color.Red;
             lblExplanation.Visible = true;
 
             btnTrue.Enabled = false;
@@ -54,12 +65,12 @@ namespace DigitalInclusionApp
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (quiz.IsFinished)
+            if (quiz.IsFinished)            
             {
                 quiz.Restart();
                 btnTrue.Visible = true;
                 btnFalse.Visible = true;
-                btnNext.Text = "Próximo";
+                btnNext.Text = "Próximo ➜";
                 ShowQuestion();
                 return;
             }
@@ -88,15 +99,7 @@ namespace DigitalInclusionApp
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openInformatics);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-        }
-        public void openInformatics()
-        {
-            Application.Run(new Informatics());
-            return;
+            FormNavigator.NavigateAndClose<Informatics>(this);
         }
     }
 }

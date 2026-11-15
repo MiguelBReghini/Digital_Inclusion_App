@@ -1,55 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using DigitalInclusionApp.Infrastructure;
 
 namespace DigitalInclusionApp
 {
-
-    public partial class KeyboardPage1 : Form
+    public partial class KeyboardPage1 : BaseForm
     {
-        Thread? t1;
         public KeyboardPage1()
         {
             InitializeComponent();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
 
             var centerX = panel1.ClientSize.Width / 2;
-            //Image Sizes
+            // Image Sizes
             var imageWidth = Math.Min(520, panel1.ClientSize.Width / 4 - 80);
             pictureBox1.Width = imageWidth;
             pictureBox1.Height = imageWidth;
@@ -65,25 +34,25 @@ namespace DigitalInclusionApp
             textBox3.Width = Convert.ToInt32(imageWidth * 1.3);
             textBox3.Height = Convert.ToInt32(imageWidth * 0.7);
 
-            //Images X
+            // Images X
             pictureBox2.Left = centerX - Convert.ToInt32(Width / 10);
             pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
             pictureBox3.Left = centerX + Convert.ToInt32(Width / 5);
-            //Button X
+            // Button X
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
             btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
-            //Text X
+            // Text X
             textBox3.Left = centerX + Convert.ToInt32(Width / 5.8);
             textBox1.Left = centerX - Convert.ToInt32(Width / 2.33);
             textBox2.Left = centerX - Convert.ToInt32(Width / 8);
 
-            //Images Y
+            // Images Y
             double divTop = 6;
             pictureBox1.Top = Convert.ToInt32(Height / divTop);
             pictureBox2.Top = Convert.ToInt32(Height / divTop);
             pictureBox3.Top = Convert.ToInt32(Height / divTop);
-            //Button Y
-            //Text Y
+            // Button Y
+            // Text Y
             double textTop = 1.7;
             textBox1.Top = Convert.ToInt32(Height / textTop);
             textBox2.Top = Convert.ToInt32(Height / textTop);
@@ -92,35 +61,16 @@ namespace DigitalInclusionApp
 
         private void btnPraticaKeyboard_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openKeyboardPage2);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-            return;
+            FormNavigator.NavigateAndClose<KeyboardPage2>(this);
         }
-
 
         private void voltarBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openInformatics);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-        }
-        private void openKeyboardPage2()
-        {
-            Application.Run(new KeyboardPage2());
-            return;
-        }
-        public void openInformatics()
-        {
-            Application.Run(new Informatics());
-            return;
+            FormNavigator.NavigateAndClose<Informatics>(this);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

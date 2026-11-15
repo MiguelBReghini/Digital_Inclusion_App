@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
+﻿using DigitalInclusionApp.Infrastructure;
+using System;
 using System.Drawing;
-using System.Numerics;
-using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DigitalInclusionApp
 {
-
-
-    public partial class Mouse : Form
+    /// <summary>
+    /// Formulário de prática do mouse com desafios interativos.
+    /// Inclui cliques simples, duplos, cliques direitos e scroll.
+    /// </summary>
+    public partial class Mouse : BaseForm
     {
-        Thread? t1;
         private Random random = new Random();
         private int clicks;
         private int quotaClicks = 20;
@@ -23,6 +18,10 @@ namespace DigitalInclusionApp
         private bool horizontalDone = false;
         private bool verticalDone = false;
         private bool scrollTaskCompleted = false;
+
+        /// <summary>
+        /// Inicializa uma nova instância de Mouse.
+        /// </summary>
         public Mouse()
         {
             InitializeComponent();
@@ -33,36 +32,12 @@ namespace DigitalInclusionApp
             progressMouse.Minimum = 0;
             progressMouse.Maximum = quotaClicks;
             progressMouse.Value = 0;
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            ApplyFullscreen();
-            CenterControls();
-        }
-
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            if (IsHandleCreated)
-            {
-                CenterControls();
-            }
-        }
-
-        private void ApplyFullscreen()
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        private void CenterControls()
+        /// <summary>
+        /// Centraliza os controles do formulário quando redimensionado.
+        /// </summary>
+        protected override void CenterControls()
         {
             if (panel1 == null)
                 return;
@@ -76,15 +51,7 @@ namespace DigitalInclusionApp
         }
         private void voltarBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t1 = new Thread(openMousePage3);
-            t1.SetApartmentState(ApartmentState.STA);
-            t1.Start();
-        }
-        public void openMousePage3()
-        {
-            Application.Run(new MousePage3());
-            return;
+            FormNavigator.NavigateAndClose<MousePage3>(this);
         }
 
         private void mouseLabel_Click(object sender, EventArgs e)
