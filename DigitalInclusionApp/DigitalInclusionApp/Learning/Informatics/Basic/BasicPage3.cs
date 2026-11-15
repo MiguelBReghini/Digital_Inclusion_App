@@ -87,7 +87,7 @@ namespace DigitalInclusionApp
         private void btnProximo_Click(object sender, EventArgs e)
         {
             this.Close();
-            t1 = new Thread(openBasicPage3);
+            t1 = new Thread(openBasicPractice);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
             return;
@@ -115,6 +115,11 @@ namespace DigitalInclusionApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        public void openBasicPractice()
+        {
+            Application.Run(new BasicPractice());
+            return;
         }
     }
 }
