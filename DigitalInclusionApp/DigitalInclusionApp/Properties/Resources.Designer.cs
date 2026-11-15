@@ -409,5 +409,18 @@ namespace DigitalInclusionApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap i_view32_zfbgVGLN9W
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("i_view32_zfbgVGLN9W", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
+    
 }

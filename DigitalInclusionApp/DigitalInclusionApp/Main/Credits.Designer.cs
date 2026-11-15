@@ -30,13 +30,16 @@ namespace DigitalInclusionApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Credits));
             panel1 = new Panel();
-            panel2 = new Panel();
+            lblApoio = new Label();
+            lblDev = new Label();
+            imgCoordEx = new PictureBox();
             imgCienciaComp = new PictureBox();
             textBox1 = new TextBox();
             socialProjectTxt = new TextBox();
             btnBack = new Button();
             lblTitulo = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imgCoordEx).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgCienciaComp).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +47,9 @@ namespace DigitalInclusionApp
             // 
             panel1.BackColor = Color.FromArgb(1, 34, 62);
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(lblApoio);
+            panel1.Controls.Add(lblDev);
+            panel1.Controls.Add(imgCoordEx);
             panel1.Controls.Add(imgCienciaComp);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(socialProjectTxt);
@@ -56,25 +61,49 @@ namespace DigitalInclusionApp
             panel1.Size = new Size(924, 700);
             panel1.TabIndex = 3;
             // 
-            // panel2
+            // lblApoio
             // 
-            panel2.Anchor = AnchorStyles.Right;
-            panel2.BackColor = Color.Transparent;
-            panel2.BackgroundImage = Properties.Resources.coordenadoria_de_extensao;
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Location = new Point(570, 442);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(301, 85);
-            panel2.TabIndex = 8;
+            lblApoio.AutoSize = true;
+            lblApoio.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblApoio.ForeColor = Color.FromArgb(171, 237, 58);
+            lblApoio.Location = new Point(635, 376);
+            lblApoio.Name = "lblApoio";
+            lblApoio.Size = new Size(79, 30);
+            lblApoio.TabIndex = 10;
+            lblApoio.Text = "Apoio:";
+            lblApoio.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblDev
+            // 
+            lblDev.AutoSize = true;
+            lblDev.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDev.ForeColor = Color.FromArgb(171, 237, 58);
+            lblDev.Location = new Point(154, 376);
+            lblDev.Name = "lblDev";
+            lblDev.Size = new Size(189, 30);
+            lblDev.TabIndex = 9;
+            lblDev.Text = "Desenvolvimento:";
+            lblDev.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // imgCoordEx
+            // 
+            imgCoordEx.Anchor = AnchorStyles.Right;
+            imgCoordEx.BackgroundImage = Properties.Resources.i_view32_zfbgVGLN9W;
+            imgCoordEx.BackgroundImageLayout = ImageLayout.Stretch;
+            imgCoordEx.Location = new Point(474, 409);
+            imgCoordEx.Name = "imgCoordEx";
+            imgCoordEx.Size = new Size(402, 118);
+            imgCoordEx.TabIndex = 8;
+            imgCoordEx.TabStop = false;
             // 
             // imgCienciaComp
             // 
             imgCienciaComp.Anchor = AnchorStyles.Left;
             imgCienciaComp.BackgroundImage = Properties.Resources.Ciencia_da_Computacao;
             imgCienciaComp.BackgroundImageLayout = ImageLayout.Stretch;
-            imgCienciaComp.Location = new Point(42, 442);
+            imgCienciaComp.Location = new Point(42, 409);
             imgCienciaComp.Name = "imgCienciaComp";
-            imgCienciaComp.Size = new Size(301, 85);
+            imgCienciaComp.Size = new Size(402, 118);
             imgCienciaComp.TabIndex = 7;
             imgCienciaComp.TabStop = false;
             // 
@@ -154,6 +183,7 @@ namespace DigitalInclusionApp
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)imgCoordEx).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgCienciaComp).EndInit();
             ResumeLayout(false);
         }
@@ -166,6 +196,8 @@ namespace DigitalInclusionApp
         private TextBox socialProjectTxt;
         private TextBox textBox1;
         private PictureBox imgCienciaComp;
-        private Panel panel2;
+        private PictureBox imgCoordEx;
+        private Label lblDev;
+        private Label lblApoio;
     }
 }
