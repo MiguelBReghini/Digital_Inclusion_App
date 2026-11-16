@@ -24,17 +24,16 @@ namespace DigitalInclusionApp
             pictureBox1.Height = imageWidth;
 
             // Images X
-            pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
+            pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.2);
             // Button X
             voltarBtn.Left = centerX - Convert.ToInt32(Width / 3);
             btnPraticaKeyboard.Left = centerX + Convert.ToInt32(Width / 12);
             // Text X
-            textBox1.Left = centerX + Convert.ToInt32(Width / 10);
+            textBox1.Left = centerX + Convert.ToInt32(Width / 50);
 
             // Images Y
             double divTop = 7;
             pictureBox1.Top = Convert.ToInt32(Height / divTop);
-            // Button Y
             // Text Y
             double textTop = 5;
             textBox1.Top = Convert.ToInt32(Height / textTop);

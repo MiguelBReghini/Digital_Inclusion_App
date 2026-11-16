@@ -30,7 +30,7 @@ namespace DigitalInclusionApp
             imgCienciaComp.Left = centerX - Convert.ToInt32(Width / 2.2);
             imgCoordEx.Left = centerX + Convert.ToInt32(Width / 9);
 
-            double VerticalLabels = 1.8;
+            double VerticalLabels = 1.9;
             lblDev.Top = Convert.ToInt32(Height / VerticalLabels);
             lblApoio.Top = Convert.ToInt32(Height / VerticalLabels);
 

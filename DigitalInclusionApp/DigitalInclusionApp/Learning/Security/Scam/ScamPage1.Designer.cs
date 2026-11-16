@@ -213,7 +213,6 @@ namespace DigitalInclusionApp
         private System.Diagnostics.Process process1;
         private TextBox textBox1;
         private PictureBox pictureBox1;
-        private ImageList imageList1;
         private PictureBox pictureBox3;
         private TextBox textBox3;
     }

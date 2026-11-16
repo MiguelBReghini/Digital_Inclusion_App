@@ -2,6 +2,8 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace DigitalInclusionApp
 {
@@ -38,10 +40,14 @@ namespace DigitalInclusionApp
             double divSize = 6;
             btnTarget.Width = Convert.ToInt32(Width / divSize - 100);
             btnTarget.Height = Convert.ToInt32(Height / divSize);
-
+            btnTarget.Font = new Font("Segoe UI", Width / 90, FontStyle.Bold);
+            //Text Sizes
             textBox1.Width = Convert.ToInt32(imageWidth * 2);
-
             textBox2.Width = Convert.ToInt32(imageWidth * 2);
+            textBox1.Height = Convert.ToInt32(Height / 4);
+            textBox2.Height = Convert.ToInt32(Height / 4);
+            textBox1.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
+            textBox2.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
 
 
             //Images X

@@ -33,6 +33,9 @@ namespace DigitalInclusionApp
             textBox2.Height = Convert.ToInt32(imageWidth * 0.7);
             textBox3.Width = Convert.ToInt32(imageWidth * 1.3);
             textBox3.Height = Convert.ToInt32(imageWidth * 0.7);
+            textBox1.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
+            textBox2.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
+            textBox3.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
 
             // Images X
             pictureBox2.Left = centerX - Convert.ToInt32(Width / 10);

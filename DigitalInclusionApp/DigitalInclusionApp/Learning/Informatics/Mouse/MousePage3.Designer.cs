@@ -232,7 +232,6 @@ namespace DigitalInclusionApp
         private Button btnPraticaKeyboard;
         private Button voltarBtn;
         private System.Diagnostics.Process process1;
-        private ImageList imageList1;
         private PictureBox pictureBox2;
         private TextBox textBox2;
         private TextBox textBox1;
