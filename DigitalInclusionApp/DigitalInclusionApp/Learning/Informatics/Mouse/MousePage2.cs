@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DigitalInclusionApp
 {
@@ -26,8 +27,6 @@ namespace DigitalInclusionApp
         /// </summary>
         protected override void CenterControls()
         {
-            double Width = Bounds.Width;
-            double Height = Bounds.Height;
             if (panel1 == null)
                 return;
 
@@ -38,14 +37,13 @@ namespace DigitalInclusionApp
             pictureBox1.Height = imageWidth;
             pictureBox2.Width = imageWidth;
             pictureBox2.Height = imageWidth;
-            ////Button Sizes
-            double divSize = 6;
-            //btnTarget.Width = Convert.ToInt32(Width / divSize - 100);
-            //btnTarget.Height = Convert.ToInt32(Height / divSize);
-
+            ////Text Sizes
             textBox1.Width = Convert.ToInt32(imageWidth * 2);
-
             textBox2.Width = Convert.ToInt32(imageWidth * 2);
+            textBox1.Height = Convert.ToInt32(Height / 4);
+            textBox2.Height = Convert.ToInt32(Height / 4);
+            textBox1.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
+            textBox2.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
 
 
 

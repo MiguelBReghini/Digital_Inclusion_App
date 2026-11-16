@@ -212,7 +212,6 @@ namespace DigitalInclusionApp
         private Button voltarBtn;
         private System.Diagnostics.Process process1;
         private PictureBox imgMoldem;
-        private ImageList imageList1;
         private PictureBox imgCabos;
         private PictureBox imgRoteador;
         private TextBox textBox2;

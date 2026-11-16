@@ -420,6 +420,7 @@ namespace DigitalInclusionApp.Properties {
                 object obj = ResourceManager.GetObject("i_view32_zfbgVGLN9W", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
+            
         }
 
         /// <summary>
@@ -430,6 +431,18 @@ namespace DigitalInclusionApp.Properties {
             get
             {
                 object obj = ResourceManager.GetObject("ScamIntro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ConjuntoBasico
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("ConjuntoBasico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

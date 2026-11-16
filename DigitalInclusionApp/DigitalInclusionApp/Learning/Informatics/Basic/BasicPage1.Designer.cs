@@ -91,7 +91,8 @@ namespace DigitalInclusionApp
             // 
             // imgConjunto
             // 
-            imgConjunto.Image = Properties.Resources.TecladoEnter;
+            imgConjunto.Image = Properties.Resources.ConjuntoBasico;
+            imgConjunto.BackgroundImageLayout = ImageLayout.Stretch;
             imgConjunto.Location = new Point(888, 124);
             imgConjunto.Name = "imgConjunto";
             imgConjunto.Size = new Size(293, 298);
@@ -196,7 +197,6 @@ namespace DigitalInclusionApp
         private Button voltarBtn;
         private System.Diagnostics.Process process1;
         private PictureBox imgCelular;
-        private ImageList imageList1;
         private PictureBox imgConjunto;
         private TextBox txtAparelhos;
     }

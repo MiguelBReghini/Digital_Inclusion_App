@@ -24,8 +24,6 @@ namespace DigitalInclusionApp
         /// </summary>
         protected override void CenterControls()
         {
-            double Width = Bounds.Width;
-            double Height = Bounds.Height;
             if (panel1 == null)
                 return;
 
@@ -40,8 +38,15 @@ namespace DigitalInclusionApp
             double divSize = 6;
             btnTarget.Width = Convert.ToInt32(Width / divSize - 100);
             btnTarget.Height = Convert.ToInt32(Height / divSize);
-
-
+            //Button Size
+            btnTarget.Font = new Font("Segoe UI", Width / 100, FontStyle.Bold);
+            button1.Font = new Font("Segoe UI", Width / 100, FontStyle.Bold);
+            //Text Sizes
+            textBox1.Height = Convert.ToInt32(Height / 4);
+            textBox3.Height = Convert.ToInt32(Height / 4);
+            textBox1.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
+            textBox3.Font = new Font("Segoe UI", Width / 80, FontStyle.Bold);
+            
             //Images X
             pictureBox1.Left = centerX - Convert.ToInt32(Width / 2.5);
             pictureBox3.Left = centerX + Convert.ToInt32(Width / 30);
@@ -53,6 +58,7 @@ namespace DigitalInclusionApp
             //Text X
             textBox3.Left = centerX + Convert.ToInt32(Width / 7);
             textBox1.Left = centerX - Convert.ToInt32(Width / 3);
+
 
             //Images Y
             double divTop = 3.8;

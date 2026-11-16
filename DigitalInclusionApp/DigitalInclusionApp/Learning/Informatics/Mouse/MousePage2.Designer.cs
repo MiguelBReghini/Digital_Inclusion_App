@@ -120,7 +120,7 @@ namespace DigitalInclusionApp
             // 
             vScrollBar1.Location = new Point(985, 54);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(111, 384);
+            vScrollBar1.Size = new Size(111, 350);
             vScrollBar1.SmallChange = 5;
             vScrollBar1.TabIndex = 17;
             vScrollBar1.Scroll += vScrollBar1_Scroll;
@@ -307,7 +307,6 @@ namespace DigitalInclusionApp
         private System.Diagnostics.Process process1;
         private TextBox textBox1;
         private PictureBox pictureBox1;
-        private ImageList imageList1;
         private PictureBox pictureBox2;
         private TextBox textBox2;
         private Label label2;
