@@ -107,7 +107,7 @@ namespace DigitalInclusionApp
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(416, 202);
             textBox2.TabIndex = 11;
-            textBox2.Text = "O Shift pode ser tanto usado como o Capslock, quanto para utilizar os Simbolos que ficam na mesma tecla que os Números.";
+            textBox2.Text = "O Shift pode ser tanto usado como o Capslock para letras maiúsculas, quanto para utilizar os Simbolos que ficam na mesma tecla que os Números.";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox3
